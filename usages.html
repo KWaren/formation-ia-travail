@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les 7 familles d’usage de l’IA au travail — Formation Atelier IA</title>
+  <meta name="description" content="Rédiger, synthétiser, analyser des données, rechercher, créer des visuels, s’entraîner, déléguer : quand l’IA aide vraiment, la méthode, les pièges et où trouver chaque fonction dans Claude, ChatGPT et Gemini.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="usages" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 09</b> · Compétence n° 3</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">Les 7 familles<br>d’<em class="text-accent">usage</em>.</h1>
+        <p class="lede mt-8 max-w-3xl">Toutes les tâches où l’IA vous aide entrent dans sept familles. Pour chacune, il y a une façon de faire qui marche et des pièges qui reviennent toujours. Quand vous les connaissez, vous savez utiliser n’importe quelle IA sur n’importe quel métier.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">35 min</dd></div>
+        <div><dt class="kicker">Exercice</dt><dd class="font-display text-2xl">1 bilan</dd></div>
+        <div><dt class="kicker">Quiz</dt><dd class="font-display text-2xl">5 questions</dd></div>
+      </dl>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Objectifs du module</span>
+          <div><p>Classer n’importe quelle tâche dans une famille d’usage, appliquer la bonne méthode, éviter le piège typique, et savoir où trouver la fonction dans chacune des trois IA.</p></div>
+        </div>
+
+        <h2 id="carte"><span class="num">09.0</span>La carte des usages</h2>
+        <div class="not-prose grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line rounded-xl overflow-hidden text-sm">
+          <a href="#rediger" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">1</span><span class="block font-semibold mt-1">Rédiger</span><span class="block text-ink-soft mt-0.5">Mails, courriers, rapports, annonces</span></a>
+          <a href="#synthetiser" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">2</span><span class="block font-semibold mt-1">Synthétiser</span><span class="block text-ink-soft mt-0.5">Documents, réunions, appels d’offres</span></a>
+          <a href="#analyser" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">3</span><span class="block font-semibold mt-1">Analyser des chiffres</span><span class="block text-ink-soft mt-0.5">Excel, ventes, budgets</span></a>
+          <a href="#rechercher" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">4</span><span class="block font-semibold mt-1">Rechercher</span><span class="block text-ink-soft mt-0.5">Web, veille, études</span></a>
+          <a href="#creer" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">5</span><span class="block font-semibold mt-1">Créer des visuels</span><span class="block text-ink-soft mt-0.5">Affiches, présentations, images</span></a>
+          <a href="#entrainer" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">6</span><span class="block font-semibold mt-1">S’entraîner, apprendre</span><span class="block text-ink-soft mt-0.5">Oral, jeux de rôle, nouvelles compétences</span></a>
+          <a href="#deleguer" class="chapter-row bg-card p-4 block"><span class="font-mono text-xs text-accent">7</span><span class="block font-semibold mt-1">Déléguer</span><span class="block text-ink-soft mt-0.5">Agents, tâches planifiées, automatisation</span></a>
+          <div class="bg-paper-2 p-4"><span class="font-mono text-xs text-ink-soft">Le principe</span><span class="block mt-1 text-ink-soft">Une famille = une méthode. L’outil vient ensuite.</span></div>
+        </div>
+
+        <!-- 1 -->
+        <h2 id="rediger"><span class="num">09.1</span>Rédiger</h2>
+        <p>La famille la plus utilisée : mails, courriers administratifs, rapports, notes, offres d’emploi, posts pour les réseaux sociaux. L’IA vous fait passer de la page blanche à un bon premier jet en une minute.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">vous savez ce que vous voulez dire mais pas comment le dire, le texte est long ou délicat, vous devez décliner un même message pour plusieurs publics.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu quand…</p><p class="mt-2">le message tient en deux lignes, ou qu’il doit porter votre voix personnelle (condoléances, remerciements sincères). Écrivez-le vous-même.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> les faits en vrac + le destinataire + l’objectif + un exemple de votre style. Puis deux relances précises.</p>
+        <p><strong>Le piège :</strong> le texte « qui sonne IA » (formules creuses, listes partout, enthousiasme). Vos interlocuteurs le repèrent. Donnez un exemple de votre ton et interdisez les tics.</p>
+        <div class="prompt-block" data-label="Demande type · courrier délicat">
+          <p class="prompt-text">Je dois annoncer à <span class="var">[un client fidèle]</span> que <span class="var">[nos prix augmentent de 8 % au 1er janvier à cause du coût du transport]</span>.
+Faits : <span class="var">[ancienneté du client, volumes, ce qu’on peut lui offrir]</span>.
+Rédige un courrier d’une page, respectueux et clair, qui explique la raison, annonce la date, et propose <span class="var">[un geste : maintien de l’ancien prix sur la prochaine commande]</span>.
+Ton : courtois et direct, sans excuses excessives.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>La meilleure plume des trois pour les textes longs et nuancés. Peut produire directement le fichier Word.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Très bon, à condition de cadrer le style. Canvas pour retravailler paragraphe par paragraphe.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Directement dans Gmail et Google Docs (« Aide-moi à écrire »).</span></div>
+        </div>
+
+        <!-- 2 -->
+        <h2 id="synthetiser"><span class="num">09.2</span>Synthétiser et extraire</h2>
+        <p>Résumer un rapport de 80 pages, extraire les exigences d’un appel d’offres, tirer les décisions d’une réunion, comparer deux versions d’un contrat. L’IA lit en quelques secondes ce qui vous prendrait une heure.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">le document est long, vous cherchez des informations précises, vous devez comparer plusieurs documents.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu quand…</p><p class="mt-2">vous devez connaître le document en profondeur pour le défendre (un contrat que vous signez) : le résumé ne remplace pas la lecture.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> dites <em>pourquoi</em> vous lisez (décider, négocier, informer) et <em>ce que</em> vous cherchez. Exigez des citations ou des numéros de page.</p>
+        <p><strong>Le piège :</strong> le résumé qui change un chiffre, oublie une condition, ou transforme une discussion en décision (voir l’exercice du module 08).</p>
+        <div class="prompt-block" data-label="Demande type · lecture utile">
+          <p class="prompt-text">Je dois décider si nous répondons à cet appel d’offres. Extrais dans un tableau : objet, budget, critères de notation et leur poids, pièces obligatoires, date limite, conditions éliminatoires.
+Pour chaque point, indique la page. Si une information manque, écris « non précisé ».
+Termine par les 3 risques principaux pour nous.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Très fidèle sur les documents longs, repère les contradictions.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Bon sur les documents, et lit très bien les photos de documents papier.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Énorme capacité de lecture pour croiser plusieurs gros documents. <strong>NotebookLM</strong> pour répondre uniquement à partir de vos sources.</span></div>
+        </div>
+
+        <!-- 3 -->
+        <h2 id="analyser"><span class="num">09.3</span>Analyser des chiffres</h2>
+        <p>Nettoyer un fichier de ventes, calculer des écarts budget/réel, faire des graphiques, écrire une formule Excel compliquée, expliquer un tableau à quelqu’un qui n’aime pas les chiffres.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">vous déposez le fichier et qu’elle calcule avec son outil d’analyse, ou quand vous avez besoin d’une formule ou d’un graphique.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu quand…</p><p class="mt-2">vous lui demandez de « calculer de tête » des chiffres collés dans la conversation. Elle peut se tromper sans le dire.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> déposez le fichier, décrivez les colonnes, demandez d’abord une vérification de la qualité des données, puis l’analyse, et exigez le détail des calculs.</p>
+        <p><strong>Le piège :</strong> un total faux présenté avec assurance. Recalculez toujours au moins une ligne.</p>
+        <div class="prompt-block" data-label="Demande type · analyse de ventes">
+          <p class="prompt-text">Voici l’export de nos ventes de l’année <span class="var">[fichier joint]</span>.
+1. Vérifie les doublons et les cellules vides, et dis-moi ce que tu as corrigé.
+2. Calcule le chiffre d’affaires par mois et par produit, en FCFA.
+3. Identifie les 3 tendances principales et les 3 anomalies.
+4. Fais 2 graphiques simples pour une réunion.
+Montre tes calculs pour que je puisse les vérifier.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Analyse et crée de vrais fichiers Excel avec graphiques. Intégré à Excel via Microsoft 365 (offres payantes).</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>L’analyse de données exécute du code : les calculs sont réellement faits, pas devinés.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Directement dans Google Sheets : formules et analyses décrites en français.</span></div>
+        </div>
+
+        <!-- 4 -->
+        <h2 id="rechercher"><span class="num">09.4</span>Rechercher et s’informer</h2>
+        <p>Préparer un rendez-vous avec un prospect, faire une veille sur ses concurrents, comprendre une nouvelle réglementation, explorer un marché. L’IA cherche, lit et résume des dizaines de pages pour vous.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">la recherche web est activée, le sujet est bien documenté en ligne, et vous voulez un premier panorama sourcé.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu quand…</p><p class="mt-2">l’information n’est pas sur Internet : beaucoup de données sur les marchés et les entreprises locales ne s’y trouvent pas. Le terrain reste indispensable.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> activez la recherche web (ou Deep Research pour un sujet large), précisez le pays et la période, exigez une source par chiffre, et ouvrez les liens.</p>
+        <p><strong>Le piège :</strong> prendre un rapport généré pour une étude de marché. C’est une base de travail, à compléter par vos clients, vos commerciaux et vos observations.</p>
+        <div class="prompt-block" data-label="Demande type · préparer un rendez-vous">
+          <p class="prompt-text">Je rencontre <span class="var">[le directeur administratif de l’entreprise X, à Cotonou]</span> dans 2 jours pour présenter <span class="var">[notre offre]</span>.
+Cherche sur le web : activité, actualité des 12 derniers mois, dirigeants, projets annoncés.
+Fais-moi une fiche d’une page avec 5 questions intelligentes à poser et 3 objections probables.
+Cite tes sources et signale ce que tu n’as pas trouvé.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Recherche web, et <strong>Research</strong> pour une enquête approfondie qui peut aussi fouiller vos outils connectés.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Recherche web et <strong>Deep Research</strong>, rapports longs et très sourcés.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Appuyé sur Google Search, avec un excellent <strong>Deep Research</strong> exportable dans Docs.</span></div>
+        </div>
+
+        <!-- 5 -->
+        <h2 id="creer"><span class="num">09.5</span>Créer des visuels et des supports</h2>
+        <p>Une affiche pour un événement, un visuel pour Facebook ou WhatsApp, une présentation pour le comité, un schéma, un logo provisoire, la retouche d’une photo de produit.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">vous avez besoin vite d’un visuel correct, d’une maquette pour montrer une idée, ou d’une présentation structurée à partir de vos notes.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu quand…</p><p class="mt-2">il faut l’identité visuelle exacte de votre marque, ou une vraie photo de votre produit : ne présentez jamais une image générée comme une photo réelle.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> décrivez le format (carré, affiche A4), le message en toutes lettres, les couleurs, le style, et ce que vous ne voulez pas. Demandez plusieurs variantes.</p>
+        <p><strong>Le piège :</strong> les textes déformés dans l’image et les personnes générées qui ne ressemblent à personne de chez nous. Précisez le contexte (« personnes africaines », « marché de Cotonou ») et relisez chaque mot affiché.</p>
+        <div class="prompt-block" data-label="Demande type · affiche">
+          <p class="prompt-text">Crée une affiche format A4 vertical pour <span class="var">[la journée portes ouvertes de notre centre de formation, samedi 15 novembre à Abomey-Calavi]</span>.
+Texte à afficher exactement : « <span class="var">[Portes ouvertes · Samedi 15 novembre · 9 h – 16 h]</span> ».
+Style : moderne et sobre, couleurs <span class="var">[vert et jaune]</span>, avec des étudiants africains en situation de travail.
+Pas d’effets 3D, pas de texte en dehors de celui indiqué.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Ne génère pas d’images, mais crée des présentations, des schémas et des documents mis en page.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Génération et retouche d’images de très bonne qualité, avec du texte lisible. Vidéos courtes avec Sora.</span></div>
+          <div><b class="text-gemini">Gemini</b><span><strong>Nano Banana</strong> pour créer et retoucher les images, <strong>Veo</strong> pour la vidéo, et les images directement dans Slides.</span></div>
+        </div>
+
+        <!-- 6 -->
+        <h2 id="entrainer"><span class="num">09.6</span>S’entraîner et apprendre</h2>
+        <p>Répéter un entretien d’embauche, préparer une négociation, s’entraîner à annoncer une mauvaise nouvelle, apprendre une nouvelle compétence (Excel, comptabilité, anglais professionnel) avec un tuteur patient et disponible à toute heure.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">vous lui donnez un rôle précis (acheteur exigeant, jury, collaborateur vexé) et lui demandez un retour franc à la fin.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu quand…</p><p class="mt-2">vous la laissez être gentille : sans consigne, elle vous félicite. Exigez la critique.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> rôle + situation + règle du jeu (une objection à la fois, attendre ma réponse) + retour final. À l’oral avec le mode vocal, c’est encore plus efficace.</p>
+        <div class="prompt-block" data-label="Demande type · jeu de rôle">
+          <p class="prompt-text">Joue le rôle d’<span class="var">[un acheteur d’une grande surface de Cotonou]</span>, exigeant et bien préparé.
+Je viens te présenter <span class="var">[notre jus de fruits local et son prix]</span>.
+Oppose-moi des objections réalistes, une par une, et attends ma réponse à chaque fois.
+Après 6 échanges, sors du rôle et donne-moi un retour franc : mes arguments solides, mes faiblesses, et ce que j’aurais dû dire.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Excellent en jeu de rôle écrit et en retour détaillé. Mode vocal disponible.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Le mode vocal le plus naturel pour répéter à voix haute.</span></div>
+          <div><b class="text-gemini">Gemini</b><span><strong>Gemini Live</strong> pour converser, avec partage d’écran ou de caméra.</span></div>
+        </div>
+
+        <!-- 7 -->
+        <h2 id="deleguer"><span class="num">09.7</span>Déléguer et automatiser</h2>
+        <p>Confier une tâche entière : traiter un dossier de factures, préparer une présentation à partir de documents, faire une veille chaque lundi, renommer et classer des centaines de fichiers, créer un petit outil (tableau de suivi, formulaire).</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Elle aide vraiment quand…</p><p class="mt-2">la tâche est répétitive, bien définie, et que vous pouvez vérifier le résultat final.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Elle sert peu, ou c’est risqué, quand…</p><p class="mt-2">la tâche implique de l’argent, des envois à des clients, des suppressions, ou des comptes sensibles.</p></div>
+        </div>
+        <p><strong>La méthode :</strong> décrivez le résultat final attendu, donnez accès à un dossier précis, demandez le plan avant l’exécution, puis vérifiez le livrable (voir les règles de sécurité du module 06).</p>
+        <div class="prompt-block" data-label="Demande type · tâche complète">
+          <p class="prompt-text">Dans le dossier <span class="var">[Factures-fournisseurs-octobre]</span>, lis toutes les factures PDF.
+Crée un fichier Excel avec : fournisseur, numéro de facture, date, montant HT, TVA, total TTC, date d’échéance.
+Ajoute une ligne de total et signale les doublons et les factures échues.
+Montre-moi d’abord ton plan, et ne modifie ni ne supprime aucun fichier existant.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span><strong>Cowork</strong> sur vos fichiers, <strong>Claude dans Chrome</strong> sur le web, tâches planifiées (offres payantes).</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span><strong>ChatGPT Work</strong> dans l’application de bureau, tâches planifiées.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Agents en cours de déploiement selon les pays. Dans Workspace, Gemini automatise déjà une partie du travail dans Gmail, Docs et Meet.</span></div>
+        </div>
+
+        <h2 id="bilan"><span class="num">09.8</span>Exercice : la carte de vos tâches</h2>
+        <div class="exercise" data-exercise="usages-1">
+          <p class="kicker"><b>Exercice 09</b> · 20 min · papier ou tableur</p>
+          <p class="exercise-title">Repérez où l’IA vous fera gagner le plus de temps.</p>
+          <ol>
+            <li>Listez 10 tâches que vous faites chaque semaine ou chaque mois, avec le temps qu’elles vous prennent.</li>
+            <li>Pour chacune, notez la famille d’usage (1 à 7), ou « aucune » si l’IA n’y apporte rien.</li>
+            <li>Notez le risque en cas d’erreur : faible, moyen, élevé.</li>
+            <li>Choisissez les 3 tâches qui combinent beaucoup de temps et un risque faible ou moyen. Ce sont vos priorités, et la base de votre projet final (module 13).</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation</p>
+            <label><input type="checkbox"><span>Ma liste contient au moins 10 tâches réelles, avec leur durée.</span></label>
+            <label><input type="checkbox"><span>J’ai classé chaque tâche dans une famille (ou « aucune »).</span></label>
+            <label><input type="checkbox"><span>J’ai noté le risque de chaque tâche.</span></label>
+            <label><input type="checkbox"><span>J’ai choisi mes 3 priorités et je sais pourquoi.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+        </div>
+
+        <h2 id="quiz"><span class="num">09.9</span>Vérifiez vos acquis</h2>
+        <div data-quiz="usages"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

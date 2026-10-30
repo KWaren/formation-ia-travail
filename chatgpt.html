@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT (OpenAI) au travail : guide complet, forces et limites — Atelier IA</title>
+  <meta name="description" content="Comment utiliser ChatGPT au travail : GPTs, Projets, analyse de données, images, voix, Deep Research, ChatGPT Work. Cas d’usage professionnels, prompts, forces, limites et offres.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="chatgpt" class="bg-paper text-ink font-sans" style="--ai: var(--chatgpt)">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-8">
+        <p class="kicker"><b>Module 03</b> · OpenAI</p>
+        <h1 class="font-display font-medium text-6xl sm:text-7xl lg:text-[7.5rem] leading-[.9] mt-5 text-chatgpt">ChatGPT</h1>
+        <p class="font-display italic-soft text-3xl lg:text-4xl mt-3">Le couteau suisse.</p>
+        <p class="lede mt-8 max-w-2xl">L’IA qui a lancé la vague, et qui reste la plus complète. Écrire, voir, parler, dessiner, calculer, naviguer : si une tâche se fait avec une IA, ChatGPT sait probablement la faire. Tout l’enjeu est de le cadrer.</p>
+      </div>
+      <aside class="lg:col-span-4 self-end">
+        <div class="bg-card border border-line rounded-2xl p-6">
+          <p class="kicker mb-4">Fiche d’identité</p>
+          <dl class="text-sm divide-y divide-line">
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Éditeur</dt><dd class="font-semibold text-right">OpenAI (États-Unis)</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Accès</dt><dd class="font-semibold text-right">chatgpt.com · bureau · mobile</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Modèles</dt><dd class="font-semibold text-right">Famille GPT (Instant · Thinking · Pro)</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Offre pro</dt><dd class="font-semibold text-right">dès 20 $/mois (≈ 11 700 FCFA)</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Signature</dt><dd class="font-semibold text-right">Polyvalence · Multimédia · Agent</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <h2 id="portrait"><span class="num">03.1</span>Portrait</h2>
+        <p class="dropcap">Lancé en novembre 2022 par <strong>OpenAI</strong>, ChatGPT a fait découvrir l’IA générative au grand public. Il compte aujourd’hui plusieurs centaines de millions d’utilisateurs par semaine, ce qui en fait <strong>le standard de fait</strong> : vos clients, vos collègues et vos candidats l’utilisent probablement déjà.</p>
+        <p>Sa philosophie : <span class="marker">tout faire, au même endroit</span>. Texte, images, voix en temps réel, vidéo, analyse de fichiers, recherche approfondie, agent qui agit sur le web, assistants personnalisés. Aucun concurrent n’offre une gamme aussi large dans une seule interface.</p>
+        <p>Le revers : sans consignes, ses textes ont une « signature » reconnaissable (listes à puces partout, enthousiasme, formules toutes faites), et sa confiance peut masquer des erreurs. Bien cadré, c’est un outil redoutable.</p>
+
+        <h3>Choisir le bon mode</h3>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Mode</th><th>Profil</th><th>À utiliser pour</th></tr></thead>
+            <tbody>
+              <tr><td>Auto</td><td>ChatGPT choisit selon la difficulté</td><td>Le réglage par défaut, adapté à la plupart des cas</td></tr>
+              <tr><td>Instant</td><td>Réponse immédiate</td><td>Questions simples, reformulations, idées rapides</td></tr>
+              <tr><td>Thinking</td><td>Réfléchit avant de répondre</td><td>Analyse, calculs, stratégie, problèmes en plusieurs étapes</td></tr>
+              <tr><td>Pro</td><td>Raisonnement maximal (offres haut de gamme)</td><td>Questions très complexes où la précision prime sur la vitesse</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="prise-en-main"><span class="num">03.2</span>Prise en main : les 4 réglages à faire dès le premier jour</h2>
+        <ol>
+          <li><strong>Contrôle des données</strong> : dans <em>Paramètres → Contrôle des données</em>, désactivez « Améliorer le modèle pour tous » si vous utilisez un compte personnel pour le travail.</li>
+          <li><strong>Personnalisation</strong> : renseignez qui vous êtes et le style de réponse souhaité. C’est ici qu’on corrige durablement le ton de ChatGPT.</li>
+          <li><strong>Mémoire</strong> : ChatGPT retient des informations d’une conversation à l’autre et peut s’appuyer sur l’historique de vos échanges (version plus limitée en gratuit). Dites « Souviens-toi que… », consultez et nettoyez régulièrement ses souvenirs, et utilisez une <em>discussion temporaire</em> pour les sujets sensibles. Voir le <a href="memoire.html">module 06</a>.</li>
+          <li><strong>Applications connectées</strong> : reliez Google Drive, SharePoint, Outlook, Gmail, Notion ou Slack pour qu’il cherche dans vos documents.</li>
+        </ol>
+
+        <div class="prompt-block" data-label="À coller dans la personnalisation · « Comment ChatGPT doit-il répondre ? »">
+          <p class="prompt-text">Réponds en français, de façon directe et concise.
+Privilégie les paragraphes aux listes à puces, sauf si je demande une liste.
+Pas de formules d’introduction ni de conclusion (« Bien sûr ! », « N’hésitez pas… », « En résumé… »).
+Pas d’emojis.
+Si une question est ambiguë, pose une question de clarification avant de répondre.
+Signale clairement quand tu n’es pas certain d’une information.</p>
+        </div>
+
+        <h2 id="fonctionnalites"><span class="num">03.3</span>Les fonctionnalités clés, expliquées</h2>
+
+        <h3>GPTs personnalisés : vos assistants sur mesure</h3>
+        <p>Un <strong>GPT</strong> est un assistant que vous configurez une fois, sans programmer : des instructions, des fichiers de référence et des capacités (web, images, analyse). Exemples : « Rédacteur d’annonces de recrutement aux couleurs de l’entreprise », « Correcteur de propositions commerciales », « Assistant onboarding ». En offre Business, vous les partagez à toute l’équipe. Un catalogue public en propose des milliers d’autres.</p>
+
+        <h3>Projets</h3>
+        <p>Comme chez Claude, un <strong>Projet</strong> rassemble conversations, fichiers et instructions autour d’un dossier. ChatGPT s’appuie sur l’historique du Projet pour garder le fil.</p>
+
+        <h3>Analyse de données</h3>
+        <p>Déposez un fichier Excel ou CSV : ChatGPT <strong>écrit et exécute du code</strong> pour le nettoyer, calculer, croiser et produire des graphiques. Les calculs sont donc réellement effectués, et non « devinés ». C’est l’un de ses grands atouts pour les fonctions finance, contrôle de gestion et commerce.</p>
+
+        <h3>Images et vidéo</h3>
+        <p>ChatGPT <strong>génère et retouche des images</strong> en conversation : visuels de posts, illustrations, maquettes, schémas, avec un très bon rendu du texte dans l’image. <strong>Sora</strong>, inclus dans les offres payantes, produit de courtes vidéos. Pratique pour illustrer une présentation ou prototyper une campagne.</p>
+
+        <h3>Mode vocal</h3>
+        <p>Le mode vocal avancé permet une <strong>conversation orale naturelle</strong>, avec interruptions et intonations. Usages pro : répéter un pitch, simuler un entretien, réfléchir à voix haute en voiture, traduire en direct. Le <strong>mode enregistrement</strong> transcrit et résume vos réunions.</p>
+
+        <h3>Recherche et Deep Research</h3>
+        <p>La recherche web donne des réponses à jour et sourcées. <strong>Deep Research</strong> enquête plusieurs minutes et livre un rapport complet, avec des dizaines de sources citées. Excellent pour une étude de marché ou un benchmark.</p>
+
+        <h3>ChatGPT Work et l’application de bureau</h3>
+        <p>Depuis juillet 2026, <strong>ChatGPT Work</strong> remplace l’ancien mode agent. Vous lui confiez une tâche complète : il rassemble les informations dans vos applications et vos fichiers, planifie le travail, puis livre un résultat fini (tableur, présentation, document). Vous suivez sa progression, répondez à ses questions et validez les actions importantes. Dans la nouvelle <strong>application de bureau pour Windows et Mac</strong>, il peut utiliser vos fichiers et applications locales ou un navigateur intégré. Il est disponible sur ordinateur pour toutes les offres, et sur le web et le mobile à partir de Plus.</p>
+        <p>Les <strong>tâches planifiées</strong> lancent un travail à heure fixe (« chaque lundi, une veille sur mes concurrents »). Avant de confier des fichiers importants, relisez les règles de sécurité du <a href="memoire.html#agents">module 06</a>.</p>
+
+        <h3>Canvas et Codex</h3>
+        <p><strong>Canvas</strong> ouvre un espace d’édition à côté de la conversation pour retravailler un texte ou du code paragraphe par paragraphe. <strong>Codex</strong> est l’agent de programmation d’OpenAI, destiné aux équipes tech.</p>
+
+        <h2 id="nouveautes"><span class="num">03.4</span>Les nouveautés 2026, mode d’emploi</h2>
+        <p>Depuis juillet 2026, ChatGPT est aussi une <strong>application de bureau</strong> (Windows et Mac) avec trois modes : Chat, Work et Codex. ChatGPT Work est détaillé pas à pas au <a href="memoire.html#agents">module 06</a>.</p>
+
+        <div class="howto" style="--ai: var(--chatgpt)">
+          <div class="howto-head"><span class="howto-title">Codex : créer un petit outil sans savoir programmer</span><span class="howto-meta">Application de bureau · toutes les offres</span></div>
+          <ol class="howto-steps">
+            <li><span>Dans l’application de bureau, ouvrez l’onglet <strong>Codex</strong> et choisissez un dossier de travail.</span></li>
+            <li><span>Décrivez l’outil voulu en français : « Chaque mois je reçois 12 fichiers Excel de nos agences avec les mêmes colonnes. Crée un outil qui les fusionne, supprime les lignes vides et fait un total par agence. »</span></li>
+            <li><span>Codex écrit le programme, le teste et vous montre le résultat. Demandez-lui : « Explique-moi comment le relancer le mois prochain, comme à quelqu’un qui ne programme pas. »</span></li>
+            <li><span>Testez sur des copies de vos fichiers, et comparez un total avec un calcul fait à la main.</span></li>
+          </ol>
+          <div class="howto-foot">Idéal pour les tâches répétitives sur des fichiers. Pour une tâche ponctuelle, ChatGPT Work suffit.</div>
+        </div>
+
+        <div class="howto" style="--ai: var(--chatgpt)">
+          <div class="howto-head"><span class="howto-title">Créer et retoucher des images</span><span class="howto-meta">Toutes les offres, limites en gratuit</span></div>
+          <ol class="howto-steps">
+            <li><span>Pour créer : décrivez le format, le texte exact à afficher, le style et les couleurs (voir le <a href="usages.html#creer">module 09</a>).</span></li>
+            <li><span>Pour retoucher : envoyez une photo (un produit, une boutique) et demandez « Remplace le fond par un fond blanc uni » ou « Ajoute le prix en bas à droite ».</span></li>
+            <li><span>Corrigez par petites touches : « Garde tout, mais agrandis le titre ».</span></li>
+            <li><span>Relisez chaque mot affiché, et ne présentez jamais une image générée comme une vraie photo.</span></li>
+          </ol>
+        </div>
+
+        <div class="howto" style="--ai: var(--chatgpt)">
+          <div class="howto-head"><span class="howto-title">Deep Research : une étude complète en quelques minutes</span><span class="howto-meta">Limité en gratuit</span></div>
+          <ol class="howto-steps">
+            <li><span>Choisissez <strong>Deep Research</strong> dans les outils de la conversation.</span></li>
+            <li><span>Décrivez le sujet, la zone géographique, la période et le livrable attendu. ChatGPT vous pose souvent des questions pour préciser : répondez-y.</span></li>
+            <li><span>Laissez-le travailler quelques minutes : il lit des dizaines de sources.</span></li>
+            <li><span>Lisez le rapport, <strong>ouvrez les sources des chiffres importants</strong>, et complétez avec ce que vous savez du terrain.</span></li>
+          </ol>
+        </div>
+
+        <h2 id="cas-usage"><span class="num">03.5</span>Six cas d’usage professionnels</h2>
+
+        <h3>1. Analyser un export de ventes</h3>
+        <div class="prompt-block" data-label="Prompt · analyse de données">
+          <p class="prompt-text">Voici l’export de nos ventes <span class="var">[2025-2026]</span> en pièce jointe.
+1. Vérifie la qualité des données (doublons, valeurs manquantes) et dis-moi ce que tu as corrigé.
+2. Calcule le CA par mois, par région et par gamme de produits.
+3. Identifie les 3 tendances les plus significatives et les 3 anomalies.
+4. Produis 3 graphiques lisibles pour une présentation.
+5. Donne-moi le fichier Excel nettoyé avec un onglet de synthèse.</p>
+        </div>
+        <p><strong>Résultat :</strong> des calculs exécutés et vérifiables, des graphiques prêts à insérer et un fichier propre à télécharger.</p>
+
+        <h3>2. Créer le visuel d’un post LinkedIn</h3>
+        <div class="prompt-block" data-label="Prompt · image">
+          <p class="prompt-text">Crée une illustration au format carré pour un post LinkedIn annonçant <span class="var">[notre certification ISO 14001]</span>.
+Style : éditorial, sobre, flat design, palette <span class="var">[vert sapin et crème]</span>.
+Inclure le texte « <span class="var">Certifiés ISO 14001</span> » en gros, lisible.
+Pas de personnages, pas d’effet 3D.</p>
+        </div>
+
+        <h3>3. Créer un GPT « Rédacteur d’offres d’emploi »</h3>
+        <div class="prompt-block" data-label="Instructions du GPT · à coller dans « Configurer »">
+          <p class="prompt-text">Tu rédiges les offres d’emploi de <span class="var">[Nom de l’entreprise]</span>.
+Avant d’écrire, demande toujours : intitulé, équipe, missions principales, profil, fourchette de salaire, lieu, télétravail.
+Respecte la charte jointe (ton, valeurs, mentions obligatoires).
+Structure : accroche (2 phrases), l’entreprise, le poste, le profil, ce que nous offrons, le processus de recrutement.
+Langage inclusif et non discriminant. 350 mots maximum.
+Propose ensuite 3 titres alternatifs plus attractifs.</p>
+        </div>
+
+        <h3>4. Répéter un entretien ou un pitch à voix haute</h3>
+        <p>Lancez le mode vocal et dites : <em>« Tu es un investisseur exigeant. Je vais te présenter mon projet en 3 minutes. Interromps-moi si je ne suis pas clair, puis pose-moi les 5 questions les plus difficiles. À la fin, fais-moi un retour sur ma clarté et ma conviction. »</em></p>
+
+        <h3>5. Lancer une étude de marché avec Deep Research</h3>
+        <div class="prompt-block" data-label="Prompt · Deep Research">
+          <p class="prompt-text">Réalise une étude du marché <span class="var">[des services de livraison à domicile à Cotonou et Abomey-Calavi]</span>.
+Je veux : taille du marché et croissance, principaux acteurs avec positionnement et prix, tendances réglementaires, attentes des clients, opportunités pour un nouvel entrant.
+Privilégie les sources de moins de 2 ans. Cite chaque chiffre.
+Termine par un tableau comparatif des 6 principaux concurrents.</p>
+        </div>
+
+        <h3>6. Automatiser une veille hebdomadaire</h3>
+        <p>Demandez : <em>« Chaque lundi à 8 h, fais une veille sur l’actualité de <span class="marker">[mes 4 concurrents]</span> et de <span class="marker">[mon secteur]</span>. Résume les 5 informations les plus importantes en 3 lignes chacune, avec le lien source. »</em> ChatGPT crée une tâche planifiée et vous notifie.</p>
+
+        <h2 id="forces"><span class="num">03.6</span>Les forces de ChatGPT</h2>
+        <div class="not-prose divide-y divide-line border-y border-line">
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Polyvalence</p><p class="text-ink-soft text-[.95rem]">Texte, image, voix, vidéo, données, web, agent : tout dans un seul outil.</p></div><span class="rating" data-ai="chatgpt" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Analyse de données</p><p class="text-ink-soft text-[.95rem]">Exécute du code pour des calculs fiables et des graphiques sur vos fichiers.</p></div><span class="rating" data-ai="chatgpt" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Écosystème et personnalisation</p><p class="text-ink-soft text-[.95rem]">GPTs partageables, applications connectées, catalogue immense.</p></div><span class="rating" data-ai="chatgpt" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Voix et image</p><p class="text-ink-soft text-[.95rem]">Le mode vocal le plus naturel et une génération d’images de premier plan.</p></div><span class="rating" data-ai="chatgpt" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Agent et automatisation</p><p class="text-ink-soft text-[.95rem]">ChatGPT Work, tâches planifiées, recherche approfondie.</p></div><span class="rating" data-ai="chatgpt" data-score="4"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Qualité d’écriture</p><p class="text-ink-soft text-[.95rem]">Très bonne, à condition de bien cadrer le style.</p></div><span class="rating" data-ai="chatgpt" data-score="4"></span></div>
+        </div>
+
+        <h2 id="limites"><span class="num">03.7</span>Les limites à connaître</h2>
+        <ul>
+          <li><strong>Un style reconnaissable par défaut.</strong> Listes à puces, titres en gras, ton enthousiaste, formules creuses. Vos interlocuteurs le repèrent. Solution : la personnalisation ci-dessus et des exemples de votre style.</li>
+          <li><strong>Une assurance parfois trompeuse.</strong> Il présente une erreur avec le même aplomb qu’un fait. Sur les sujets pointus, exigez des sources.</li>
+          <li><strong>Une complaisance possible.</strong> Il a tendance à aller dans votre sens. Demandez explicitement une critique franche et des contre-arguments.</li>
+          <li><strong>Des offres complexes, des publicités sur l’entrée de gamme.</strong> Les offres Free et Go affichent de la publicité, et les limites varient selon le mode et l’offre.</li>
+          <li><strong>Les données des comptes personnels</strong> servent à l’entraînement par défaut. Pensez à le désactiver, ou passez à Business.</li>
+          <li><strong>La mémoire peut « polluer ».</strong> Des informations retenues d’anciennes conversations peuvent biaiser une réponse. Vérifiez-la et nettoyez-la.</li>
+        </ul>
+
+        <h2 id="offres"><span class="num">03.8</span>Les offres en un coup d’œil</h2>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Offre</th><th>Prix indicatif</th><th>Pour qui</th></tr></thead>
+            <tbody>
+              <tr><td>Free</td><td>0 $</td><td>Découverte, avec des limites serrées et de la publicité</td></tr>
+              <tr><td>Go</td><td>≈ 8 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 4 700 FCFA</span></td><td>Plus de messages à petit prix, avec publicité, sans Deep Research ni Sora</td></tr>
+              <tr><td>Plus</td><td>20 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 11 700 FCFA</span></td><td>Le professionnel individuel : modèles avancés, Deep Research, ChatGPT Work, Sora, GPTs, Projets</td></tr>
+              <tr><td>Pro</td><td>100, 200 ou 500 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 58 500 à 292 500 FCFA</span></td><td>Usage intensif et raisonnement maximal, en trois paliers</td></tr>
+              <tr><td>Business</td><td>≈ 25 $/utilisateur/mois (≈ 20 $ en annuel)<br><span class="text-ink-soft text-xs font-mono">≈ 14 600 FCFA</span></td><td>Équipes dès 2 personnes : espace partagé, administration, données exclues de l’entraînement</td></tr>
+              <tr><td>Enterprise</td><td>Sur devis</td><td>Grandes organisations : SSO avancé, résidence des données, conformité</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-soft">Tarifs hors taxes relevés en octobre 2026 à partir de sources concordantes. La page officielle d’OpenAI fait foi, et l’offre Go n’existe pas dans tous les pays. Prix payés en dollars par carte bancaire, convertis à environ 585 FCFA pour 1 $, hors frais bancaires. Comment payer : <a href="abonnements.html">module 12</a>.</p>
+
+        <h2 id="astuces"><span class="num">03.9</span>Astuces de pro</h2>
+        <ul>
+          <li><strong>Exigez la contradiction.</strong> « Joue l’avocat du diable : donne-moi les 5 meilleures raisons de ne PAS faire ce que je propose. » Antidote parfait à la complaisance.</li>
+          <li><strong>Passez en Thinking pour les chiffres.</strong> Pour tout calcul ou raisonnement en plusieurs étapes, le mode Thinking réduit nettement les erreurs.</li>
+          <li><strong>Un GPT par tâche répétitive.</strong> Si vous écrivez le même type de prompt plus de 3 fois par semaine, transformez-le en GPT.</li>
+          <li><strong>Utilisez la voix pour penser.</strong> Dictez vos idées en vrac pendant 5 minutes, puis demandez « structure tout ça en plan d’action ».</li>
+          <li><strong>Discussion temporaire pour le ponctuel.</strong> Elle n’alimente ni la mémoire ni l’historique.</li>
+        </ul>
+
+        <h2 id="quiz"><span class="num">03.10</span>Vérifiez vos acquis</h2>
+        <div data-quiz="chatgpt"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

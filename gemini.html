@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini (Google) au travail : guide complet, forces et limites — Atelier IA</title>
+  <meta name="description" content="Comment utiliser Gemini au travail : Gmail, Docs, Meet, Gems, NotebookLM, Deep Research, vidéo. Cas d’usage professionnels, prompts, forces, limites et offres Google AI et Workspace.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="gemini" class="bg-paper text-ink font-sans" style="--ai: var(--gemini)">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-8">
+        <p class="kicker"><b>Module 04</b> · Google</p>
+        <h1 class="font-display font-medium text-6xl sm:text-7xl lg:text-[7.5rem] leading-[.9] mt-5 text-gemini">Gemini</h1>
+        <p class="font-display italic-soft text-3xl lg:text-4xl mt-3">Le natif de Google.</p>
+        <p class="lede mt-8 max-w-2xl">L’IA qui vient à vous, plutôt que l’inverse. Dans votre boîte mail, vos documents, vos réunions et vos recherches. Pour une équipe déjà sur Google Workspace, c’est souvent le gain de temps le plus immédiat.</p>
+      </div>
+      <aside class="lg:col-span-4 self-end">
+        <div class="bg-card border border-line rounded-2xl p-6">
+          <p class="kicker mb-4">Fiche d’identité</p>
+          <dl class="text-sm divide-y divide-line">
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Éditeur</dt><dd class="font-semibold text-right">Google (États-Unis)</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Accès</dt><dd class="font-semibold text-right">gemini.google.com · Workspace · Android</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Modèles</dt><dd class="font-semibold text-right">Flash · Pro</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Offre pro</dt><dd class="font-semibold text-right">dès 20 $/mois (≈ 11 700 FCFA) ou via Workspace</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Signature</dt><dd class="font-semibold text-right">Intégration · Vidéo · Recherche</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <h2 id="portrait"><span class="num">04.1</span>Portrait</h2>
+        <p class="dropcap">Gemini est l’IA de <strong>Google</strong>, conçue par Google DeepMind. Arrivé après ChatGPT, il a rattrapé son retard à grande vitesse grâce à un avantage que personne d’autre n’a : <strong>l’écosystème Google</strong>. Recherche, Gmail, Docs, Sheets, Drive, Meet, YouTube, Android, Chrome.</p>
+        <p>Gemini a été pensé <span class="marker">multimodal dès l’origine</span> : il comprend aussi bien le texte que l’image, l’audio et surtout la <strong>vidéo</strong>. Il dispose d’une très grande fenêtre de contexte (environ un million de tokens sur l’offre Pro, soit des milliers de pages), idéale pour croiser de gros volumes de documents.</p>
+        <p>Son atout le plus sous-estimé : <strong>NotebookLM</strong>, un outil de recherche documentaire qui ne répond qu’à partir de vos sources.</p>
+
+        <h3>Les modèles, en une phrase</h3>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Modèle</th><th>Profil</th><th>À utiliser pour</th></tr></thead>
+            <tbody>
+              <tr><td>Flash</td><td>Rapide et économe</td><td>Questions courantes, mails, résumés, usage quotidien</td></tr>
+              <tr><td>Pro</td><td>Le plus capable, avec raisonnement</td><td>Analyses complexes, documents volumineux, code, stratégie</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="prise-en-main"><span class="num">04.2</span>Prise en main : les 4 réglages à faire dès le premier jour</h2>
+        <ol>
+          <li><strong>Activité dans les applications Gemini</strong> : sur un compte personnel, ce réglage conditionne la conservation et l’usage de vos conversations, avec une possible relecture humaine. Désactivez-le pour le travail, ou utilisez un compte Workspace.</li>
+          <li><strong>Instructions et mémoire</strong> : indiquez votre métier, votre contexte et le style de réponse attendu. Gemini peut aussi retenir ce que vous lui dites (« Souviens-toi que… ») et s’appuyer sur vos conversations passées, mais ces fonctions n’arrivent pas en même temps dans tous les pays : vérifiez ce que propose votre compte. Voir le <a href="memoire.html">module 06</a>.</li>
+          <li><strong>Applications connectées</strong> : autorisez Gmail, Drive, Agenda et Keep pour que Gemini puisse y chercher l’information.</li>
+          <li><strong>Gemini dans Workspace</strong> : sur un compte d’entreprise, vérifiez avec votre administrateur que les fonctions Gemini sont activées dans Gmail, Docs et Meet.</li>
+        </ol>
+
+        <div class="callout callout-info"><span class="callout-tag">Bon à savoir</span>
+          <div><p>Sur un compte <strong>Google Workspace professionnel</strong>, vos données ne servent pas à entraîner les modèles et ne sont pas relues par des humains. Elles restent régies par vos accords Google Cloud existants. C’est un argument fort pour les DSI.</p></div>
+        </div>
+
+        <h2 id="fonctionnalites"><span class="num">04.3</span>Les fonctionnalités clés, expliquées</h2>
+
+        <h3>Gemini dans Gmail, Docs, Sheets, Slides et Meet</h3>
+        <p>C’est la grande différence. Un panneau Gemini s’ouvre <strong>à droite de vos outils</strong> :</p>
+        <ul>
+          <li><strong>Gmail</strong> : résumé d’un long fil, brouillon de réponse, recherche en langage naturel (« quel était le dernier tarif proposé par Dupont ? »).</li>
+          <li><strong>Docs</strong> : rédaction, réécriture, synthèse d’un document, création à partir de fichiers Drive.</li>
+          <li><strong>Sheets</strong> : formules, analyse, tableaux et mise en forme décrits en français.</li>
+          <li><strong>Slides</strong> : génération de diapositives et d’images.</li>
+          <li><strong>Meet</strong> : prise de notes automatique, résumé, actions, et « rattrapage » si vous arrivez en retard.</li>
+        </ul>
+
+        <h3>Gems : vos assistants personnalisés</h3>
+        <p>L’équivalent des GPTs : un <strong>Gem</strong> garde vos instructions et vos fichiers de référence. Exemples : « Correcteur selon notre charte éditoriale », « Coach de préparation commerciale », « Traducteur technique FR-EN ». Les Gems se partagent comme un fichier Drive.</p>
+
+        <h3>NotebookLM : votre documentaliste</h3>
+        <p>Dans <strong>NotebookLM</strong>, vous ajoutez vos sources : PDF, Docs, sites web, vidéos YouTube, enregistrements. L’outil <strong>répond uniquement à partir de ces sources</strong>, avec une citation cliquable pour chaque affirmation. Il génère des fiches de révision, des FAQ, des cartes mentales et des <strong>résumés audio façon podcast</strong>. Idéal pour la formation, la veille, l’onboarding ou la préparation d’un dossier.</p>
+
+        <h3>Deep Research</h3>
+        <p>Appuyé sur la recherche Google, <strong>Deep Research</strong> parcourt des dizaines de sources et livre un rapport structuré, exportable dans Google Docs. Il peut aussi intégrer vos fichiers Drive et vos mails à l’enquête.</p>
+
+        <h3>Vidéo, image et voix</h3>
+        <p>Gemini <strong>comprend les vidéos</strong> : collez le lien d’une vidéo YouTube et demandez un résumé, les chapitres ou un passage précis. Côté création, <strong>Nano Banana</strong> génère et retouche les images avec une grande cohérence, et <strong>Veo</strong> produit des vidéos. <strong>Gemini Live</strong> permet une conversation vocale en partageant votre caméra ou votre écran.</p>
+
+        <h3>Canvas et navigation automatique</h3>
+        <p><strong>Canvas</strong> offre un espace d’édition de documents et de code. Dans Chrome, la <strong>navigation automatique</strong> (offres payantes) permet à Gemini d’accomplir des tâches en ligne pour vous. Elle est pour l’instant réservée à quelques pays, dont les États-Unis : Google étend ses agents progressivement.</p>
+
+        <h2 id="nouveautes"><span class="num">04.4</span>Les nouveautés 2026, mode d’emploi</h2>
+        <p>Les outils Google qui font gagner le plus de temps, expliqués pas à pas. L’agent Gemini Spark est présenté au <a href="memoire.html#agents">module 06</a>.</p>
+
+        <div class="howto" style="--ai: var(--gemini)">
+          <div class="howto-head"><span class="howto-title">NotebookLM : votre documentaliste personnel</span><span class="howto-meta">Gratuit, avec plus de fonctions en Pro et Ultra</span></div>
+          <ol class="howto-steps">
+            <li><span>Allez sur <strong>notebooklm.google.com</strong> avec votre compte Google et créez un notebook par sujet (« Procédures internes », « Appel à projets 2027 »).</span></li>
+            <li><span>Ajoutez vos sources : PDF, Google Docs, pages web, vidéos YouTube, enregistrements.</span></li>
+            <li><span>Posez vos questions : chaque réponse cite le passage exact de la source. Il ne répond qu’à partir de vos documents.</span></li>
+            <li><span>Dans le <strong>Studio</strong>, générez un <strong>résumé audio</strong> façon émission (disponible en français, à écouter dans les transports), une <strong>vidéo</strong> de synthèse, une <strong>carte mentale</strong>, des <strong>fiches de révision</strong> et des <strong>quiz</strong> (votre progression est enregistrée), ou une infographie.</span></li>
+            <li><span>Partagez le notebook avec vos collègues : idéal pour l’accueil des nouveaux et la formation interne.</span></li>
+          </ol>
+          <div class="howto-foot">Les vidéos courtes et les vidéos « cinématiques » arrivent d’abord sur les offres Pro et Ultra. Le gratuit a un nombre limité de résumés par jour.</div>
+        </div>
+
+        <div class="howto" style="--ai: var(--gemini)">
+          <div class="howto-head"><span class="howto-title">Gems : un assistant sur mesure en 5 minutes</span><span class="howto-meta">Toutes les offres</span></div>
+          <ol class="howto-steps">
+            <li><span>Dans Gemini, ouvrez le <strong>gestionnaire de Gems</strong> et créez un nouveau Gem.</span></li>
+            <li><span>Donnez-lui un nom (« Rédacteur de courriers officiels ») et des instructions : rôle, format, ton, ce qu’il doit toujours vérifier.</span></li>
+            <li><span>Ajoutez des fichiers de référence : un modèle de courrier, votre charte, des exemples réussis.</span></li>
+            <li><span>Testez-le, ajustez les instructions, puis partagez-le avec vos collègues comme un fichier Drive.</span></li>
+          </ol>
+        </div>
+
+        <div class="howto" style="--ai: var(--gemini)">
+          <div class="howto-head"><span class="howto-title">Retoucher une photo avec Nano Banana</span><span class="howto-meta">Toutes les offres, limites en gratuit</span></div>
+          <ol class="howto-steps">
+            <li><span>Envoyez une photo de votre produit ou de votre boutique dans Gemini.</span></li>
+            <li><span>Demandez la modification : « Mets ce flacon sur une table en bois, lumière naturelle », « Retire les objets en arrière-plan ».</span></li>
+            <li><span>Gemini garde le produit identique d’une image à l’autre : pratique pour une série de visuels cohérents.</span></li>
+            <li><span>Vérifiez que le produit n’a pas été déformé (étiquette, couleur, forme) avant de publier.</span></li>
+          </ol>
+        </div>
+
+        <h2 id="cas-usage"><span class="num">04.5</span>Six cas d’usage professionnels</h2>
+
+        <h3>1. Vider sa boîte mail après une semaine d’absence</h3>
+        <div class="prompt-block" data-label="Prompt · Gemini dans Gmail">
+          <p class="prompt-text">Résume les mails reçus depuis <span class="var">[lundi dernier]</span> qui nécessitent une action de ma part.
+Classe-les par urgence (aujourd’hui / cette semaine / pour info).
+Pour chacun : expéditeur, sujet en une ligne, action attendue, échéance si mentionnée.
+Ignore les newsletters et notifications automatiques.</p>
+        </div>
+
+        <h3>2. Ne plus jamais prendre de notes en réunion</h3>
+        <p>Activez <strong>« Prendre des notes pour moi »</strong> dans Meet. À la fin, vous recevez un Google Doc avec le résumé, les décisions et les actions par personne. Demandez ensuite dans Gmail : <em>« Rédige le mail de compte rendu à partir des notes de la réunion de ce matin, avec les actions et les échéances. »</em></p>
+
+        <h3>3. Résumer une conférence YouTube de 50 minutes</h3>
+        <div class="prompt-block" data-label="Prompt · vidéo">
+          <p class="prompt-text"><span class="var">[coller le lien YouTube]</span>
+Résume cette conférence pour un <span class="var">[directeur commercial]</span> pressé :
+- l’idée centrale en 2 phrases
+- les 5 enseignements actionnables, avec l’horodatage où ils sont abordés
+- les chiffres cités
+- ce qui est discutable ou non démontré</p>
+        </div>
+
+        <h3>4. Former une nouvelle recrue avec NotebookLM</h3>
+        <p>Créez un notebook avec vos procédures, votre catalogue produit et vos FAQ clients. Générez un <strong>résumé audio</strong> de 15 minutes que la recrue écoute dans les transports, puis laissez-la poser ses questions au notebook. Chaque réponse renvoie à la source exacte.</p>
+
+        <h3>5. Construire un tableau de suivi dans Sheets</h3>
+        <div class="prompt-block" data-label="Prompt · Gemini dans Sheets">
+          <p class="prompt-text">Crée un tableau de suivi des <span class="var">[appels d’offres]</span> avec les colonnes : client, objet, montant estimé, date limite, responsable, statut (liste déroulante : à étudier / en cours / déposé / gagné / perdu), probabilité.
+Ajoute une mise en forme conditionnelle : date limite à moins de 7 jours en rouge.
+Ajoute une ligne de total pondéré (montant × probabilité).</p>
+        </div>
+
+        <h3>6. Croiser plusieurs gros documents</h3>
+        <p>Grâce à sa fenêtre de contexte, Gemini peut comparer en une fois <strong>plusieurs rapports annuels</strong> de concurrents : <em>« Compare les stratégies, les investissements annoncés et les risques déclarés dans ces 4 rapports. Présente un tableau puis 5 enseignements pour nous. »</em></p>
+
+        <h2 id="forces"><span class="num">04.6</span>Les forces de Gemini</h2>
+        <div class="not-prose divide-y divide-line border-y border-line">
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Intégration Google Workspace</p><p class="text-ink-soft text-[.95rem]">Dans Gmail, Docs, Sheets, Slides, Drive et Meet, sans copier-coller.</p></div><span class="rating" data-ai="gemini" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Vidéo et multimodal</p><p class="text-ink-soft text-[.95rem]">Comprend YouTube et les fichiers vidéo, génère images (Nano Banana) et vidéos (Veo).</p></div><span class="rating" data-ai="gemini" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Volume de contexte</p><p class="text-ink-soft text-[.95rem]">Environ un million de tokens : idéal pour croiser beaucoup de documents.</p></div><span class="rating" data-ai="gemini" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Recherche et actualité</p><p class="text-ink-soft text-[.95rem]">Appuyé sur Google Search, avec un excellent Deep Research.</p></div><span class="rating" data-ai="gemini" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Rapport qualité-prix</p><p class="text-ink-soft text-[.95rem]">L’offre Pro inclut 5 To de stockage. Souvent déjà inclus dans Workspace.</p></div><span class="rating" data-ai="gemini" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Qualité d’écriture</p><p class="text-ink-soft text-[.95rem]">Bonne et en net progrès, parfois un peu scolaire sans consignes de style.</p></div><span class="rating" data-ai="gemini" data-score="4"></span></div>
+        </div>
+
+        <h2 id="limites"><span class="num">04.7</span>Les limites à connaître</h2>
+        <ul>
+          <li><strong>L’assistant intégré est inégal.</strong> Le panneau Gemini dans Gmail ou Docs est parfois moins performant que l’application Gemini elle-même. Pour une tâche exigeante, passez par gemini.google.com.</li>
+          <li><strong>Moins de valeur hors de l’écosystème Google.</strong> Si votre entreprise est sur Microsoft 365, l’avantage principal disparaît.</li>
+          <li><strong>Des fonctions qui varient selon le pays.</strong> Certaines nouveautés arrivent d’abord aux États-Unis ou en anglais.</li>
+          <li><strong>Une confidentialité à surveiller sur les comptes personnels.</strong> Des conversations peuvent être relues par des humains si l’activité est activée. Séparez strictement le perso et le pro.</li>
+          <li><strong>Une gamme d’offres mouvante.</strong> Les noms, les paliers et les inclusions changent souvent, ce qui complique le choix.</li>
+        </ul>
+
+        <h2 id="offres"><span class="num">04.8</span>Les offres en un coup d’œil</h2>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Offre</th><th>Prix indicatif</th><th>Pour qui</th></tr></thead>
+            <tbody>
+              <tr><td>Gratuit</td><td>0 $</td><td>Découverte : modèle Flash, Deep Research limité, NotebookLM, 15 Go</td></tr>
+              <tr><td>Google AI Plus</td><td>≈ 5 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 2 900 FCFA</span></td><td>Usage léger : plus de requêtes, Gemini dans Gmail, 400 Go</td></tr>
+              <tr><td>Google AI Pro</td><td>≈ 20 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 11 700 FCFA</span></td><td>Le professionnel individuel : modèle Pro, Gmail et Docs, NotebookLM étendu, vidéo, 5 To</td></tr>
+              <tr><td>Google AI Ultra</td><td>100 à 200 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 58 500 à 117 000 FCFA</span></td><td>Usage intensif : 5× ou 20× les limites de Pro, fonctions en avant-première, 20 To et plus</td></tr>
+              <tr><td>Google Workspace</td><td>dès ≈ 14 $/utilisateur/mois (Business Standard, annuel)<br><span class="text-ink-soft text-xs font-mono">≈ 8 200 FCFA</span></td><td>Entreprises : Gemini inclus dans Gmail, Docs et Meet, avec les garanties de Workspace</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-soft">Tarifs hors taxes relevés en octobre 2026 sur gemini.google et auprès de sources spécialisées. Variables selon le pays. Prix payés en dollars par carte bancaire, convertis à environ 585 FCFA pour 1 $, hors frais bancaires. Comment payer : <a href="abonnements.html">module 12</a>.</p>
+
+        <h2 id="astuces"><span class="num">04.9</span>Astuces de pro</h2>
+        <ul>
+          <li><strong>Utilisez « @ » pour citer vos outils.</strong> Dans l’application Gemini, tapez <code>@Gmail</code>, <code>@Drive</code> ou <code>@YouTube</code> pour orienter la recherche.</li>
+          <li><strong>NotebookLM pour tout ce qui doit être sourcé.</strong> Dès que la fiabilité prime, ancrez-vous dans vos documents.</li>
+          <li><strong>Exportez vers Docs.</strong> Chaque réponse longue peut partir directement dans Google Docs pour être retravaillée et partagée.</li>
+          <li><strong>Passez au modèle Pro pour l’important.</strong> Flash est rapide, mais Pro raisonne nettement mieux sur les tâches complexes.</li>
+          <li><strong>Un Gem par usage récurrent.</strong> Mêmes bénéfices que les GPTs : constance et gain de temps.</li>
+        </ul>
+
+        <h2 id="quiz"><span class="num">04.10</span>Vérifiez vos acquis</h2>
+        <div data-quiz="gemini"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

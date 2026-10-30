@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Évaluation et projet final — Formation Atelier IA</title>
+  <meta name="description" content="Évaluation finale par mises en situation, projet final avec plan d’action personnel, test « Quelle IA pour moi ? » et quiz de révision par module.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="quiz" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8 no-print">
+      <div class="lg:col-span-8">
+        <p class="kicker"><b>Module 13</b> · Évaluation</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">À vous de <em class="text-accent">jouer</em>.</h1>
+        <p class="lede mt-8 max-w-2xl">Une évaluation finale par mises en situation, puis le projet final : appliquer la méthode à trois tâches réelles de votre travail. C’est ce plan d’action, mis en pratique, qui prouve que vous maîtrisez.</p>
+      </div>
+      <aside class="lg:col-span-4 self-end">
+        <div class="bg-card border border-line rounded-2xl p-6">
+          <p class="kicker mb-4">Vos meilleurs scores</p>
+          <ul class="text-sm divide-y divide-line" data-quiz-scores></ul>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Évaluation finale -->
+    <section id="final" class="py-14 lg:py-20 border-b border-line grid lg:grid-cols-12 gap-10 scroll-mt-20 no-print" style="--ai: var(--accent)">
+      <div class="lg:col-span-4">
+        <p class="kicker"><b>Étape 1</b> · 12 mises en situation</p>
+        <h2 class="font-display text-4xl lg:text-5xl mt-4 leading-tight">Savez-vous quoi faire, <em>en situation</em> ?</h2>
+        <p class="mt-4 text-ink-soft leading-relaxed">Pas de questions de mémoire : des cas concrets qui couvrent tout le parcours. Choisir l’usage, briefer, vérifier, protéger les données, déléguer sans risque. Visez 10 sur 12.</p>
+      </div>
+      <div class="lg:col-span-8" data-quiz="final"></div>
+    </section>
+
+    <!-- Projet final -->
+    <section id="projet" class="py-14 lg:py-20 border-b border-line scroll-mt-20">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-4 no-print">
+          <p class="kicker"><b>Étape 2</b> · Projet final · 30 min, puis 2 semaines de pratique</p>
+          <h2 class="font-display text-4xl lg:text-5xl mt-4 leading-tight">Votre plan d’action <em>personnel</em>.</h2>
+          <p class="mt-4 text-ink-soft leading-relaxed">Reprenez les 3 tâches prioritaires repérées au module 09. Pour chacune, construisez votre demande et décidez comment vous vérifierez le résultat. Pratiquez-les pendant deux semaines, puis notez le temps gagné.</p>
+          <div class="callout callout-tip mt-6"><span class="callout-tag">Critères de réussite</span>
+            <div><p>Chaque demande suit la méthode C.R.A.F.T. · aucune donnée sensible · une vérification prévue · un temps gagné mesuré.</p></div>
+          </div>
+        </div>
+
+        <form id="action-plan" class="lg:col-span-8 space-y-6" onsubmit="return false">
+          <div class="plan-card bg-card border border-line rounded-2xl p-6 space-y-4">
+            <p class="kicker"><b>Tâche 1</b></p>
+            <div class="grid sm:grid-cols-[2fr_1fr] gap-4">
+              <label class="field"><span>La tâche</span><input name="t1" placeholder="ex. rédiger le rapport mensuel d’activité"></label>
+              <label class="field"><span>Temps passé aujourd’hui</span><input name="h1" placeholder="ex. 3 h par mois"></label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="field"><span>Famille d’usage</span><select name="f1"><option value="">Choisir…</option><option>1 · Rédiger</option><option>2 · Synthétiser</option><option>3 · Analyser des chiffres</option><option>4 · Rechercher</option><option>5 · Créer des visuels</option><option>6 · S’entraîner, apprendre</option><option>7 · Déléguer</option></select></label>
+              <label class="field"><span>Outil choisi</span><select name="o1"><option value="">Choisir…</option><option>Claude</option><option>ChatGPT</option><option>Gemini</option><option>NotebookLM</option><option>Autre IA</option></select></label>
+            </div>
+            <label class="field"><span>Ma demande (C.R.A.F.T.)</span><textarea name="p1" placeholder="Contexte, rôle, action, format, ton…"></textarea></label>
+            <label class="field"><span>Comment je vérifie le résultat</span><input name="v1" placeholder="ex. je recalcule les totaux et je compare avec le fichier source"></label>
+          </div>
+
+          <div class="plan-card bg-card border border-line rounded-2xl p-6 space-y-4">
+            <p class="kicker"><b>Tâche 2</b></p>
+            <div class="grid sm:grid-cols-[2fr_1fr] gap-4">
+              <label class="field"><span>La tâche</span><input name="t2" placeholder="ex. répondre aux demandes de devis"></label>
+              <label class="field"><span>Temps passé aujourd’hui</span><input name="h2" placeholder="ex. 4 h par semaine"></label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="field"><span>Famille d’usage</span><select name="f2"><option value="">Choisir…</option><option>1 · Rédiger</option><option>2 · Synthétiser</option><option>3 · Analyser des chiffres</option><option>4 · Rechercher</option><option>5 · Créer des visuels</option><option>6 · S’entraîner, apprendre</option><option>7 · Déléguer</option></select></label>
+              <label class="field"><span>Outil choisi</span><select name="o2"><option value="">Choisir…</option><option>Claude</option><option>ChatGPT</option><option>Gemini</option><option>NotebookLM</option><option>Autre IA</option></select></label>
+            </div>
+            <label class="field"><span>Ma demande (C.R.A.F.T.)</span><textarea name="p2" placeholder="Contexte, rôle, action, format, ton…"></textarea></label>
+            <label class="field"><span>Comment je vérifie le résultat</span><input name="v2" placeholder="ex. je relis chaque prix avec la grille tarifaire"></label>
+          </div>
+
+          <div class="plan-card bg-card border border-line rounded-2xl p-6 space-y-4">
+            <p class="kicker"><b>Tâche 3</b></p>
+            <div class="grid sm:grid-cols-[2fr_1fr] gap-4">
+              <label class="field"><span>La tâche</span><input name="t3" placeholder="ex. préparer les comptes rendus de réunion"></label>
+              <label class="field"><span>Temps passé aujourd’hui</span><input name="h3" placeholder="ex. 2 h par semaine"></label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="field"><span>Famille d’usage</span><select name="f3"><option value="">Choisir…</option><option>1 · Rédiger</option><option>2 · Synthétiser</option><option>3 · Analyser des chiffres</option><option>4 · Rechercher</option><option>5 · Créer des visuels</option><option>6 · S’entraîner, apprendre</option><option>7 · Déléguer</option></select></label>
+              <label class="field"><span>Outil choisi</span><select name="o3"><option value="">Choisir…</option><option>Claude</option><option>ChatGPT</option><option>Gemini</option><option>NotebookLM</option><option>Autre IA</option></select></label>
+            </div>
+            <label class="field"><span>Ma demande (C.R.A.F.T.)</span><textarea name="p3" placeholder="Contexte, rôle, action, format, ton…"></textarea></label>
+            <label class="field"><span>Comment je vérifie le résultat</span><input name="v3" placeholder="ex. je compare le compte rendu avec mes notes"></label>
+          </div>
+
+          <div class="plan-card bg-card border border-line rounded-2xl p-6 space-y-4">
+            <p class="kicker"><b>Bilan après deux semaines</b></p>
+            <label class="field"><span>Temps gagné par semaine, au total</span><input name="gain" placeholder="ex. environ 3 h"></label>
+            <label class="field"><span>Ce qui a bien marché, ce que j’ai dû corriger</span><textarea name="bilan" placeholder="Vos observations…"></textarea></label>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 no-print">
+            <button type="button" class="btn btn-primary" data-plan-copy>Copier mon plan</button>
+            <button type="button" class="btn btn-ghost" data-plan-print>Imprimer ou enregistrer en PDF</button>
+            <span class="font-mono text-xs text-ink-soft" data-plan-status></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Test d'orientation -->
+    <section id="profil" class="py-14 lg:py-20 border-b border-line grid lg:grid-cols-12 gap-10 scroll-mt-20 no-print">
+      <div class="lg:col-span-4">
+        <p class="kicker"><b>Test</b> · 2 minutes · 6 questions</p>
+        <h2 class="font-display text-4xl lg:text-5xl mt-4 leading-tight">Quelle IA est faite <em>pour vous</em> ?</h2>
+        <p class="mt-4 text-ink-soft leading-relaxed">Répondez selon votre quotidien réel. Le résultat vous indique l’IA par laquelle commencer, l’offre à envisager et un complément gratuit.</p>
+      </div>
+      <div class="lg:col-span-8" data-profiler></div>
+    </section>
+
+    <!-- Révisions -->
+    <section id="revisions" class="py-14 lg:py-20 scroll-mt-20 no-print">
+      <div>
+        <p class="kicker"><b>Révisions</b> · 5 questions par module</p>
+        <h2 class="font-display text-4xl lg:text-5xl mt-4">Quiz par module</h2>
+        <div class="flex flex-wrap gap-2 mt-6" data-tabs="mod">
+          <button type="button" class="tab-btn" data-tab="comprendre">01 · Comprendre</button>
+          <button type="button" class="tab-btn" data-tab="claude">02 · Claude</button>
+          <button type="button" class="tab-btn" data-tab="chatgpt">03 · ChatGPT</button>
+          <button type="button" class="tab-btn" data-tab="gemini">04 · Gemini</button>
+          <button type="button" class="tab-btn" data-tab="comparatif">05 · Choisir</button>
+          <button type="button" class="tab-btn" data-tab="memoire">06 · Mémoire et agents</button>
+          <button type="button" class="tab-btn" data-tab="briefer">07 · Briefer</button>
+          <button type="button" class="tab-btn" data-tab="verifier">08 · Vérifier</button>
+          <button type="button" class="tab-btn" data-tab="usages">09 · Usages</button>
+          <button type="button" class="tab-btn" data-tab="cadre">11 · Cadre légal</button>
+        </div>
+      </div>
+      <div class="mt-10 max-w-4xl">
+        <div data-tab-panel="comprendre" data-group="mod"><div data-quiz="comprendre"></div></div>
+        <div data-tab-panel="claude" data-group="mod" style="--ai: var(--claude)"><div data-quiz="claude"></div></div>
+        <div data-tab-panel="chatgpt" data-group="mod" style="--ai: var(--chatgpt)"><div data-quiz="chatgpt"></div></div>
+        <div data-tab-panel="gemini" data-group="mod" style="--ai: var(--gemini)"><div data-quiz="gemini"></div></div>
+        <div data-tab-panel="comparatif" data-group="mod"><div data-quiz="comparatif"></div></div>
+        <div data-tab-panel="memoire" data-group="mod"><div data-quiz="memoire"></div></div>
+        <div data-tab-panel="briefer" data-group="mod"><div data-quiz="briefer"></div></div>
+        <div data-tab-panel="verifier" data-group="mod"><div data-quiz="verifier"></div></div>
+        <div data-tab-panel="usages" data-group="mod"><div data-quiz="usages"></div></div>
+        <div data-tab-panel="cadre" data-group="mod"><div data-quiz="cadre"></div></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

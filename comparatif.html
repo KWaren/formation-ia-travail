@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude vs ChatGPT vs Gemini : le comparatif pour les professionnels — Atelier IA</title>
+  <meta name="description" content="Comparatif détaillé de Claude, ChatGPT et Gemini pour un usage professionnel : 15 critères, choix par tâche, par profil d’entreprise, confidentialité et combinaisons gagnantes.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="comparatif" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line">
+      <p class="kicker"><b>Module 05</b> · Comparatif</p>
+      <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-[6.5rem] leading-[.92] mt-5">
+        <span class="text-claude">Claude</span>, <span class="text-chatgpt">ChatGPT</span>,<br class="hidden md:block"> <span class="text-gemini">Gemini</span> : <em>lequel ?</em>
+      </h1>
+      <div class="grid lg:grid-cols-12 gap-8 mt-8">
+        <p class="lede lg:col-span-8">La vraie réponse n’est pas « le meilleur », mais « le meilleur <em>pour quoi</em> ». Voici une grille de lecture honnête, critère par critère et tâche par tâche, pour choisir en connaissance de cause.</p>
+        <dl class="lg:col-span-4 grid grid-cols-3 gap-4 text-sm self-end">
+          <div><dt class="kicker">Lecture</dt><dd class="font-display text-2xl">12 min</dd></div>
+          <div><dt class="kicker">Critères</dt><dd class="font-display text-2xl">15</dd></div>
+          <div><dt class="kicker">Tâches</dt><dd class="font-display text-2xl">12</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-4xl">
+
+        <h2 id="verdict"><span class="num">05.1</span>Le verdict en 30 secondes</h2>
+        <div class="not-prose grid md:grid-cols-3 gap-px bg-line border border-line rounded-2xl overflow-hidden">
+          <div class="bg-card p-6" style="--ai: var(--claude)">
+            <p class="kicker"><b>Choisissez</b></p>
+            <p class="font-display text-4xl text-claude mt-1">Claude</p>
+            <p class="mt-3 text-[.95rem] leading-relaxed">si votre valeur ajoutée passe par l’<strong>écrit</strong>, l’<strong>analyse</strong> et la <strong>rigueur</strong> : consultants, juristes, dirigeants, analystes, rédacteurs, développeurs.</p>
+          </div>
+          <div class="bg-card p-6" style="--ai: var(--chatgpt)">
+            <p class="kicker"><b>Choisissez</b></p>
+            <p class="font-display text-4xl text-chatgpt mt-1">ChatGPT</p>
+            <p class="mt-3 text-[.95rem] leading-relaxed">si vous voulez <strong>un seul outil qui fait tout</strong> : texte, images, voix, données, agent. Marketing, commerce, entrepreneurs, usages variés.</p>
+          </div>
+          <div class="bg-card p-6" style="--ai: var(--gemini)">
+            <p class="kicker"><b>Choisissez</b></p>
+            <p class="font-display text-4xl text-gemini mt-1">Gemini</p>
+            <p class="mt-3 text-[.95rem] leading-relaxed">si votre entreprise <strong>vit dans Google Workspace</strong>, ou si vous travaillez beaucoup avec la vidéo, la recherche et de gros volumes de documents.</p>
+          </div>
+        </div>
+
+        <h2 id="criteres"><span class="num">05.2</span>Critère par critère</h2>
+        <p>Appréciation éditoriale sur 5, fondée sur des usages professionnels courants en octobre 2026. Les trois IA s’améliorent tous les trimestres : un écart d’un point peut s’inverser à la version suivante. Seuls les écarts de deux points ou plus sont vraiment structurants.</p>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Critère</th><th class="!text-claude">Claude</th><th class="!text-chatgpt">ChatGPT</th><th class="!text-gemini">Gemini</th></tr></thead>
+            <tbody>
+              <tr><td>Qualité d’écriture en français</td><td><span class="rating" data-ai="claude" data-score="5"></span></td><td><span class="rating" data-ai="chatgpt" data-score="4"></span></td><td><span class="rating" data-ai="gemini" data-score="4"></span></td></tr>
+              <tr><td>Analyse de documents longs</td><td><span class="rating" data-ai="claude" data-score="5"></span></td><td><span class="rating" data-ai="chatgpt" data-score="4"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Raisonnement complexe</td><td><span class="rating" data-ai="claude" data-score="5"></span></td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Respect des consignes</td><td><span class="rating" data-ai="claude" data-score="5"></span></td><td><span class="rating" data-ai="chatgpt" data-score="4"></span></td><td><span class="rating" data-ai="gemini" data-score="4"></span></td></tr>
+              <tr><td>Analyse de données (Excel, CSV)</td><td><span class="rating" data-ai="claude" data-score="4"></span></td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="4"></span></td></tr>
+              <tr><td>Code et développement</td><td><span class="rating" data-ai="claude" data-score="5"></span></td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="4"></span></td></tr>
+              <tr><td>Recherche web et actualité</td><td><span class="rating" data-ai="claude" data-score="4"></span></td><td><span class="rating" data-ai="chatgpt" data-score="4"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Recherche approfondie</td><td><span class="rating" data-ai="claude" data-score="4"></span></td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Génération d’images</td><td class="text-ink-soft font-mono text-xs">Non disponible</td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Vidéo (compréhension et création)</td><td class="text-ink-soft font-mono text-xs">Non disponible</td><td><span class="rating" data-ai="chatgpt" data-score="4"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Conversation vocale</td><td><span class="rating" data-ai="claude" data-score="3"></span></td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Intégration Google Workspace</td><td><span class="rating" data-ai="claude" data-score="3"></span></td><td><span class="rating" data-ai="chatgpt" data-score="3"></span></td><td><span class="rating" data-ai="gemini" data-score="5"></span></td></tr>
+              <tr><td>Intégration Microsoft 365</td><td><span class="rating" data-ai="claude" data-score="4"></span></td><td><span class="rating" data-ai="chatgpt" data-score="4"></span></td><td><span class="rating" data-ai="gemini" data-score="2"></span></td></tr>
+              <tr><td>Agent et automatisation</td><td><span class="rating" data-ai="claude" data-score="4"></span></td><td><span class="rating" data-ai="chatgpt" data-score="5"></span></td><td><span class="rating" data-ai="gemini" data-score="4"></span></td></tr>
+              <tr><td>Prudence et honnêteté sur l’incertitude</td><td><span class="rating" data-ai="claude" data-score="5"></span></td><td><span class="rating" data-ai="chatgpt" data-score="3"></span></td><td><span class="rating" data-ai="gemini" data-score="4"></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="taches" data-toc="Quelle IA pour quelle tâche"><span class="num">05.3</span>Quelle IA pour quelle tâche ?</h2>
+        <p>Cliquez sur une tâche pour voir notre recommandation et l’alternative.</p>
+        <div id="task-picker" class="not-prose"></div>
+
+        <h2 id="profils"><span class="num">05.4</span>Par profil d’organisation</h2>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Votre situation</th><th>Recommandation</th><th>Pourquoi</th></tr></thead>
+            <tbody>
+              <tr><td>Indépendant, consultant, commerçant</td><td>Gratuit d’abord, puis <span class="text-claude font-semibold">Claude Pro</span> ou <span class="text-chatgpt font-semibold">ChatGPT Plus</span></td><td>Les versions gratuites suffisent pour démarrer. Prenez un seul abonnement le jour où vous butez sur les limites dans votre travail quotidien.</td></tr>
+              <tr><td>Petite structure de 2 à 10 personnes</td><td>Comptes individuels bien réglés, puis <span class="text-chatgpt font-semibold">ChatGPT Business</span> ou <span class="text-claude font-semibold">Claude Team</span></td><td>Désactivez l’entraînement sur chaque compte. Passez à une offre équipe dès que des données clients circulent.</td></tr>
+              <tr><td>Structure sous Google Workspace</td><td><span class="text-gemini font-semibold">Gemini via Workspace</span></td><td>Souvent déjà inclus : on active, on forme, on gagne du temps dès la première semaine.</td></tr>
+              <tr><td>Structure sous Microsoft 365</td><td><span class="text-chatgpt font-semibold">ChatGPT Business</span> ou <span class="text-claude font-semibold">Claude Team</span></td><td>Connecteurs Outlook et SharePoint, intégrations Office. Évaluez aussi Microsoft Copilot si vous l’avez déjà.</td></tr>
+              <tr><td>ONG et projets financés</td><td><span class="text-claude font-semibold">Claude</span> ou <span class="text-chatgpt font-semibold">ChatGPT</span>, en offre équipe</td><td>Rapports aux bailleurs, cadres logiques, documents longs. Vérifiez les exigences de confidentialité de votre bailleur.</td></tr>
+              <tr><td>Communication et marketing</td><td><span class="text-chatgpt font-semibold">ChatGPT</span> ou <span class="text-gemini font-semibold">Gemini</span></td><td>Texte, image et vidéo au même endroit pour Facebook, WhatsApp et les affiches.</td></tr>
+              <tr><td>Banque, microfinance, santé, juridique</td><td>Offre entreprise uniquement, après validation</td><td>Secret professionnel et données sensibles : jamais de compte personnel, et un cadre validé par la direction et le délégué à la protection des données.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="duo"><span class="num">05.5</span>Le duo gagnant : un payant, un gratuit</h2>
+        <p>Pour la plupart des professionnels, la meilleure stratégie n’est pas de payer trois abonnements, mais <strong>un abonnement principal</strong> pour votre usage dominant, plus <strong>la version gratuite d’un second</strong> pour ce que le premier fait moins bien.</p>
+        <div class="not-prose grid sm:grid-cols-2 gap-4">
+          <div class="border border-line rounded-xl p-5 bg-card"><p class="kicker">Duo « Zéro budget »</p><p class="font-display text-2xl mt-2"><span class="text-chatgpt">ChatGPT</span> + <span class="text-gemini">Gemini</span></p><p class="text-sm text-ink-soft mt-2">Les deux versions gratuites couvrent déjà la rédaction, les images, la recherche et la voix. Le point de départ idéal.</p></div>
+          <div class="border border-line rounded-xl p-5 bg-card"><p class="kicker">Duo « Plume »</p><p class="font-display text-2xl mt-2"><span class="text-claude">Claude Pro</span> + <span class="text-chatgpt">ChatGPT</span></p><p class="text-sm text-ink-soft mt-2">Écrits exigeants avec Claude, visuels et voix ponctuels avec ChatGPT.</p></div>
+          <div class="border border-line rounded-xl p-5 bg-card"><p class="kicker">Duo « Polyvalent »</p><p class="font-display text-2xl mt-2"><span class="text-chatgpt">ChatGPT Plus</span> + <span class="text-claude">Claude</span></p><p class="text-sm text-ink-soft mt-2">Tout-en-un au quotidien, Claude pour relire et améliorer les textes importants.</p></div>
+          <div class="border border-line rounded-xl p-5 bg-card"><p class="kicker">Duo « Google »</p><p class="font-display text-2xl mt-2"><span class="text-gemini">Gemini</span> + <span class="text-claude">Claude</span></p><p class="text-sm text-ink-soft mt-2">Mails, réunions et documents avec Gemini, rédaction de fond avec Claude.</p></div>
+        </div>
+
+        <h2 id="confidentialite"><span class="num">05.6</span>Confidentialité comparée</h2>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Question</th><th class="!text-claude">Claude</th><th class="!text-chatgpt">ChatGPT</th><th class="!text-gemini">Gemini</th></tr></thead>
+            <tbody>
+              <tr><td>Entraînement sur les données (offres perso)</td><td>Selon votre choix dans les paramètres</td><td>Oui par défaut, désactivable</td><td>Lié à l’« Activité », désactivable</td></tr>
+              <tr><td>Entraînement (offres pro)</td><td>Non par défaut (Team, Enterprise)</td><td>Non par défaut (Business, Enterprise)</td><td>Non (Workspace)</td></tr>
+              <tr><td>Relecture humaine possible (perso)</td><td>Limitée (signalements, sécurité)</td><td>Possible si l’entraînement est actif</td><td>Possible si l’activité est active</td></tr>
+              <tr><td>Administration et SSO</td><td>Team et Enterprise</td><td>Business et Enterprise</td><td>Console Workspace</td></tr>
+              <tr><td>Accord de traitement des données (DPA)</td><td>Offres commerciales</td><td>Offres Business et Enterprise</td><td>Contrat Workspace</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warn"><span class="callout-tag">Important</span><div><p>Les politiques de confidentialité évoluent. Avant tout déploiement en entreprise, faites valider l’offre retenue par votre délégué à la protection des données et votre responsable informatique, à partir des conditions contractuelles en vigueur.</p></div></div>
+
+        <h2 id="tester"><span class="num">05.7</span>Votre propre test, en 30 minutes</h2>
+        <p>Les comparatifs donnent une tendance, mais <strong>seul un test sur vos tâches réelles</strong> tranche vraiment. La méthode :</p>
+        <ol>
+          <li>Choisissez <strong>5 tâches</strong> que vous faites chaque semaine (un mail délicat, une synthèse, une analyse, un document, une recherche).</li>
+          <li>Écrivez <strong>un seul prompt par tâche</strong>, bien construit selon la méthode C.R.A.F.T. (module 07).</li>
+          <li>Soumettez le <strong>même prompt aux trois IA</strong>, dans leur version gratuite ou d’essai.</li>
+          <li>Copiez les réponses dans un document <strong>sans indiquer leur origine</strong>, et faites-les noter par un collègue.</li>
+          <li>Notez aussi le <strong>temps de retouche</strong> nécessaire : c’est le vrai indicateur de productivité.</li>
+        </ol>
+
+        <h2 id="quiz"><span class="num">05.8</span>Vérifiez vos acquis</h2>
+        <div data-quiz="comparatif"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

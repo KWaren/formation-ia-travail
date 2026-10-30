@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Une IA qui vous connaît et qui agit : mémoire, projets, agents — Formation Atelier IA</title>
+  <meta name="description" content="Mémoire, instructions personnalisées, projets, connecteurs et agents qui travaillent sur votre ordinateur : comment les IA de 2026 se souviennent de vous et agissent pour vous.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="memoire" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 06</b> · Travailler autrement</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">Une IA qui vous <em class="text-accent">connaît</em>,<br>et qui agit.</h1>
+        <p class="lede mt-8 max-w-3xl">Les IA de 2026 retiennent qui vous êtes, vont chercher l’information dans vos outils et peuvent mener une tâche entière sur votre ordinateur. Bien réglées, elles vous font gagner bien plus que du temps de rédaction.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">40 min</dd></div>
+        <div><dt class="kicker">Exercices</dt><dd class="font-display text-2xl">3 pratiques</dd></div>
+        <div><dt class="kicker">Quiz</dt><dd class="font-display text-2xl">5 questions</dd></div>
+      </dl>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Objectifs du module</span>
+          <div><p>Régler la mémoire et le profil de votre IA pour ne plus répéter qui vous êtes, organiser vos dossiers en Projets, et savoir quand et comment confier une tâche complète à un agent sans prendre de risque.</p></div>
+        </div>
+
+        <h2 id="changement"><span class="num">06.1</span>Fini de repartir de zéro</h2>
+        <p class="dropcap">Il y a encore peu de temps, chaque conversation commençait de zéro. Il fallait réexpliquer à chaque fois : « Je suis comptable dans une PME de Cotonou, je prépare les états financiers selon le SYSCOHADA… ». Ce n’est plus le cas.</p>
+        <p>Aujourd’hui, l’IA peut <strong>se souvenir de vous</strong> : votre métier, votre entreprise, votre façon d’écrire, vos dossiers en cours. Elle peut aussi <strong>aller chercher</strong> elle-même un document dans votre Drive ou un mail dans votre boîte, et même <strong>faire le travail</strong> : ouvrir vos fichiers, les traiter, et vous rendre un tableau ou un rapport terminé.</p>
+
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Avant</th><th>Maintenant</th></tr></thead>
+            <tbody>
+              <tr><td>Vous vous présentez à chaque conversation</td><td>L’IA retient votre profil et vos préférences</td></tr>
+              <tr><td>Vous copiez-collez vos documents</td><td>Elle les lit dans vos outils grâce aux connecteurs</td></tr>
+              <tr><td>Vous posez une question, elle répond</td><td>Vous confiez une tâche, elle la mène jusqu’au bout</td></tr>
+              <tr><td>Vous refaites la même demande chaque semaine</td><td>Une tâche planifiée la lance pour vous</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="memoire"><span class="num">06.2</span>La mémoire : ce que l’IA retient de vous</h2>
+        <p>La mémoire fonctionne de deux façons, et vous pouvez utiliser les deux :</p>
+        <ul>
+          <li><strong>Elle retient d’elle-même</strong> ce qui lui paraît utile dans vos échanges : votre métier, un projet en cours, une préférence de style.</li>
+          <li><strong>Vous lui demandez explicitement</strong> de retenir quelque chose, simplement en le disant.</li>
+        </ul>
+
+        <div class="prompt-block" data-label="À dire une fois, elle s’en souviendra">
+          <p class="prompt-text">Souviens-toi de ceci pour nos prochaines conversations :
+- Je suis <span class="var">[assistante de direction]</span> dans <span class="var">[une société de transit de 40 personnes à Cotonou]</span>.
+- J’écris surtout des <span class="var">[courriers administratifs, comptes rendus de réunion et mails aux clients]</span>.
+- J’écris en français, ton professionnel et courtois, phrases courtes, sans jargon.
+- Nos clients sont surtout <span class="var">[des importateurs et des commerçants]</span>.
+- Quand il te manque une information, pose-moi la question au lieu de l’inventer.</p>
+        </div>
+
+        <p>Vous pouvez aussi corriger : « Oublie que je travaille sur le dossier X, il est terminé », ou vérifier : « Que sais-tu de moi ? ». C’est un bon réflexe à avoir une fois par mois.</p>
+
+        <h3>Où la régler, selon l’IA</h3>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Mémoire activée par défaut, y compris en gratuit. À gérer dans les paramètres. Claude peut aussi importer la mémoire d’une autre IA si vous changez d’outil.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Paramètres → Personnalisation : « souvenirs enregistrés » et « historique des conversations ». Version plus limitée en gratuit.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Paramètres → contexte personnel et « infos enregistrées ». Certaines fonctions de mémoire n’arrivent pas en même temps dans tous les pays : vérifiez ce qui est disponible sur votre compte.</span></div>
+        </div>
+
+        <h3>Ce qu’on lui confie… et ce qu’on garde pour soi</h3>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+          <div class="bg-card p-6">
+            <p class="kicker text-chatgpt">À retenir, utile</p>
+            <ul class="mt-4 space-y-2.5 text-[.95rem]">
+              <li>✓ Votre métier, votre secteur, votre rôle</li>
+              <li>✓ Votre style d’écriture et vos formats préférés</li>
+              <li>✓ Le type de clients ou de public que vous servez</li>
+              <li>✓ Vos dossiers en cours (sans données sensibles)</li>
+            </ul>
+          </div>
+          <div class="bg-card p-6">
+            <p class="kicker text-accent">Jamais en mémoire</p>
+            <ul class="mt-4 space-y-2.5 text-[.95rem]">
+              <li>✗ Mots de passe, codes, numéros de carte</li>
+              <li>✗ Noms et coordonnées de clients ou de collègues</li>
+              <li>✗ Informations de santé, salaires nominatifs</li>
+              <li>✗ Secrets de votre entreprise</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-warn"><span class="callout-tag">Deux pièges</span>
+          <div><p><strong>La mémoire qui pollue.</strong> Une vieille information (un ancien poste, un dossier clos) peut fausser une réponse. Vérifiez et nettoyez régulièrement.</p><p><strong>Le compte partagé.</strong> Si plusieurs collègues utilisent le même compte, l’IA mélange leurs profils et chacun voit l’historique des autres. Un compte par personne, toujours.</p></div>
+        </div>
+        <p>Pour un sujet délicat que vous ne voulez pas voir retenu, utilisez une <strong>conversation temporaire</strong> (ou éphémère, ou incognito selon l’outil) : elle n’alimente ni la mémoire ni l’historique.</p>
+
+        <h2 id="instructions"><span class="num">06.3</span>Le profil permanent : vos instructions personnalisées</h2>
+        <p>À côté de la mémoire, chaque IA propose une zone où vous écrivez <strong>une fois pour toutes</strong> comment vous voulez qu’elle vous réponde. La différence :</p>
+        <ul>
+          <li><strong>La mémoire</strong>, c’est ce que l’IA apprend sur vous au fil des échanges. Elle évolue.</li>
+          <li><strong>Les instructions</strong>, c’est ce que vous décidez. Elles s’appliquent à chaque réponse, sans exception.</li>
+        </ul>
+        <div class="prompt-block" data-label="À coller dans vos instructions personnalisées">
+          <p class="prompt-text">Réponds en français, de façon directe et concise.
+Privilégie les paragraphes aux listes à puces, sauf si je demande une liste.
+Pas de formules creuses (« Bien sûr ! », « N’hésitez pas… »), pas d’emojis.
+Quand tu cites un chiffre, une loi ou une date, indique ta source ou dis que tu n’es pas sûr.
+Quand ta réponse dépend de la réglementation ou des prix locaux, signale ce qu’il faut vérifier.
+Si ma demande est ambiguë, pose une question avant de répondre.</p>
+        </div>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Paramètres → Profil : « préférences personnelles ».</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Paramètres → Personnalisation : « instructions personnalisées » et style de réponse.</span></div>
+          <div><b class="text-gemini">Gemini</b><span>Paramètres : « instructions pour Gemini ».</span></div>
+        </div>
+
+        <h2 id="projets"><span class="num">06.4</span>Un espace par dossier : Projets, GPTs et Gems</h2>
+        <p>La mémoire concerne <em>vous</em>. Les Projets concernent <em>un dossier</em>. Un Projet rassemble des documents de référence et des consignes qui s’appliquent à toutes les conversations de ce dossier.</p>
+        <p>Exemple : un Projet « Appels d’offres » contenant la présentation de votre entreprise, vos références clients, vos CV d’experts et votre grille tarifaire. Chaque nouvel appel d’offres part de là, sans rien recopier.</p>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span><strong>Projets</strong> (5 en gratuit, illimités en payant), partageables avec l’équipe en offre Team.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span><strong>Projets</strong> pour un dossier, <strong>GPTs</strong> pour un assistant réutilisable (« rédacteur de devis »).</span></div>
+          <div><b class="text-gemini">Gemini</b><span><strong>Gems</strong> pour un assistant réutilisable, <strong>NotebookLM</strong> pour un dossier de documents.</span></div>
+        </div>
+
+        <h2 id="connecteurs"><span class="num">06.5</span>Les connecteurs : l’IA va chercher l’information</h2>
+        <p>Un connecteur relie l’IA à une application : Gmail, Google Drive, agenda, Outlook, SharePoint, Notion… Une fois branchée, vous pouvez demander « Retrouve le dernier devis envoyé au client Dossou et résume les conditions » sans rien copier-coller.</p>
+        <p>Branchez seulement les outils dont vous avez besoin, et uniquement des comptes que vous avez le droit d’utiliser ainsi. Sur un ordinateur de l’entreprise, demandez d’abord à votre responsable informatique.</p>
+
+        <h2 id="agents"><span class="num">06.6</span>Les agents : l’IA qui travaille sur votre ordinateur</h2>
+        <p>Un agent ne se contente pas de répondre : il <strong>planifie, ouvre, lit, crée et range</strong>. Vous décrivez le résultat voulu, il découpe le travail en étapes, l’exécute en vous montrant ce qu’il fait, et vous demande votre accord avant les actions importantes. C’est la plus grande nouveauté de 2026 : on ne pose plus seulement des questions, on <strong>confie des tâches</strong>.</p>
+
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Outil</th><th>Où il travaille</th><th>Accès</th></tr></thead>
+            <tbody>
+              <tr><td class="!text-claude">Claude Cowork</td><td>Vos fichiers et vos applications connectées, depuis l’application de bureau Claude</td><td>Offres payantes</td></tr>
+              <tr><td class="!text-claude">Claude dans Chrome</td><td>Votre navigateur Chrome : pages, formulaires, onglets</td><td>Offres payantes</td></tr>
+              <tr><td class="!text-chatgpt">ChatGPT Work</td><td>Vos fichiers, vos applications et un navigateur intégré, depuis l’application de bureau ChatGPT (Windows et Mac)</td><td>Toutes les offres sur ordinateur, y compris gratuite ; offres payantes sur le web et le mobile</td></tr>
+              <tr><td class="!text-gemini">Gemini Spark</td><td>Gmail, Docs, Sheets, Agenda et les applications que vous autorisez, en arrière-plan dans le cloud</td><td>Google AI Pro et Ultra, déploiement progressif selon les pays</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Pas à pas : Claude Cowork</h3>
+        <div class="howto" style="--ai: var(--claude)">
+          <div class="howto-head"><span class="howto-title">Confier un dossier à Claude</span><span class="howto-meta">Application de bureau · offres payantes</span></div>
+          <ol class="howto-steps">
+            <li><span>Installez l’<strong>application de bureau Claude</strong> (Windows ou Mac) depuis claude.com, et connectez-vous. Cowork n’existe pas dans la version web.</span></li>
+            <li><span>Dans la fenêtre de conversation, passez de <strong>Chat</strong> à <strong>Cowork</strong>.</span></li>
+            <li><span>Créez un dossier de travail dédié (par exemple <code>Documents/IA-travail</code>) et copiez-y les fichiers à traiter. <strong>Donnez accès à ce dossier uniquement</strong> : Cowork ne voit aucun fichier tant que vous ne l’avez pas autorisé.</span></li>
+            <li><span>Si besoin, connectez vos applications (Gmail, Google Drive, agenda…) dans les connecteurs, pour qu’il puisse y chercher l’information.</span></li>
+            <li><span>Décrivez le <strong>résultat final</strong> attendu, pas les étapes : « À partir des 20 factures de ce dossier, crée un fichier Excel récapitulatif… ». Ajoutez : « Montre-moi ton plan avant de commencer. »</span></li>
+            <li><span>Lisez le plan, corrigez-le si besoin, puis laissez-le travailler. Il vous demande confirmation avant les actions sensibles (suppression, téléchargement, partage).</span></li>
+            <li><span>Ouvrez le fichier livré dans votre dossier et <strong>vérifiez-le</strong> comme un travail de collègue : totaux, noms, dates.</span></li>
+          </ol>
+          <div class="howto-foot"><strong>Pour aller plus loin :</strong> tapez <code>/</code> dans Cowork pour voir les commandes et les savoir-faire (Skills) disponibles, et ajoutez des <strong>instructions de dossier</strong> qui ne s’appliquent qu’à ce dossier (par exemple « les montants sont en FCFA, les dates au format JJ/MM/AAAA »). Cowork consomme plus de quota qu’une conversation.</div>
+        </div>
+
+        <h3>Pas à pas : ChatGPT Work</h3>
+        <div class="howto" style="--ai: var(--chatgpt)">
+          <div class="howto-head"><span class="howto-title">Faire mener une tâche complète à ChatGPT</span><span class="howto-meta">Application de bureau Windows et Mac · toutes les offres</span></div>
+          <ol class="howto-steps">
+            <li><span>Installez la nouvelle <strong>application de bureau ChatGPT</strong> depuis chatgpt.com. Elle regroupe trois modes : <strong>Chat</strong>, <strong>Work</strong> et <strong>Codex</strong>.</span></li>
+            <li><span>Choisissez <strong>Work</strong> (Chat sert aux questions rapides, Work aux tâches de bout en bout).</span></li>
+            <li><span>Décidez de ce à quoi il peut accéder : un dossier de fichiers, vos applications connectées, ou son <strong>navigateur intégré</strong> pour le web.</span></li>
+            <li><span>Décrivez la tâche et le livrable : « Compare les offres de ces 4 fournisseurs à partir de leurs devis PDF et fais-moi un tableau avec une recommandation. »</span></li>
+            <li><span>Suivez sa progression : vous voyez ce qu’il fait, il vous pose des questions, et vous pouvez <strong>changer de direction</strong> en cours de route.</span></li>
+            <li><span>Il s’arrête pour demander votre <strong>accord avant les actions sensibles</strong>, comme envoyer un mail. Quand il arrive sur une page de connexion, il vous passe la main : c’est vous qui tapez identifiant et mot de passe, jamais lui.</span></li>
+            <li><span>Récupérez le livrable (tableur, présentation, document) et vérifiez-le.</span></li>
+          </ol>
+          <div class="howto-foot"><strong>Bon à savoir :</strong> les conversations Work « locales » restent sur votre ordinateur ; celles dans le cloud se retrouvent sur le web et le téléphone. L’onglet <strong>Codex</strong> de la même application sert à créer de petits outils et des automatisations, même sans savoir programmer (voir le <a href="chatgpt.html#nouveautes">module 03</a>).</div>
+        </div>
+
+        <h3>Pas à pas : Claude dans Chrome</h3>
+        <div class="howto" style="--ai: var(--claude)">
+          <div class="howto-head"><span class="howto-title">Laisser Claude agir dans le navigateur</span><span class="howto-meta">Extension Chrome · offres payantes</span></div>
+          <ol class="howto-steps">
+            <li><span>Installez l’extension <strong>Claude</strong> depuis le Chrome Web Store (ou claude.com/chrome) et connectez-vous à votre compte.</span></li>
+            <li><span>Ouvrez le <strong>panneau latéral</strong> Claude dans Chrome.</span></li>
+            <li><span>Placez dans le <strong>groupe d’onglets de Claude</strong> uniquement les pages sur lesquelles il doit travailler : il ne voit et n’agit que sur ces onglets.</span></li>
+            <li><span>Demandez : « Sur ces trois sites de fournisseurs, relève le prix du carton de papier A4 et les frais de livraison, et fais-en un tableau. »</span></li>
+            <li><span>Regardez-le faire : il lit, clique, fait défiler, remplit. Arrêtez-le s’il part sur une page inattendue.</span></li>
+            <li><span>Une tâche que vous refaites souvent peut être <strong>enregistrée</strong> pour être relancée en un clic, ou planifiée (chaque jour, chaque semaine).</span></li>
+          </ol>
+          <div class="howto-foot"><strong>Prudence :</strong> une page web peut contenir des instructions cachées destinées à détourner l’agent. Évitez de le laisser naviguer seul sur des sites inconnus, et jamais sur votre banque ou un compte de paiement.</div>
+        </div>
+
+        <h3>Gemini Spark</h3>
+        <div class="howto" style="--ai: var(--gemini)">
+          <div class="howto-head"><span class="howto-title">L’agent de Google qui travaille en arrière-plan</span><span class="howto-meta">Google AI Pro et Ultra · selon les pays</span></div>
+          <ol class="howto-steps">
+            <li><span>Dans l’application Gemini, ouvrez le choix du mode et passez sur <strong>Spark</strong>, puis sur ses <strong>tâches</strong>. Si l’option n’apparaît pas, elle n’est pas encore ouverte sur votre compte : Google la déploie pays par pays.</span></li>
+            <li><span>Autorisez seulement les applications utiles (Gmail, Docs, Sheets, Agenda) : elles sont désactivées par défaut.</span></li>
+            <li><span>Confiez une tâche de suivi : « Chaque matin, repère dans mes mails les demandes de devis et ajoute-les dans le tableau de suivi. »</span></li>
+            <li><span>Spark continue à travailler dans le cloud même quand vous fermez l’ordinateur, et vous demande confirmation avant les actions importantes (envoyer un mail, acheter).</span></li>
+          </ol>
+          <div class="howto-foot">Commencez par des tâches sans risque et relisez son plan avant de valider.</div>
+        </div>
+
+        <h3>Les tâches planifiées</h3>
+        <p>Les trois éditeurs permettent de lancer un travail <strong>à heure fixe</strong>, sans y penser : une veille chaque lundi, un point quotidien sur vos mails, un rapport chaque fin de mois.</p>
+        <ul>
+          <li><strong>Claude Cowork :</strong> tapez <code>/schedule</code> et choisissez la fréquence (chaque jour, chaque semaine, jours ouvrés…). Les tâches apparaissent dans la rubrique « Planifiées ». L’application doit être ouverte et l’ordinateur allumé au moment prévu ; sinon, la tâche s’exécute à la réouverture.</li>
+          <li><strong>ChatGPT Work :</strong> une tâche peut s’exécuter une fois, se répéter, ou <strong>surveiller un changement</strong> (« préviens-moi quand ce site publie un nouvel appel d’offres »).</li>
+          <li><strong>Claude dans Chrome et Gemini Spark :</strong> les tâches enregistrées peuvent aussi être planifiées.</li>
+        </ul>
+        <div class="prompt-block" data-label="Exemple de tâche planifiée">
+          <p class="prompt-text">Chaque lundi à 8 h, cherche les appels d’offres publiés la semaine précédente dans le domaine <span class="var">[fournitures et équipements de bureau]</span>.
+Fais-moi un tableau : objet, organisme, date limite, lien. Signale ceux dont la date limite tombe dans moins de 10 jours.</p>
+        </div>
+
+        <div class="callout callout-warn"><span class="callout-tag">Les règles de sécurité des agents</span>
+          <div>
+            <p><strong>1. Un dossier précis, pas tout l’ordinateur.</strong> Donnez accès uniquement au dossier nécessaire.</p>
+            <p><strong>2. Le plan d’abord.</strong> Demandez-lui de montrer ce qu’il va faire avant de déplacer, supprimer ou envoyer quoi que ce soit.</p>
+            <p><strong>3. Jamais d’argent ni de mots de passe.</strong> Pas de banque, pas de paiement, pas de Mobile Money, et c’est toujours vous qui tapez vos identifiants.</p>
+            <p><strong>4. Méfiance sur le web.</strong> Une page piégée peut contenir des instructions cachées pour détourner l’agent. Surveillez ce qu’il fait sur des sites inconnus.</p>
+            <p><strong>5. Une copie de sauvegarde.</strong> Avant de lui confier des fichiers importants, gardez-en une copie.</p>
+          </div>
+        </div>
+        <p>Les agents consomment beaucoup de quota d’usage et de données Internet. Lancez les tâches longues en Wi-Fi plutôt qu’en données mobiles.</p>
+
+        <h2 id="exercices"><span class="num">06.7</span>Exercices</h2>
+
+        <div class="exercise" data-exercise="memoire-1">
+          <p class="kicker"><b>Exercice 06.1</b> · 15 min · toutes les IA, version gratuite</p>
+          <p class="exercise-title">Réglez votre IA pour qu’elle vous connaisse.</p>
+          <ol>
+            <li>Remplissez vos <strong>instructions personnalisées</strong> à partir du modèle ci-dessus, adapté à votre métier.</li>
+            <li>Dites-lui « Souviens-toi que… » avec 4 ou 5 informations sur votre travail (sans données sensibles).</li>
+            <li>Ouvrez une <strong>nouvelle conversation</strong> et demandez simplement : « Rédige un mail pour reporter la réunion de demain. »</li>
+            <li>Demandez enfin : « Que sais-tu de moi ? » et corrigez ce qui est faux.</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation · le mail obtenu à l’étape 3…</p>
+            <label><input type="checkbox"><span>…est écrit dans le ton que j’ai demandé, sans que je le précise dans la demande.</span></label>
+            <label><input type="checkbox"><span>…tient compte de mon métier ou de mon contexte de travail.</span></label>
+            <label><input type="checkbox"><span>…ne contient aucune formule creuse ni emoji.</span></label>
+            <label><input type="checkbox"><span>J’ai vérifié ce que l’IA sait de moi et rien de sensible n’y figure.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+        </div>
+
+        <div class="exercise mt-8" data-exercise="memoire-2">
+          <p class="kicker"><b>Exercice 06.2</b> · 20 min · Projet, GPT ou Gem</p>
+          <p class="exercise-title">Créez votre premier espace de dossier.</p>
+          <ol>
+            <li>Choisissez une tâche que vous faites souvent (devis, rapport mensuel, réponses aux clients, courriers).</li>
+            <li>Créez un Projet (Claude, ChatGPT), un GPT ou un Gem. Déposez 2 ou 3 documents de référence : un bon exemple passé, votre modèle, vos tarifs ou votre charte.</li>
+            <li>Écrivez des consignes : à quoi sert l’espace, le format attendu, le ton, ce qu’il faut toujours vérifier.</li>
+            <li>Testez avec un cas réel, en donnant seulement les informations nouvelles.</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation</p>
+            <label><input type="checkbox"><span>Le résultat reprend la structure de mon exemple de référence.</span></label>
+            <label><input type="checkbox"><span>Je n’ai eu à donner que les informations propres à ce cas.</span></label>
+            <label><input type="checkbox"><span>Le résultat demande moins de 5 minutes de retouche.</span></label>
+            <label><input type="checkbox"><span>Aucun document déposé ne contient de données personnelles de clients.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+        </div>
+
+        <div class="exercise mt-8" data-exercise="memoire-3">
+          <p class="kicker"><b>Exercice 06.3</b> · 25 min · ChatGPT Work (gratuit sur ordinateur) ou Claude Cowork</p>
+          <p class="exercise-title">Votre première délégation.</p>
+          <ol>
+            <li>Créez un dossier de test et copiez-y 5 à 10 documents sans données sensibles : devis, factures, comptes rendus ou rapports.</li>
+            <li>Ouvrez ChatGPT Work ou Claude Cowork en suivant le pas à pas ci-dessus, et donnez accès à ce seul dossier.</li>
+            <li>Demandez un livrable précis : « Lis ces documents et crée un tableau Excel récapitulatif (date, émetteur, objet, montant). Montre-moi ton plan avant de commencer. »</li>
+            <li>Validez le plan, laissez-le travailler, puis vérifiez le tableau ligne par ligne.</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation</p>
+            <label><input type="checkbox"><span>J’ai donné accès à un seul dossier, contenant des copies sans données sensibles.</span></label>
+            <label><input type="checkbox"><span>J’ai lu et validé son plan avant qu’il agisse.</span></label>
+            <label><input type="checkbox"><span>J’ai vérifié chaque ligne du livrable avec les documents d’origine.</span></label>
+            <label><input type="checkbox"><span>Je sais estimer le temps que cette tâche m’aurait pris à la main.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+        </div>
+
+        <h2 id="quiz"><span class="num">06.8</span>Vérifiez vos acquis</h2>
+        <div data-quiz="memoire"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bien briefer une IA : la méthode C.R.A.F.T., avec exercices — Formation Atelier IA</title>
+  <meta name="description" content="Apprendre à formuler des demandes efficaces à n’importe quelle IA : méthode C.R.A.F.T., matière, itération, techniques avancées et exercices corrigés.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="briefer" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 07</b> · Compétence n° 1</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">Bien <em class="text-accent">briefer</em>.</h1>
+        <p class="lede mt-8 max-w-3xl">La compétence qui fait la plus grande différence, et qui marche avec toutes les IA. Une demande précise et bien nourrie donne un résultat utilisable du premier coup. Une demande vague donne un texte que personne ne voudrait signer.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">30 min</dd></div>
+        <div><dt class="kicker">Exercices</dt><dd class="font-display text-2xl">2 pratiques</dd></div>
+        <div><dt class="kicker">Quiz</dt><dd class="font-display text-2xl">5 questions</dd></div>
+      </dl>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Objectifs du module</span>
+          <div><p>Formuler une demande complète en moins de deux minutes, fournir la bonne matière, améliorer un premier jet en deux relances précises, et réparer une demande qui donne un résultat moyen.</p></div>
+        </div>
+
+        <h2 id="pourquoi"><span class="num">07.1</span>Pourquoi la demande fait tout</h2>
+        <p class="dropcap">Une IA ne lit pas dans vos pensées. Face à une demande vague, elle comble les trous avec la réponse la plus <em>moyenne</em> possible : un texte qui conviendrait à n’importe qui, donc à personne. Chaque information que vous ajoutez réduit cette part de « moyenne ».</p>
+        <p>La règle d’or : <span class="marker">écrivez comme si vous briefiez un collègue compétent qui ne connaît rien au dossier</span>. Si un humain aurait besoin d’une information pour bien faire le travail, l’IA aussi.</p>
+
+        <h2 id="memoire"><span class="num">07.2</span>Ce que la mémoire change (et ne change pas)</h2>
+        <p>Si vous avez réglé votre profil et la mémoire (module 06), l’IA sait déjà <strong>qui vous êtes</strong> et <strong>comment vous écrivez</strong>. Vous n’avez plus à le répéter. Mais elle ne sait pas, à chaque nouvelle demande :</p>
+        <ul>
+          <li><strong>la situation</strong> précise : ce qui s’est passé, l’enjeu, le délai ;</li>
+          <li><strong>le destinataire</strong> de ce texte-là : un client fâché, un bailleur, un directeur, un agent des impôts ;</li>
+          <li><strong>le résultat attendu</strong> : longueur, forme, ce qui doit absolument y figurer ;</li>
+          <li><strong>la matière</strong> : les faits, les chiffres, le document de départ.</li>
+        </ul>
+        <p>C’est ce qu’il faut toujours lui donner. La mémoire vous fait gagner les deux premières lignes du brief, pas le reste.</p>
+
+        <h2 id="craft"><span class="num">07.3</span>La méthode C.R.A.F.T.</h2>
+        <p>Cinq ingrédients. Tous ne sont pas obligatoires à chaque fois : plus la tâche compte, plus vous les utilisez.</p>
+        <div class="not-prose grid sm:grid-cols-5 gap-px bg-line border border-line rounded-xl overflow-hidden text-sm">
+          <div class="bg-card p-4"><p class="font-display text-4xl text-accent">C</p><p class="font-semibold mt-2">Contexte</p><p class="text-ink-soft mt-1">La situation, l’enjeu, le destinataire, ce qui s’est passé avant.</p></div>
+          <div class="bg-card p-4"><p class="font-display text-4xl text-accent">R</p><p class="font-semibold mt-2">Rôle</p><p class="text-ink-soft mt-1">L’expertise que l’IA doit mobiliser.</p></div>
+          <div class="bg-card p-4"><p class="font-display text-4xl text-accent">A</p><p class="font-semibold mt-2">Action</p><p class="text-ink-soft mt-1">La tâche précise, avec un verbe clair.</p></div>
+          <div class="bg-card p-4"><p class="font-display text-4xl text-accent">F</p><p class="font-semibold mt-2">Format</p><p class="text-ink-soft mt-1">Longueur, structure, type de document.</p></div>
+          <div class="bg-card p-4"><p class="font-display text-4xl text-accent">T</p><p class="font-semibold mt-2">Ton</p><p class="text-ink-soft mt-1">Le registre, et ce qu’il faut éviter.</p></div>
+        </div>
+        <p>Assemblé, cela donne :</p>
+        <div class="prompt-block" data-label="Exemple complet · rapport pour un bailleur">
+          <p class="prompt-text">[C] Je suis responsable de programme dans une ONG de santé communautaire à Parakou. Notre bailleur attend le rapport du 3e trimestre. Les activités ont pris du retard à cause des pluies (routes impraticables pendant 3 semaines), mais nous avons dépassé l’objectif de sensibilisation. Voici mes notes : <span class="var">[coller les notes et les chiffres]</span>.
+[R] Agis comme un spécialiste de la rédaction de rapports pour les bailleurs internationaux.
+[A] Rédige la partie « Avancement et écarts » du rapport : ce qui a été réalisé, ce qui a pris du retard et pourquoi, et les mesures prévues pour rattraper.
+[F] 400 mots maximum, avec un petit tableau « prévu / réalisé / écart » pour les 4 indicateurs.
+[T] Factuel et transparent : on ne cache pas le retard, on montre qu’il est maîtrisé. Pas de superlatifs.</p>
+        </div>
+
+        <h2 id="constructeur"><span class="num">07.4</span>Constructeur de demande</h2>
+        <p>Remplissez les champs : votre demande s’assemble en direct. Copiez-la ensuite dans l’IA de votre choix.</p>
+        <form id="prompt-builder" class="not-prose bg-card border border-line rounded-2xl overflow-hidden" onsubmit="return false">
+          <div class="grid md:grid-cols-2">
+            <div class="p-6 space-y-4 md:border-r border-line">
+              <label class="block"><span class="kicker"><b>C</b> · Contexte</span><textarea name="c" rows="3" class="mt-1.5 w-full rounded-lg border border-line bg-paper p-3 text-sm focus:outline-none focus:border-accent" placeholder="La situation, l’enjeu, pour qui est le résultat ?"></textarea></label>
+              <label class="block"><span class="kicker"><b>R</b> · Rôle</span><input name="r" class="mt-1.5 w-full rounded-lg border border-line bg-paper p-3 text-sm focus:outline-none focus:border-accent" placeholder="ex. un comptable expérimenté, un formateur…"></label>
+              <label class="block"><span class="kicker"><b>A</b> · Action</span><textarea name="a" rows="2" class="mt-1.5 w-full rounded-lg border border-line bg-paper p-3 text-sm focus:outline-none focus:border-accent" placeholder="Que doit-elle produire, exactement ?"></textarea></label>
+              <label class="block"><span class="kicker"><b>F</b> · Format</span><input name="f" class="mt-1.5 w-full rounded-lg border border-line bg-paper p-3 text-sm focus:outline-none focus:border-accent" placeholder="ex. tableau 3 colonnes, mail de 150 mots…"></label>
+              <label class="block"><span class="kicker"><b>T</b> · Ton</span><input name="t" class="mt-1.5 w-full rounded-lg border border-line bg-paper p-3 text-sm focus:outline-none focus:border-accent" placeholder="ex. courtois et ferme, sans jargon"></label>
+              <label class="flex items-start gap-3 text-sm pt-1"><input type="checkbox" name="q" class="mt-1 accent-[rgb(var(--accent))]"> <span>Ajouter « Pose-moi d’abord tes questions si des informations manquent »</span></label>
+              <label class="flex items-start gap-3 text-sm"><input type="checkbox" name="v" class="mt-1 accent-[rgb(var(--accent))]"> <span>Ajouter la consigne anti-erreurs (« dis-le si tu n’es pas sûr »)</span></label>
+            </div>
+            <div class="p-6 bg-paper-2/60 flex flex-col">
+              <div class="flex items-center justify-between">
+                <span class="kicker">Votre demande</span>
+                <span class="font-mono text-xs text-ink-soft" data-builder-score></span>
+              </div>
+              <pre data-builder-out class="mt-3 flex-1 whitespace-pre-wrap font-mono text-[.82rem] leading-relaxed text-ink/85 min-h-[16rem]"></pre>
+              <button type="button" data-builder-copy class="copy-btn self-start mt-4">Copier le prompt</button>
+            </div>
+          </div>
+        </form>
+
+        <h2 id="matiere"><span class="num">07.5</span>La matière vaut mieux que les adjectifs</h2>
+        <p>« Un rapport professionnel et convaincant » ne dit presque rien à l’IA. Un vrai document de départ dit tout. Avant d’écrire de longues consignes, demandez-vous ce que vous pouvez lui <strong>donner</strong> :</p>
+        <ul>
+          <li><strong>Le document source</strong> : le contrat, l’appel d’offres, le compte rendu, le fichier Excel ;</li>
+          <li><strong>Un exemple réussi</strong> : un ancien rapport que votre directeur a aimé, un mail qui a bien marché ;</li>
+          <li><strong>Les faits bruts</strong> : vos notes en vrac suffisent, l’IA sait les mettre en ordre ;</li>
+          <li><strong>Une photo</strong> : un tableau au mur, un document papier, un reçu. Les IA lisent très bien les photos prises au téléphone.</li>
+        </ul>
+        <div class="callout callout-tip"><span class="callout-tag">Astuce</span>
+          <div><p>Pas à l’aise pour taper de longs textes ? <strong>Dictez.</strong> Les trois IA acceptent la voix sur téléphone : racontez la situation pendant deux minutes comme à un collègue, puis demandez « Fais-en une demande claire et exécute-la ». C’est souvent plus complet qu’un texte tapé.</p></div>
+        </div>
+
+        <h2 id="avant-apres"><span class="num">07.6</span>Avant / après : quatre exemples</h2>
+        <div class="not-prose space-y-4">
+          <div class="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+            <div class="bg-card p-5"><p class="kicker text-accent">Avant</p><p class="mt-2 font-mono text-sm">Fais-moi un post Facebook pour ma boutique.</p><p class="mt-3 text-sm text-ink-soft">Résultat : un texte enthousiaste et générique, plein d’emojis, qui pourrait venir de n’importe quelle boutique.</p></div>
+            <div class="bg-card p-5"><p class="kicker text-chatgpt">Après</p><p class="mt-2 font-mono text-sm">Je tiens une boutique de pagnes et de tissus wax au marché Dantokpa. Je reçois samedi un nouvel arrivage de pagnes pour les fêtes de fin d’année. Écris un post Facebook de 80 mots qui donne envie de passer avant que les beaux modèles partent, avec l’adresse et le numéro WhatsApp <span class="text-accent">[numéro]</span>. Ton chaleureux, 2 emojis maximum.</p></div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+            <div class="bg-card p-5"><p class="kicker text-accent">Avant</p><p class="mt-2 font-mono text-sm">Résume ce document.</p><p class="mt-3 text-sm text-ink-soft">Résultat : un résumé neutre et plat, qui ne répond pas à votre vraie question.</p></div>
+            <div class="bg-card p-5"><p class="kicker text-chatgpt">Après</p><p class="mt-2 font-mono text-sm">Je dois décider demain si nous répondons à cet appel d’offres. Extrais : l’objet, le budget, les critères de notation et leur poids, les pièces éliminatoires, la date limite de dépôt, et les 3 points qui nous seraient défavorables. Format : tableau, puis un avis « on y va / on n’y va pas » en 5 lignes.</p></div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+            <div class="bg-card p-5"><p class="kicker text-accent">Avant</p><p class="mt-2 font-mono text-sm">Donne-moi des idées pour garder mes clients.</p><p class="mt-3 text-sm text-ink-soft">Résultat : 10 idées banales (carte de fidélité, réseaux sociaux…).</p></div>
+            <div class="bg-card p-5"><p class="kicker text-chatgpt">Après</p><p class="mt-2 font-mono text-sm">Cabinet comptable à Cotonou, 120 clients TPE et commerçants. Nous en perdons environ 15 par an, surtout au moment des déclarations annuelles. Budget : 500 000 FCFA par an, équipe de 5. Propose 8 actions concrètes classées par impact et effort, dont 3 gratuites. Pour chacune : l’objectif, comment faire en 3 étapes, comment mesurer.</p></div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+            <div class="bg-card p-5"><p class="kicker text-accent">Avant</p><p class="mt-2 font-mono text-sm">Corrige ce mail.</p><p class="mt-3 text-sm text-ink-soft">Résultat : le mail est réécrit en entier, avec un ton qui n’est plus le vôtre.</p></div>
+            <div class="bg-card p-5"><p class="kicker text-chatgpt">Après</p><p class="mt-2 font-mono text-sm">Corrige uniquement l’orthographe, la grammaire et la ponctuation de ce mail. Ne change ni le ton, ni la structure, ni le vocabulaire. Ensuite, propose séparément 2 améliorations de fond facultatives.</p></div>
+          </div>
+        </div>
+
+        <h2 id="techniques"><span class="num">07.7</span>Six techniques qui changent tout</h2>
+        <h3>1. Faire poser les questions d’abord</h3>
+        <p>Sur une tâche complexe, c’est la technique la plus rentable : l’IA identifie ce qu’il lui manque au lieu de l’inventer.</p>
+        <div class="prompt-block" data-label="Prompt · questions d’abord">
+          <p class="prompt-text">Je veux construire <span class="var">[le plan de formation annuel de mon équipe commerciale]</span>.
+Avant de proposer quoi que ce soit, pose-moi les 5 à 8 questions dont tu as besoin pour faire un travail vraiment adapté. Attends mes réponses.</p>
+        </div>
+        <h3>2. Montrer plutôt que décrire</h3>
+        <p>Deux exemples valent mieux qu’un long paragraphe sur le style attendu. L’IA en imite le ton, la longueur et la structure.</p>
+        <h3>3. Découper en étapes</h3>
+        <p>D’abord le plan, vous validez, puis le développement partie par partie. Vous gardez le contrôle et la qualité monte nettement.</p>
+        <h3>4. Demander de réfléchir avant de répondre</h3>
+        <p>Pour un calcul, une décision ou un problème à plusieurs étapes, activez le mode réflexion (<em>Thinking</em>, réflexion étendue) ou écrivez « Analyse d’abord le problème étape par étape, puis donne ta recommandation ».</p>
+        <h3>5. Faire critiquer, puis améliorer</h3>
+        <div class="prompt-block" data-label="Prompt · autocritique">
+          <p class="prompt-text">Relis ta réponse comme le ferait <span class="var">[un directeur financier sceptique]</span>. Liste ses 3 principales faiblesses, puis réécris une version qui les corrige.</p>
+        </div>
+        <h3>6. Faire écrire la demande par l’IA</h3>
+        <p>Pour une tâche récurrente : « Voici ce que je veux obtenir chaque mois. Rédige la demande idéale que je pourrai réutiliser. » Testez-la, ajustez-la, puis enregistrez-la dans un Projet, un GPT ou un Gem.</p>
+
+        <h2 id="iterer"><span class="num">07.8</span>Itérer : deux retours précis valent dix nouvelles tentatives</h2>
+        <p>Le premier jet est rarement parfait. Ne recommencez pas de zéro : restez dans la même conversation et dites <strong>exactement</strong> ce qui ne va pas.</p>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Retour flou</th><th>Retour précis</th></tr></thead>
+            <tbody>
+              <tr><td>« Pas terrible. »</td><td>« Trop long de moitié, et le 2e paragraphe répète le premier. »</td></tr>
+              <tr><td>« Fais mieux. »</td><td>« Le ton est trop familier pour un directeur général. Vouvoie et retire les points d’exclamation. »</td></tr>
+              <tr><td>« Ajoute des choses. »</td><td>« Ajoute un chiffre concret dans l’accroche : nous avons livré 340 commandes en septembre. »</td></tr>
+              <tr><td>« C’est faux. »</td><td>« Le taux de TVA est de 18 %, corrige le calcul de la ligne 3 et refais le total. »</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="erreurs"><span class="num">07.9</span>Les 6 erreurs les plus fréquentes</h2>
+        <ol>
+          <li><strong>La demande télégraphique</strong> : « mail relance client ». L’IA invente tout le reste.</li>
+          <li><strong>Tout demander d’un coup</strong> : 12 consignes dans un seul message, dont la moitié sera oubliée.</li>
+          <li><strong>Ne pas fournir la matière</strong> : demander une synthèse sans joindre le document, ou un courrier sans les faits.</li>
+          <li><strong>Oublier le destinataire</strong> : un texte pour un directeur et pour un client ne s’écrit pas pareil.</li>
+          <li><strong>Accepter le premier jet</strong> : la vraie qualité arrive à la 2e ou 3e itération.</li>
+          <li><strong>Des conversations interminables</strong> : au-delà d’un certain volume, l’IA perd le fil. Repartez d’une nouvelle conversation avec un résumé.</li>
+        </ol>
+
+        <h2 id="exercices"><span class="num">07.10</span>Exercices</h2>
+
+        <div class="exercise" data-exercise="briefer-1">
+          <p class="kicker"><b>Exercice 07.1</b> · 15 min · papier ou constructeur ci-dessus</p>
+          <p class="exercise-title">Réparez ces trois demandes.</p>
+          <p>Chacune donnera un résultat médiocre. Réécrivez-les avec la méthode C.R.A.F.T., en inventant les détails plausibles qui manquent, puis testez-en au moins une dans votre IA.</p>
+          <ol>
+            <li>« Écris une lettre de relance pour un client qui ne paie pas. »</li>
+            <li>« Fais un planning pour mon équipe. »</li>
+            <li>« Explique-moi la TVA. »</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation · chacune de mes demandes réécrites…</p>
+            <label><input type="checkbox"><span>…précise la situation et le destinataire.</span></label>
+            <label><input type="checkbox"><span>…contient les faits nécessaires (montant, dates, nombre de personnes…).</span></label>
+            <label><input type="checkbox"><span>…indique le format attendu (longueur, structure).</span></label>
+            <label><input type="checkbox"><span>…précise le ton ou ce qu’il faut éviter.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+          <details class="answer"><summary>Voir une correction possible</summary>
+            <div>
+              <p><strong>1.</strong> « Je suis gérant d’une entreprise de fournitures de bureau à Cotonou. Le client <em>[Société X]</em> nous doit 1 450 000 FCFA pour une livraison du 15 août, échue depuis 45 jours, malgré deux relances par téléphone. Rédige une lettre de relance ferme mais courtoise, d’une page : rappel de la facture et de l’échéance, demande de paiement sous 8 jours, proposition d’un échéancier si besoin, mention des suites possibles sans menace. Nous voulons garder ce client. »</p>
+              <p><strong>2.</strong> « J’encadre 6 agents d’accueil dans une clinique, ouverte de 7 h à 21 h, 6 jours sur 7. Il faut toujours 2 personnes en même temps, et chacun travaille 40 heures par semaine. Propose un planning hebdomadaire sous forme de tableau, équitable sur les week-ends. Signale s’il y a un problème de couverture. »</p>
+              <p><strong>3.</strong> « Je viens de créer une petite entreprise de couture à Porto-Novo. Explique-moi en 10 lignes, sans jargon, ce qu’est la TVA, si je suis concerné et ce que je dois vérifier auprès des impôts. Signale ce qui dépend de mon régime fiscal et que je dois confirmer auprès de la DGI ou d’un comptable. »</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="exercise mt-8" data-exercise="briefer-2">
+          <p class="kicker"><b>Exercice 07.2</b> · 15 min · dans votre IA</p>
+          <p class="exercise-title">Du premier jet au texte prêt à envoyer, en trois relances.</p>
+          <ol>
+            <li>Choisissez un vrai texte à écrire cette semaine (mail, note, annonce).</li>
+            <li>Faites une première demande complète avec C.R.A.F.T.</li>
+            <li>Relisez et notez les trois défauts principaux. Corrigez-les par trois relances précises, une à la fois.</li>
+            <li>Comparez la première et la dernière version.</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation</p>
+            <label><input type="checkbox"><span>Mes relances disaient précisément ce qui n’allait pas (pas « fais mieux »).</span></label>
+            <label><input type="checkbox"><span>Je suis resté dans la même conversation.</span></label>
+            <label><input type="checkbox"><span>La version finale est envoyable avec moins de 2 minutes de retouche.</span></label>
+            <label><input type="checkbox"><span>J’ai noté la demande finale pour la réutiliser.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+        </div>
+
+        <h2 id="bibliotheque"><span class="num">07.11</span>Construire sa bibliothèque de demandes</h2>
+        <p>Les professionnels les plus efficaces ont une vingtaine de demandes éprouvées, toujours sous la main :</p>
+        <ul>
+          <li>Un document (Word, Google Docs, ou même une note de téléphone) avec une demande par usage, et les <strong>[zones à remplacer]</strong> bien visibles ;</li>
+          <li>Les plus utilisées transformées en Projets, GPTs ou Gems ;</li>
+          <li>Une version partagée avec les collègues, enrichie au fil des retours.</li>
+        </ul>
+        <p>Le module 10 vous donne une base de départ : 24 demandes métier, prêtes à adapter.</p>
+
+        <h2 id="quiz"><span class="num">07.12</span>Vérifiez vos acquis</h2>
+        <div data-quiz="briefer"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

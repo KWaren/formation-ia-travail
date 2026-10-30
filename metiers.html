@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cas pratiques par métier : 24 situations de travail — Formation Atelier IA</title>
+  <meta name="description" content="Commercial, comptabilité, RH, administration, enseignement, ONG, communication, entrepreneurs : 24 cas concrets d’usage de l’IA au travail, avec la demande à copier et le piège à éviter.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="metiers" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 10</b> · Pratique</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">Votre métier,<br><em class="text-accent">augmenté</em>.</h1>
+        <p class="lede mt-8 max-w-3xl">Vingt-quatre situations de travail réelles, réparties sur huit métiers. Pour chacune : la famille d’usage, les IA les mieux adaptées, la demande à copier et le piège à éviter. Remplacez les <span class="marker">zones colorées</span> par vos informations.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">30 min</dd></div>
+        <div><dt class="kicker">Métiers</dt><dd class="font-display text-2xl">8</dd></div>
+        <div><dt class="kicker">Demandes</dt><dd class="font-display text-2xl">24</dd></div>
+      </dl>
+    </header>
+
+    <nav class="py-8 border-b border-line" aria-label="Accès rapide aux métiers">
+      <p class="kicker mb-4">Aller directement à</p>
+      <div class="flex flex-wrap gap-2">
+        <a href="#commercial" class="tab-btn">Commercial</a>
+        <a href="#finance" class="tab-btn">Comptabilité &amp; finance</a>
+        <a href="#rh" class="tab-btn">Ressources humaines</a>
+        <a href="#administration" class="tab-btn">Administration</a>
+        <a href="#enseignement" class="tab-btn">Enseignement</a>
+        <a href="#ong" class="tab-btn">ONG &amp; projets</a>
+        <a href="#communication" class="tab-btn">Communication</a>
+        <a href="#entrepreneurs" class="tab-btn">Entrepreneurs</a>
+      </div>
+    </nav>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Comment utiliser ce module</span>
+          <div><p>Lisez d’abord votre métier, puis un ou deux métiers voisins : beaucoup de demandes se transposent. Pour chaque cas, repérez la <strong>famille d’usage</strong> (module 09) : c’est elle qui vous dit quelle méthode appliquer et quoi vérifier. Les IA citées sont des suggestions : toutes savent faire l’essentiel.</p></div>
+        </div>
+
+        <!-- ============ COMMERCIAL ============ -->
+        <h2 id="commercial" data-toc="Commercial"><span class="num">10.1</span>Commercial et vente</h2>
+
+        <h3>Préparer un rendez-vous client</h3>
+        <p><span class="tag">4 · Rechercher</span> <span class="tag"><span class="ai-dot bg-gemini"></span>Gemini</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span></p>
+        <div class="prompt-block" data-label="Demande · préparation de rendez-vous">
+          <p class="prompt-text">Je rencontre <span class="var">[le responsable des achats de l’entreprise X, à Cotonou]</span> jeudi pour présenter <span class="var">[nos services de maintenance informatique]</span>.
+Cherche sur le web : activité de l’entreprise, actualité des 12 derniers mois, projets annoncés, dirigeants.
+Fais-moi une fiche d’une page : ce qu’il faut savoir, 5 questions intelligentes à poser, 3 objections probables et comment y répondre.
+Cite tes sources et dis clairement ce que tu n’as pas trouvé.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> beaucoup d’entreprises locales sont peu présentes en ligne. Si l’IA « trouve » des chiffres précis sans source, ils sont probablement inventés. Complétez avec votre réseau.</p>
+
+        <h3>Relancer un devis resté sans réponse</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · relance">
+          <p class="prompt-text">J’ai envoyé il y a 12 jours un devis de <span class="var">[2 800 000 FCFA]</span> à <span class="var">[une clinique privée]</span> pour <span class="var">[l’équipement de son nouveau laboratoire]</span>. Pas de réponse malgré un appel.
+Rédige deux versions de relance :
+1. un message WhatsApp de 40 mots maximum, courtois et direct ;
+2. un mail de 100 mots qui rappelle la valeur de l’offre, propose un échange de 15 minutes et donne une raison d’agir maintenant <span class="var">[prix garanti jusqu’à fin novembre]</span>.
+Pas de pression excessive, pas de formules toutes faites.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> laisser l’IA inventer une « offre limitée » ou une remise que vous n’avez pas décidée.</p>
+
+        <h3>S’entraîner aux objections</h3>
+        <p><span class="tag">6 · S’entraîner</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT en mode vocal</span> <span class="tag"><span class="ai-dot bg-gemini"></span>Gemini Live</span></p>
+        <div class="prompt-block" data-label="Demande · jeu de rôle">
+          <p class="prompt-text">Joue un client <span class="var">[gérant de quincaillerie à Parakou]</span> qui trouve notre <span class="var">[ciment]</span> 8 % plus cher que la concurrence.
+Oppose-moi une objection à la fois et attends ma réponse. Sois réaliste : parle de prix, de délais de livraison, de crédit fournisseur.
+Après 6 échanges, sors du rôle : mes bons arguments, mes faiblesses, et 2 phrases que j’aurais dû dire.</p>
+        </div>
+
+        <!-- ============ FINANCE ============ -->
+        <h2 id="finance" data-toc="Comptabilité & finance"><span class="num">10.2</span>Comptabilité et finance</h2>
+
+        <h3>Analyser les écarts budget / réalisé</h3>
+        <p><span class="tag">3 · Analyser</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · écarts budgétaires">
+          <p class="prompt-text">Voici le fichier budget / réalisé du <span class="var">[3e trimestre]</span> par rubrique, en FCFA.
+1. Calcule les écarts en valeur et en pourcentage, et repère ceux qui dépassent ±10 % et <span class="var">[500 000 FCFA]</span>.
+2. Classe-les par impact sur le résultat.
+3. Pour chaque écart important, propose des explications possibles à vérifier (volume, prix, calendrier, dépense exceptionnelle).
+4. Fais un graphique simple.
+Montre tes calculs pour que je puisse les vérifier.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> présenter les « explications possibles » comme des faits. Ce sont des pistes, à confirmer avec les services concernés.</p>
+
+        <h3>Écrire une formule Excel de suivi des créances</h3>
+        <p><span class="tag">3 · Analyser</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · formule Excel">
+          <p class="prompt-text">Dans Excel, j’ai en colonne A les numéros de facture, en B le client, en C la date de facture, en D le montant TTC en FCFA et en E le statut (payée / en attente).
+Je veux en colonne F le nombre de jours de retard si la facture est en attente et que l’échéance (date de facture + 60 jours) est dépassée, sinon une cellule vide.
+Donne la formule, explique-la en 3 lignes simples, et propose une mise en forme conditionnelle par tranche de retard (0-30, 31-90, plus de 90 jours).</p>
+        </div>
+
+        <h3>Expliquer les états financiers à un dirigeant</h3>
+        <p><span class="tag">2 · Synthétiser</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · commentaire de gestion">
+          <p class="prompt-text">Voici le bilan et le compte de résultat de l’exercice, établis selon le SYSCOHADA <span class="var">[fichiers joints, anonymisés]</span>, et ceux de l’an dernier.
+Rédige pour le gérant, qui n’est pas comptable, une note d’une page : 3 messages clés, l’évolution de l’activité, de la rentabilité et de la trésorerie, puis 3 points d’attention.
+Phrases simples, aucun chiffre absent des documents, et explique chaque terme technique entre parenthèses.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> les IA connaissent surtout le plan comptable français. Pour toute question de traitement comptable ou fiscal, vérifiez dans le référentiel SYSCOHADA et le Code général des impôts en vigueur.</p>
+
+        <!-- ============ RH ============ -->
+        <h2 id="rh" data-toc="Ressources humaines"><span class="num">10.3</span>Ressources humaines</h2>
+
+        <h3>Rédiger une offre d’emploi qui attire les bons profils</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span></p>
+        <div class="prompt-block" data-label="Demande · offre d’emploi">
+          <p class="prompt-text">Rédige une offre d’emploi pour un poste de <span class="var">[comptable junior]</span> chez <span class="var">[entreprise, secteur, taille, ville]</span>.
+Informations : <span class="var">[missions, profil, diplôme, salaire ou fourchette, avantages]</span>.
+Commence par ce qui rend ce poste intéressant. Indique clairement les pièces à envoyer, la date limite et l’adresse de dépôt.
+Langage neutre, aucune exigence discriminante (âge, ethnie, religion, situation familiale). 300 mots maximum, puis 3 titres alternatifs.</p>
+        </div>
+
+        <h3>Construire une grille d’entretien</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · grille d’entretien">
+          <p class="prompt-text">Pour le poste de <span class="var">[chef d’équipe logistique]</span>, les 4 compétences clés sont : <span class="var">[liste]</span>.
+Construis une grille d’entretien : pour chaque compétence, 2 questions sur des situations vécues (« Racontez-moi une fois où… »), les signes d’une bonne et d’une mauvaise réponse, et une note de 1 à 4 avec la description de chaque niveau.
+Ajoute 3 questions que le candidat pourrait nous poser, et les réponses à préparer.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> coller des CV nominatifs dans une IA grand public, ou lui faire trier les candidats. L’IA prépare le recrutement ; ce sont des personnes qui décident.</p>
+
+        <h3>Créer un assistant d’accueil des nouveaux employés</h3>
+        <p><span class="tag">2 · Synthétiser</span> <span class="tag"><span class="ai-dot bg-gemini"></span>NotebookLM</span> <span class="tag"><span class="ai-dot bg-claude"></span>Projet Claude</span></p>
+        <p>Déposez le règlement intérieur, l’organigramme, les procédures et la foire aux questions dans un notebook ou un Projet. Les nouveaux arrivants posent leurs questions et chaque réponse cite le document source. Consigne à ajouter :</p>
+        <div class="prompt-block" data-label="Consigne · assistant d’accueil">
+          <p class="prompt-text">Tu es l’assistant d’accueil des nouveaux collaborateurs de <span class="var">[entreprise]</span>.
+Réponds uniquement à partir des documents fournis. Si la réponse n’y figure pas, oriente vers <span class="var">[le service RH, poste 204]</span>.
+Ton chaleureux et simple. Termine chaque réponse par le document utilisé.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> pour toute question de droit du travail (congés, préavis, licenciement), l’IA doit renvoyer au Code du travail et aux RH, pas répondre de mémoire.</p>
+
+        <!-- ============ ADMINISTRATION ============ -->
+        <h2 id="administration" data-toc="Administration"><span class="num">10.4</span>Administration et secrétariat</h2>
+
+        <h3>Rédiger un courrier administratif officiel</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · courrier officiel">
+          <p class="prompt-text">Rédige un courrier officiel de <span class="var">[notre société]</span> adressé à <span class="var">[Monsieur le Maire de la commune de Ouidah]</span> pour <span class="var">[demander l’autorisation d’occuper la voie publique le 22 novembre pour un événement de lancement]</span>.
+Éléments : <span class="var">[date, horaires, lieu exact, nombre de personnes, mesures de sécurité prévues]</span>.
+Respecte la présentation d’un courrier administratif officiel : expéditeur, destinataire, objet, références, formule d’appel, corps, formule de politesse, signature.
+Ton respectueux et précis, une page maximum.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> l’IA peut inventer des références de textes (« conformément à l’arrêté n°… »). Ne gardez que celles que vous avez vérifiées.</p>
+
+        <h3>Transformer des notes en compte rendu</h3>
+        <p><span class="tag">2 · Synthétiser</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span> <span class="tag"><span class="ai-dot bg-gemini"></span>Gemini dans Meet</span></p>
+        <div class="prompt-block" data-label="Demande · compte rendu">
+          <p class="prompt-text">Voici mes notes brutes de la réunion de <span class="var">[ce matin]</span> : <span class="var">[coller les notes, ou la transcription]</span>.
+Rédige le compte rendu : participants, points abordés, décisions prises, actions (qui, quoi, pour quand), points restés en suspens.
+Ne transforme jamais une discussion en décision. Si quelque chose n’est pas clair dans mes notes, signale-le au lieu de deviner.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> enregistrer une réunion sans prévenir les participants. Annoncez-le toujours au début.</p>
+
+        <h3>Classer et renommer des documents scannés</h3>
+        <p><span class="tag">7 · Déléguer</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude Cowork</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT Work</span></p>
+        <div class="prompt-block" data-label="Demande · agent sur un dossier">
+          <p class="prompt-text">Dans le dossier <span class="var">[Scans-courrier-octobre]</span>, il y a environ 80 courriers scannés en PDF.
+Lis chaque document et propose : un nom de fichier au format AAAA-MM-JJ_expéditeur_objet, et un classement en sous-dossiers (factures, administrations, clients, fournisseurs, divers).
+Montre-moi d’abord le tableau des noms et du classement proposés. N’effectue aucun déplacement avant mon accord, et ne supprime rien.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> donner à l’agent accès à tout l’ordinateur. Un seul dossier, et une copie de sauvegarde avant.</p>
+
+        <!-- ============ ENSEIGNEMENT ============ -->
+        <h2 id="enseignement" data-toc="Enseignement"><span class="num">10.5</span>Enseignement et formation</h2>
+
+        <h3>Préparer une séquence de cours</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span></p>
+        <div class="prompt-block" data-label="Demande · séquence pédagogique">
+          <p class="prompt-text">J’enseigne <span class="var">[les SVT en classe de 4e]</span> dans un collège de <span class="var">[Lokossa]</span>, avec des classes de <span class="var">[60 élèves]</span> et peu de matériel.
+Voici l’extrait du programme officiel concerné : <span class="var">[coller l’extrait]</span>.
+Propose une séquence de 3 séances de 55 minutes : objectifs, déroulé minute par minute, activités réalisables sans matériel coûteux, exemples tirés de la vie quotidienne de mes élèves, et une évaluation de fin de séquence.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> ne pas fournir le programme officiel. Sans lui, l’IA s’aligne sur des programmes étrangers.</p>
+
+        <h3>Créer des exercices de niveaux différents</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · exercices différenciés">
+          <p class="prompt-text">À partir de cette leçon sur <span class="var">[les pourcentages]</span>, crée 3 séries de 5 exercices : une pour les élèves en difficulté, une pour le niveau moyen, une pour les plus avancés.
+Utilise des situations locales (marché, prix en FCFA, transport, récoltes). Donne le corrigé détaillé à part.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> distribuer sans refaire les calculs du corrigé. Les erreurs de calcul existent encore.</p>
+
+        <h3>Se former soi-même avec un tuteur</h3>
+        <p><span class="tag">6 · Apprendre</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · tuteur personnel">
+          <p class="prompt-text">Je veux apprendre <span class="var">[à utiliser les tableaux croisés dynamiques dans Excel]</span>. Mon niveau : <span class="var">[je sais faire des sommes et des filtres]</span>.
+Sois mon tuteur : explique une notion à la fois avec un exemple concret, puis donne-moi un petit exercice et attends ma réponse avant de continuer.
+Si je me trompe, explique pourquoi sans donner directement la solution.</p>
+        </div>
+
+        <!-- ============ ONG ============ -->
+        <h2 id="ong" data-toc="ONG & projets"><span class="num">10.6</span>ONG et gestion de projet</h2>
+
+        <h3>Rédiger une note conceptuelle pour un appel à projets</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · note conceptuelle">
+          <p class="prompt-text">Voici l’appel à projets de <span class="var">[bailleur]</span> <span class="var">[document joint]</span> et nos notes sur le projet envisagé : <span class="var">[problème, zone, bénéficiaires, activités, budget estimé]</span>.
+1. Liste d’abord les critères d’éligibilité et d’évaluation de l’appel, et dis-moi si notre projet les remplit.
+2. Rédige ensuite la note conceptuelle en suivant exactement la structure demandée par le bailleur, dans la limite de pages indiquée.
+Ne jamais inventer de chiffres : écris [DONNÉE À COMPLÉTER] quand une information manque.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> les bailleurs repèrent les textes génériques. Ajoutez vos données de terrain, vos partenaires locaux et vos résultats passés.</p>
+
+        <h3>Construire un cadre logique et des indicateurs</h3>
+        <p><span class="tag">3 · Analyser</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span></p>
+        <div class="prompt-block" data-label="Demande · cadre logique">
+          <p class="prompt-text">Pour le projet <span class="var">[d’amélioration de l’accès à l’eau potable dans 12 villages de la commune de Djidja]</span>, propose un cadre logique sous forme de tableau : objectif général, objectifs spécifiques, résultats attendus, activités.
+Pour chaque résultat : 2 indicateurs mesurables, la valeur de départ à collecter, la cible, la source de vérification et les hypothèses.
+Signale les indicateurs difficiles à mesurer sur le terrain.</p>
+        </div>
+
+        <h3>Rédiger un rapport d’activité à partir des données de terrain</h3>
+        <p><span class="tag">2 · Synthétiser</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · rapport d’activité">
+          <p class="prompt-text">Voici le fichier de suivi des activités du trimestre <span class="var">[Excel joint]</span> et les rapports des animateurs <span class="var">[notes jointes]</span>.
+Calcule les taux de réalisation par indicateur, puis rédige le rapport trimestriel selon le modèle du bailleur <span class="var">[modèle joint]</span> : réalisations, écarts et leurs causes, leçons apprises, prochaines étapes.
+Ton factuel. Chaque chiffre doit venir du fichier : montre d’où il vient.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> partager des données sur les bénéficiaires (noms, santé, situation) dans un compte grand public. Travaillez sur des données agrégées.</p>
+
+        <!-- ============ COMMUNICATION ============ -->
+        <h2 id="communication" data-toc="Communication"><span class="num">10.7</span>Communication et marketing</h2>
+
+        <h3>Construire un calendrier de publications</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · calendrier éditorial">
+          <p class="prompt-text">Structure : <span class="var">[centre de formation professionnelle à Cotonou, cible : jeunes de 18 à 30 ans et leurs parents]</span>. Objectif du trimestre : <span class="var">[80 inscriptions pour la rentrée de janvier]</span>.
+Temps forts : <span class="var">[journée portes ouvertes le 15 novembre, résultats d’examens en décembre]</span>.
+Construis un calendrier de 12 semaines pour Facebook, Instagram et le statut WhatsApp : sujet, format (visuel, vidéo courte, témoignage), objectif, appel à l’action.
+Tableau. Équilibre : 50 % conseils utiles, 30 % preuves (réussites d’anciens), 20 % coulisses.</p>
+        </div>
+
+        <h3>Créer un visuel pour les réseaux sociaux</h3>
+        <p><span class="tag">5 · Créer</span> <span class="tag"><span class="ai-dot bg-chatgpt"></span>ChatGPT</span> <span class="tag"><span class="ai-dot bg-gemini"></span>Gemini</span></p>
+        <div class="prompt-block" data-label="Demande · visuel">
+          <p class="prompt-text">Crée un visuel carré pour Facebook annonçant <span class="var">[l’ouverture de notre nouvelle agence à Bohicon]</span>.
+Texte exact à afficher : « <span class="var">[Nouvelle agence · Bohicon · Ouverture le 3 novembre]</span> ».
+Style : moderne, lumineux, couleurs <span class="var">[bleu et blanc]</span>, avec une façade d’agence et des clients africains souriants.
+Aucun autre texte, pas d’effet 3D.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> publier sans relire chaque lettre du texte dans l’image, et présenter un lieu généré comme votre vraie agence.</p>
+
+        <h3>Répondre aux messages et aux avis clients</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · réponses types">
+          <p class="prompt-text">Voici les 10 questions et réclamations que nous recevons le plus souvent sur WhatsApp et Facebook : <span class="var">[liste]</span>.
+Rédige pour chacune une réponse type de 50 mots maximum, polie et chaleureuse, qui règle le problème ou indique la prochaine étape.
+Prévois aussi une réponse pour un avis négatif public : reconnaître, proposer une solution, passer en message privé.</p>
+        </div>
+
+        <!-- ============ ENTREPRENEURS ============ -->
+        <h2 id="entrepreneurs" data-toc="Entrepreneurs"><span class="num">10.8</span>Entrepreneurs et commerçants</h2>
+
+        <h3>Préparer un dossier de demande de financement</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag">3 · Analyser</span> <span class="tag"><span class="ai-dot bg-claude"></span>Claude</span></p>
+        <div class="prompt-block" data-label="Demande · plan d’affaires">
+          <p class="prompt-text">Je veux demander un crédit de <span class="var">[3 000 000 FCFA]</span> à <span class="var">[une institution de microfinance]</span> pour <span class="var">[acheter un second moulin à maïs et ouvrir un point de vente à Abomey]</span>.
+Voici mes chiffres : <span class="var">[ventes mensuelles, charges, nombre de clients, ancienneté]</span>.
+Pose-moi d’abord les questions qui te manquent. Puis rédige un plan d’affaires simple de 3 pages : présentation, marché, projet, prévisions sur 2 ans, capacité de remboursement mensuelle.
+Signale les points qui inquiéteront un agent de crédit et comment y répondre.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> gonfler les prévisions parce que l’IA les rend « présentables ». L’agent de crédit vérifiera, et vous devrez rembourser.</p>
+
+        <h3>Calculer son prix de revient et sa marge</h3>
+        <p><span class="tag">3 · Analyser</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · prix de revient">
+          <p class="prompt-text">Je fabrique <span class="var">[du savon artisanal]</span>. Pour un lot de <span class="var">[200 savons]</span>, j’achète : <span class="var">[liste des matières premières avec prix en FCFA]</span>. J’ai aussi <span class="var">[loyer de l’atelier, électricité, 2 employés payés X par mois]</span>, et je produis <span class="var">[4 lots par mois]</span>.
+Calcule le coût de revient d’un savon, en détaillant chaque étape du calcul. Puis indique le prix de vente pour une marge de 25 %, 35 % et 50 %, et le nombre de savons à vendre par mois pour couvrir toutes mes charges.</p>
+        </div>
+        <p class="text-[.95rem]"><strong>Piège à éviter :</strong> ne pas vérifier une ligne du calcul. Refaites au moins le coût d’un lot vous-même.</p>
+
+        <h3>Rédiger les descriptions de son catalogue</h3>
+        <p><span class="tag">1 · Rédiger</span> <span class="tag">5 · Créer</span> <span class="tag">Toutes les IA</span></p>
+        <div class="prompt-block" data-label="Demande · catalogue WhatsApp">
+          <p class="prompt-text">Voici la liste de mes produits avec leurs caractéristiques et prix : <span class="var">[liste]</span>.
+Pour chaque produit, rédige une description de 30 mots maximum pour mon catalogue WhatsApp Business : ce que c’est, à qui ça sert, le bénéfice principal, le prix en FCFA.
+Ton simple et chaleureux. Puis propose un message d’accueil automatique pour les nouveaux clients.</p>
+        </div>
+
+        <div class="callout callout-tip mt-12"><span class="callout-tag">Et maintenant</span>
+          <div><p>Choisissez 3 demandes de votre métier, testez-les cette semaine sur un vrai dossier, ajustez-les et enregistrez-les dans votre bibliothèque. Elles serviront de base à votre <a href="quiz.html#projet">projet final</a>.</p></div>
+        </div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

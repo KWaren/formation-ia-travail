@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude (Anthropic) au travail : guide complet, forces et limites — Atelier IA</title>
+  <meta name="description" content="Comment utiliser Claude au travail : Projets, Artifacts, Research, connecteurs, Claude Code. Cas d’usage professionnels, prompts prêts à l’emploi, forces, limites et offres.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="claude" class="bg-paper text-ink font-sans" style="--ai: var(--claude)">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-8">
+        <p class="kicker"><b>Module 02</b> · Anthropic</p>
+        <h1 class="font-display font-medium text-6xl sm:text-7xl lg:text-[7.5rem] leading-[.9] mt-5 text-claude">Claude</h1>
+        <p class="font-display italic-soft text-3xl lg:text-4xl mt-3">L’analyste et la plume.</p>
+        <p class="lede mt-8 max-w-2xl">Le collègue à qui l’on confie les documents difficiles, les textes qui doivent être justes et les raisonnements qui demandent de la rigueur. Moins tape-à-l’œil que ses concurrents, souvent plus fiable sur le fond.</p>
+      </div>
+      <aside class="lg:col-span-4 self-end">
+        <div class="bg-card border border-line rounded-2xl p-6">
+          <p class="kicker mb-4">Fiche d’identité</p>
+          <dl class="text-sm divide-y divide-line">
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Éditeur</dt><dd class="font-semibold text-right">Anthropic (États-Unis)</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Accès</dt><dd class="font-semibold text-right">claude.ai · bureau · mobile</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Modèles</dt><dd class="font-semibold text-right">Haiku · Sonnet · Opus</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Offre pro</dt><dd class="font-semibold text-right">dès 20 $/mois (≈ 11 700 FCFA)</dd></div>
+            <div class="flex justify-between gap-4 py-2.5"><dt class="text-ink-soft">Signature</dt><dd class="font-semibold text-right">Écriture · Analyse · Code</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <h2 id="portrait"><span class="num">02.1</span>Portrait</h2>
+        <p class="dropcap">Claude est développé par <strong>Anthropic</strong>, une entreprise fondée en 2021 par d’anciens chercheurs d’OpenAI, avec la sécurité de l’IA comme priorité affichée. Cette culture se ressent à l’usage : Claude est <strong>prudent, nuancé, honnête sur ses incertitudes</strong>, et remarquablement fidèle aux consignes.</p>
+        <p>Sa grande force est la <span class="marker">qualité du travail intellectuel</span>. Il écrit dans un français naturel, sans tics de langage. Il suit une argumentation sur des dizaines de pages et repère les incohérences d’un document. C’est aussi l’une des références des développeurs.</p>
+        <p>En contrepartie, il est moins « couteau suisse » que ChatGPT : <strong>pas de génération d’images</strong>, pas de vidéo, et un écosystème grand public plus restreint.</p>
+
+        <h3>Les trois modèles, en une phrase</h3>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Modèle</th><th>Profil</th><th>À utiliser pour</th></tr></thead>
+            <tbody>
+              <tr><td>Haiku</td><td>Le plus rapide et le plus léger</td><td>Tâches simples et répétitives, tri, reformulations courtes</td></tr>
+              <tr><td>Sonnet</td><td>L’équilibre, le modèle par défaut</td><td>90 % des usages pro : rédaction, synthèse, analyse, code</td></tr>
+              <tr><td>Opus</td><td>Le plus puissant (offres payantes)</td><td>Raisonnements complexes, stratégie, documents très exigeants</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-soft">Anthropic propose aussi un modèle haut de gamme, Fable, accessible selon les offres. Les noms et versions évoluent plusieurs fois par an : retenez la logique « rapide / équilibré / puissant ».</p>
+
+        <h2 id="prise-en-main"><span class="num">02.2</span>Prise en main : les 4 réglages à faire dès le premier jour</h2>
+        <ol>
+          <li><strong>Confidentialité</strong> : dans <em>Paramètres → Confidentialité</em>, choisissez si vos conversations peuvent servir à améliorer les modèles. Sur un compte individuel utilisé pour le travail, désactivez cette option.</li>
+          <li><strong>Préférences personnelles</strong> : dans <em>Paramètres → Profil</em>, décrivez en quelques lignes votre métier, votre secteur et vos attentes. Claude en tient compte dans chaque conversation.</li>
+          <li><strong>Mémoire</strong> : elle est activée par défaut, même en gratuit. Dites simplement « Souviens-toi que… » pour que Claude retienne une information, et demandez de temps en temps « Que sais-tu de moi ? ». Pour un sujet sensible, utilisez une conversation éphémère. Tout est détaillé au <a href="memoire.html">module 06</a>.</li>
+          <li><strong>Connecteurs</strong> : reliez les outils utiles (Google Drive, Gmail, Agenda, Notion, Slack…) pour que Claude puisse y chercher l’information lui-même.</li>
+        </ol>
+
+        <div class="prompt-block" data-label="À coller dans vos préférences personnelles">
+          <p class="prompt-text">Je suis <span class="var">[responsable marketing]</span> dans <span class="var">[une PME industrielle de 80 personnes]</span>.
+Je rédige principalement des <span class="var">[notes internes, présentations au CODIR et contenus LinkedIn]</span>.
+Écris en français, avec un ton professionnel mais direct, sans jargon inutile.
+Évite les listes à puces si un paragraphe suffit.
+Quand une information te manque, pose-moi la question plutôt que de supposer.</p>
+        </div>
+
+        <h2 id="fonctionnalites"><span class="num">02.3</span>Les fonctionnalités clés, expliquées</h2>
+
+        <h3>Projets : votre espace de travail permanent</h3>
+        <p>Un <strong>Projet</strong> regroupe des conversations autour d’un même sujet, avec des <strong>documents de référence</strong> et des <strong>instructions</strong> qui s’appliquent à chaque nouvel échange. Exemple : un Projet « Appels d’offres » contenant votre présentation d’entreprise, vos références clients et votre grille tarifaire. Chaque nouvelle réponse à un appel d’offres part de là.</p>
+        <p>En offre Team ou Enterprise, les Projets se <strong>partagent avec l’équipe</strong>. C’est le meilleur moyen de diffuser une méthode commune.</p>
+
+        <h3>Artifacts et création de fichiers</h3>
+        <p>Quand vous demandez un livrable consistant, Claude le produit dans un panneau à part : un <strong>Artifact</strong>. Ce peut être un document, un tableau, un graphique, un schéma, une mini-application ou une page web. Vous le modifiez par la conversation, puis vous le copiez, le téléchargez ou le partagez. Claude sait aussi <strong>générer de vrais fichiers</strong> Word, Excel, PowerPoint et PDF prêts à envoyer.</p>
+
+        <h3>Recherche web et Research</h3>
+        <p>La <strong>recherche web</strong> permet à Claude de répondre avec des informations à jour et des sources cliquables. Le mode <strong>Research</strong> va plus loin : Claude mène une enquête de plusieurs minutes sur le web <em>et</em> dans vos outils connectés, puis rend un rapport structuré et sourcé. Idéal pour une étude de marché, une veille concurrentielle ou la préparation d’un rendez-vous important.</p>
+
+        <h3>Connecteurs et Skills</h3>
+        <p>Les <strong>connecteurs</strong> branchent Claude sur vos applications : il cherche dans vos mails, lit un document Drive ou consulte votre agenda sans copier-coller. Les <strong>Skills</strong> sont des savoir-faire réutilisables (par exemple « mettre en forme selon notre charte ») que Claude applique automatiquement quand c’est pertinent.</p>
+
+        <h3>Claude dans Chrome et dans Microsoft 365</h3>
+        <p>Avec l’extension <strong>Claude dans Chrome</strong>, Claude peut agir dans votre navigateur : naviguer, remplir un formulaire, comparer des pages. Les intégrations <strong>Microsoft 365</strong> l’amènent dans vos outils Office, Excel en tête.</p>
+
+        <h3>Claude Code : pour les équipes tech (et au-delà)</h3>
+        <p><strong>Claude Code</strong> est un assistant de développement qui travaille directement dans le code d’un projet : il lit, modifie, teste et explique. Il est inclus dès l’offre Pro. Beaucoup de profils non développeurs l’utilisent aussi pour automatiser des tâches : renommer des centaines de fichiers, transformer des exports, créer de petits outils internes.</p>
+
+        <h3>Cowork et tâches planifiées</h3>
+        <p>Dans l’application de bureau, <strong>Cowork</strong> confie à Claude une tâche longue sur vos fichiers : il lit un dossier, planifie le travail, puis livre un rapport, une présentation ou un tableur, pendant que vous faites autre chose. Les <strong>tâches planifiées</strong> relancent un travail à heure fixe (« chaque lundi, le point sur mes dossiers en cours »). Inclus dans toutes les offres payantes. Relisez ce qu’il prévoit avant de le laisser agir sur des données importantes.</p>
+
+        <h2 id="nouveautes"><span class="num">02.4</span>Les nouveautés 2026, mode d’emploi</h2>
+        <p>Claude ne se limite plus à la conversation. Voici comment utiliser ses outils les plus récents. Les agents (Cowork et Claude dans Chrome) sont détaillés pas à pas au <a href="memoire.html#agents">module 06</a>.</p>
+
+        <div class="howto" style="--ai: var(--claude)">
+          <div class="howto-head"><span class="howto-title">Docs, Slides et Design : documents, présentations et visuels</span><span class="howto-meta">Toutes les offres, y compris gratuite</span></div>
+          <ol class="howto-steps">
+            <li><span>Demandez simplement le livrable dans la conversation : « Fais une présentation de 8 diapositives pour le comité de pilotage à partir de ce rapport », « Rédige la note de service en document », « Crée un visuel une page pour annoncer notre formation ».</span></li>
+            <li><span>Le document, la présentation ou le visuel s’ouvre à côté de la conversation.</span></li>
+            <li><span>Modifiez-le en parlant : « Ajoute une diapositive sur le budget », « Plus sobre, deux couleurs maximum », « Raccourcis la partie 2 ».</span></li>
+            <li><span>Exportez : une présentation se télécharge en <strong>PowerPoint ou en PDF</strong>, un document se copie ou se télécharge.</span></li>
+            <li><span>Relisez chaque chiffre et chaque nom avant de présenter.</span></li>
+          </ol>
+          <div class="howto-foot">Donnez toujours la matière (rapport, notes, chiffres) : sans elle, Claude remplit avec du contenu générique.</div>
+        </div>
+
+        <div class="howto" style="--ai: var(--claude)">
+          <div class="howto-head"><span class="howto-title">Skills : apprendre à Claude votre façon de faire</span><span class="howto-meta">Selon les offres</span></div>
+          <ol class="howto-steps">
+            <li><span>Une Skill est un savoir-faire que Claude applique automatiquement quand il est utile : votre modèle de compte rendu, votre charte graphique, votre façon de présenter un devis.</span></li>
+            <li><span>Pour en créer une, montrez à Claude un bon exemple de votre travail et demandez : « Aide-moi à transformer ce modèle en Skill réutilisable. » Il vous pose des questions et la rédige.</span></li>
+            <li><span>Activez et gérez vos Skills dans les paramètres. Dans Cowork, tapez <code>/</code> pour les voir et les lancer.</span></li>
+            <li><span>Testez-la sur un nouveau cas et ajustez-la jusqu’à ce que le résultat demande très peu de retouches.</span></li>
+          </ol>
+        </div>
+
+        <div class="howto" style="--ai: var(--claude)">
+          <div class="howto-head"><span class="howto-title">Dashboards et Motion : tableaux de bord et vidéos explicatives</span><span class="howto-meta">Bêta · offres payantes</span></div>
+          <ol class="howto-steps">
+            <li><span><strong>Dashboards</strong> : si votre structure a ses données dans un outil comme Salesforce, BigQuery ou Snowflake, Claude s’y connecte et construit un tableau de bord vivant à partir d’une question en français. Chaque graphique montre la requête utilisée, pour vérifier.</span></li>
+            <li><span><strong>Motion</strong> (offres Team et Enterprise) : transforme un rapport ou un graphique en courte animation explicative, exportée en vidéo MP4. Pratique pour présenter des résultats en réunion ou sur les réseaux.</span></li>
+          </ol>
+        </div>
+
+        <h2 id="cas-usage"><span class="num">02.5</span>Six cas d’usage professionnels</h2>
+        <p>Pour chaque cas : la situation, le prompt à adapter (les zones colorées sont à remplacer) et ce que vous obtenez.</p>
+
+        <h3>1. Synthétiser un rapport de 120 pages</h3>
+        <div class="prompt-block" data-label="Prompt · synthèse de document long">
+          <p class="prompt-text">Tu es analyste pour un comité de direction.
+Voici le rapport <span class="var">[nom du rapport]</span> en pièce jointe.
+Produis une synthèse de 1 page maximum structurée ainsi :
+1. Les 3 conclusions principales (une phrase chacune)
+2. Les chiffres clés, avec la page où ils apparaissent
+3. Les points de vigilance ou contradictions internes au document
+4. Trois questions que le CODIR devrait poser
+Reste fidèle au texte. Si un point est ambigu, signale-le.</p>
+        </div>
+        <p><strong>Résultat :</strong> une note exploitable en réunion, avec renvois aux pages pour vérifier en un clic.</p>
+
+        <h3>2. Analyser un contrat et repérer les clauses à risque</h3>
+        <div class="prompt-block" data-label="Prompt · revue de contrat">
+          <p class="prompt-text">Je suis <span class="var">[le prestataire]</span> dans ce contrat de <span class="var">[prestation de services informatiques]</span>.
+Analyse-le et présente un tableau avec : clause (numéro + citation courte), risque pour moi, niveau (faible / moyen / élevé), proposition de reformulation.
+Concentre-toi sur : responsabilité, pénalités, résiliation, propriété intellectuelle, confidentialité, paiement.
+Termine par les 3 points à négocier en priorité.</p>
+        </div>
+        <div class="callout callout-warn"><span class="callout-tag">Attention</span><div><p>Claude est un excellent premier filtre, mais pas un avocat. Pour un engagement significatif, faites valider l’analyse par un juriste.</p></div></div>
+
+        <h3>3. Rédiger une note stratégique qui ne sonne pas « IA »</h3>
+        <div class="prompt-block" data-label="Prompt · rédaction avec votre style">
+          <p class="prompt-text">Rédige une note de 600 mots à destination de <span class="var">[la direction générale]</span> pour recommander <span class="var">[le passage à un CRM unique]</span>.
+Voici mes notes en vrac : <span class="var">[coller vos notes]</span>
+Voici deux notes que j’ai écrites précédemment, pour que tu imites mon style : <span class="var">[coller 2 exemples]</span>
+Structure : contexte, problème, recommandation, coûts et bénéfices, prochaines étapes.
+Écris en paragraphes, pas en listes. Pas de formules creuses.</p>
+        </div>
+
+        <h3>4. Préparer une négociation en jouant l’adversaire</h3>
+        <div class="prompt-block" data-label="Prompt · jeu de rôle">
+          <p class="prompt-text">Joue le rôle de <span class="var">[l’acheteur d’un grand compte de la distribution]</span>, exigeant et bien préparé.
+Je viens te présenter une hausse tarifaire de <span class="var">[6 %]</span> justifiée par <span class="var">[la hausse des matières premières]</span>.
+Oppose-moi des objections réalistes, une par une, et attends ma réponse à chaque fois.
+À la fin, donne-moi un retour franc : arguments solides, faiblesses, ce que j’aurais dû dire.</p>
+        </div>
+
+        <h3>5. Transformer des données brutes en tableau de bord</h3>
+        <p>Déposez un export CSV ou Excel et demandez : <em>« Crée un tableau de bord interactif de ces ventes : évolution mensuelle, top 10 clients, répartition par région. Ajoute 3 observations clés. »</em> Claude produit un Artifact interactif que vous pouvez partager, ou un fichier Excel avec graphiques.</p>
+
+        <h3>6. Relire et challenger avant envoi</h3>
+        <div class="prompt-block" data-label="Prompt · relecture critique">
+          <p class="prompt-text">Voici ma proposition commerciale pour <span class="var">[client]</span>.
+Relis-la comme le ferait un décideur sceptique qui a 5 minutes.
+1. Qu’est-ce qui n’est pas clair ou pas convaincant ?
+2. Quelles objections va-t-il se faire en lisant ?
+3. Qu’est-ce qui est trop long ?
+Propose ensuite une version améliorée du premier paragraphe uniquement.</p>
+        </div>
+
+        <h2 id="forces"><span class="num">02.6</span>Les forces de Claude</h2>
+        <div class="not-prose divide-y divide-line border-y border-line">
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Qualité d’écriture</p><p class="text-ink-soft text-[.95rem]">Le français le plus naturel des trois, un style ajustable, peu de tics reconnaissables.</p></div><span class="rating" data-ai="claude" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Analyse de documents longs</p><p class="text-ink-soft text-[.95rem]">Lecture fidèle, bonne mémoire de l’ensemble du texte, repérage des contradictions.</p></div><span class="rating" data-ai="claude" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Respect des consignes</p><p class="text-ink-soft text-[.95rem]">Suit précisément les contraintes de format, de longueur et de ton.</p></div><span class="rating" data-ai="claude" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Code et automatisation</p><p class="text-ink-soft text-[.95rem]">Une référence chez les développeurs, avec Claude Code inclus dès l’offre Pro.</p></div><span class="rating" data-ai="claude" data-score="5"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Honnêteté et prudence</p><p class="text-ink-soft text-[.95rem]">Admet plus volontiers ses incertitudes, ce qui est précieux sur les sujets sensibles.</p></div><span class="rating" data-ai="claude" data-score="4"></span></div>
+          <div class="grid sm:grid-cols-[1fr_auto] gap-2 py-4"><div><p class="font-semibold">Livrables (Artifacts, fichiers)</p><p class="text-ink-soft text-[.95rem]">Documents, tableaux, présentations et mini-outils générés directement.</p></div><span class="rating" data-ai="claude" data-score="4"></span></div>
+        </div>
+
+        <h2 id="limites"><span class="num">02.7</span>Les limites à connaître</h2>
+        <ul>
+          <li><strong>Pas de génération d’images ni de vidéos.</strong> Claude peut créer des schémas, des graphiques et des visuels en code (SVG, HTML), mais pas d’images photoréalistes.</li>
+          <li><strong>Limites d’usage parfois frustrantes.</strong> Les quotas se rechargent par sessions de 5 heures, avec un plafond hebdomadaire. Un usage intensif avec de gros documents peut les atteindre en offre Pro.</li>
+          <li><strong>Un mode vocal moins abouti.</strong> Il existe sur toutes les offres, mais reste en retrait de ChatGPT et Gemini pour converser en temps réel.</li>
+          <li><strong>Écosystème plus restreint</strong> : pas d’intégration native à Gmail ou Docs comparable à Gemini, ni de catalogue d’assistants aussi vaste que les GPTs.</li>
+          <li><strong>Prudence parfois excessive</strong> : il peut refuser ou nuancer à l’excès sur certains sujets limites. Expliquer votre contexte professionnel suffit généralement.</li>
+        </ul>
+
+        <h2 id="offres"><span class="num">02.8</span>Les offres en un coup d’œil</h2>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Offre</th><th>Prix indicatif</th><th>Pour qui</th></tr></thead>
+            <tbody>
+              <tr><td>Free</td><td>0 $</td><td>Découvrir : chat, recherche web, mode vocal, mémoire, Artifacts, connecteurs, 5 Projets</td></tr>
+              <tr><td>Pro</td><td>20 $/mois (17 $ en annuel)<br><span class="text-ink-soft text-xs font-mono">≈ 11 700 FCFA</span></td><td>Le professionnel individuel : Opus, Research, Claude Code, Cowork, Projets illimités, Chrome, Microsoft 365</td></tr>
+              <tr><td>Max</td><td>dès 100 $/mois<br><span class="text-ink-soft text-xs font-mono">≈ 58 500 FCFA</span></td><td>Usage intensif quotidien : 5× ou 20× les limites de Pro</td></tr>
+              <tr><td>Team</td><td>25 $/siège/mois (20 $ en annuel)<br><span class="text-ink-soft text-xs font-mono">≈ 14 600 FCFA</span></td><td>Équipes de 2 à 150 : administration, SSO, Projets partagés, Claude Code, données exclues de l’entraînement. Siège Premium (5× l’usage) à 125 $</td></tr>
+              <tr><td>Enterprise</td><td>20 $/siège/mois en annuel + usage (20 sièges min.)</td><td>Grandes organisations : audit, SCIM, rétention des données, conformité</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-soft">Tarifs en dollars hors taxes relevés en octobre 2026 sur claude.com. Prix payés en dollars par carte bancaire, convertis à environ 585 FCFA pour 1 $, hors frais bancaires. Comment payer : <a href="abonnements.html">module 12</a>.</p>
+
+        <h2 id="astuces"><span class="num">02.9</span>Astuces de pro</h2>
+        <ul>
+          <li><strong>Structurez avec des balises.</strong> Claude est très réceptif aux balises : <code>&lt;document&gt;…&lt;/document&gt;</code>, <code>&lt;consignes&gt;…&lt;/consignes&gt;</code>. Pratique quand vous mélangez instructions et contenus.</li>
+          <li><strong>Demandez-lui de réfléchir d’abord.</strong> « Avant de répondre, analyse le problème étape par étape » améliore les réponses complexes. Avec Opus, activez la réflexion étendue.</li>
+          <li><strong>Un Projet par dossier récurrent.</strong> Client important, appel d’offres, rapport annuel : chacun son Projet, avec ses documents.</li>
+          <li><strong>Économisez vos quotas.</strong> Commencez une nouvelle conversation quand vous changez de sujet : une conversation très longue consomme beaucoup plus à chaque message.</li>
+          <li><strong>Demandez le fichier final.</strong> « Fais-en un document Word » ou « Fais-en un fichier Excel avec un onglet par région » vous évite la mise en forme.</li>
+        </ul>
+
+        <h2 id="quiz"><span class="num">02.10</span>Vérifiez vos acquis</h2>
+        <div data-quiz="claude"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprendre l’IA générative — Formation Atelier IA</title>
+  <meta name="description" content="Comprendre comment fonctionne une IA générative, ce qu’elle sait faire en 2026, ses limites, ses erreurs et les règles d’or pour l’utiliser au travail.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="comprendre" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 01</b> · Les bases</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">Comprendre<br>avant d’<em class="text-accent">utiliser</em>.</h1>
+        <p class="lede mt-8 max-w-3xl">Pas besoin d’être informaticien. Mais savoir comment « pense » une IA change tout : vous saurez quand lui faire confiance, quand la vérifier, et comment en tirer le meilleur, quel que soit l’outil.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">20 min</dd></div>
+        <div><dt class="kicker">Exercice</dt><dd class="font-display text-2xl">1 pratique</dd></div>
+        <div><dt class="kicker">Quiz</dt><dd class="font-display text-2xl">5 questions</dd></div>
+      </dl>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Objectifs du module</span>
+          <div><p>À la fin de ce module, vous saurez expliquer avec vos mots comment une IA produit une réponse, citer ce qu’elle fait bien et mal, et reconnaître les situations où il faut se méfier.</p></div>
+        </div>
+
+        <h2 id="principe"><span class="num">01.1</span>Ce qu’est (vraiment) une IA générative</h2>
+        <p class="dropcap">Claude, ChatGPT, Gemini, mais aussi Copilot, Meta AI ou Mistral reposent tous sur la même technologie : les <strong>grands modèles de langage</strong> (en anglais <em>Large Language Models</em>, ou LLM). Ces modèles ont été entraînés sur d’immenses quantités de textes : livres, sites, code, articles. Ils y ont appris les régularités de la langue, des raisonnements et beaucoup de connaissances.</p>
+        <p>Quand vous posez une question, le modèle ne « cherche » pas la réponse dans une base de données. Il <span class="marker">génère la suite la plus probable</span>, morceau de mot par morceau de mot, en tenant compte de tout ce que vous lui avez écrit. C’est pour cela qu’il est si fluide, et pour cela aussi qu’il peut se tromper avec aplomb.</p>
+
+        <div class="callout callout-info"><span class="callout-tag">L’image à retenir</span>
+          <div><p>Pensez à l’IA comme à <strong>un assistant brillant, infatigable et très cultivé</strong>, qui ne connaît rien de votre entreprise le premier jour. Il travaille vite et bien si vous lui donnez du contexte. Il invente parfois plutôt que d’avouer qu’il ne sait pas. Et c’est vous qui relisez et signez avant d’envoyer.</p></div>
+        </div>
+
+        <h3>Pourquoi c’est important de le savoir</h3>
+        <p>Trois conséquences pratiques découlent de ce fonctionnement, et elles reviennent dans tout le parcours :</p>
+        <ul>
+          <li><strong>La qualité de la réponse dépend de ce que vous lui donnez.</strong> Une demande vague produit une réponse moyenne. Le module 07 vous apprend à bien briefer.</li>
+          <li><strong>Une réponse bien écrite n’est pas forcément juste.</strong> La forme est toujours soignée, le fond doit être vérifié. Le module 08 y est consacré.</li>
+          <li><strong>Elle ne connaît pas votre réalité.</strong> Vos clients, vos prix, vos procédures, la vie à Cotonou ou à Parakou : tout ce qui n’est pas sur Internet en grande quantité, elle le connaît mal. C’est à vous de le lui apporter.</li>
+        </ul>
+
+        <h2 id="capacites"><span class="num">01.2</span>Ce qu’elle sait faire en 2026</h2>
+        <p>Les IA d’aujourd’hui ne sont plus de simples « chatbots » qui répondent à une question. Elles savent :</p>
+        <ul>
+          <li><strong>Raisonner par étapes</strong> avant de répondre (modes « réflexion » ou <em>thinking</em>), ce qui améliore nettement les réponses aux problèmes complexes ;</li>
+          <li><strong>Chercher sur le web</strong> et citer leurs sources, ce qui comble les trous de leurs connaissances ;</li>
+          <li><strong>Lire vos fichiers</strong> : PDF, Excel, Word, photos, captures d’écran, et pour certaines la vidéo et l’audio ;</li>
+          <li><strong>Se souvenir de vous</strong> : votre métier, votre style, vos dossiers en cours, d’une conversation à l’autre. C’est la <em>mémoire</em> ;</li>
+          <li><strong>Se connecter à vos outils</strong> (mails, agenda, Drive…) grâce à des connecteurs ;</li>
+          <li><strong>Agir</strong> : naviguer sur des sites, remplir des formulaires, travailler sur les fichiers de votre ordinateur et livrer un document fini. C’est ce qu’on appelle un <em>agent</em>.</li>
+        </ul>
+        <p>La mémoire et les agents changent beaucoup la façon de travailler : on ne repart plus de zéro à chaque conversation, et on peut confier une tâche complète au lieu d’une simple question. Le module 06 leur est entièrement consacré.</p>
+
+        <h2 id="vocabulaire"><span class="num">01.3</span>Le vocabulaire indispensable</h2>
+        <p>Une douzaine de mots suffisent pour comprendre presque tout ce que vous lirez sur l’IA.</p>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Terme</th><th>Ce que ça veut dire, concrètement</th></tr></thead>
+            <tbody>
+              <tr><td>Prompt</td><td>La demande que vous écrivez (ou dites) à l’IA. Sa qualité détermine celle de la réponse.</td></tr>
+              <tr><td>Modèle</td><td>Le « cerveau » utilisé : Opus ou Sonnet chez Claude, les modèles GPT chez ChatGPT, Pro ou Flash chez Gemini. Un modèle plus puissant est plus lent et consomme plus vite vos quotas.</td></tr>
+              <tr><td>Token</td><td>Unité de texte traitée par l’IA, environ ¾ d’un mot. Les limites d’usage se calculent en tokens.</td></tr>
+              <tr><td>Fenêtre de contexte</td><td>La quantité de texte que l’IA « garde en tête » dans une conversation : de quelques centaines à plusieurs milliers de pages.</td></tr>
+              <tr><td>Mémoire</td><td>Ce que l’IA retient de vous d’une conversation à l’autre (métier, préférences, dossiers). Vous pouvez la consulter, la corriger ou la désactiver.</td></tr>
+              <tr><td>Hallucination</td><td>Une information inventée mais présentée comme vraie : fausse citation, chiffre erroné, article de loi qui n’existe pas.</td></tr>
+              <tr><td>Multimodal</td><td>Capable de traiter plusieurs types de contenus : texte, image, audio, vidéo.</td></tr>
+              <tr><td>Recherche web</td><td>L’IA consulte Internet en direct pour répondre avec des informations récentes et sourcées.</td></tr>
+              <tr><td>Deep Research</td><td>Un mode où l’IA mène une enquête de plusieurs minutes sur des dizaines de sources et rend un rapport structuré.</td></tr>
+              <tr><td>Connecteur</td><td>Un branchement entre l’IA et une application (Gmail, Drive, agenda…) pour qu’elle y cherche elle-même l’information.</td></tr>
+              <tr><td>Agent</td><td>Une IA qui enchaîne seule plusieurs actions pour atteindre un objectif : chercher, cliquer, ouvrir des fichiers, produire un document.</td></tr>
+              <tr><td>Projet / GPT / Gem</td><td>Un espace ou un assistant personnalisé qui garde vos consignes et documents de référence. Le nom change selon l’IA.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="forces-limites"><span class="num">01.4</span>Ce qu’elle fait très bien… et mal</h2>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+          <div class="bg-card p-6">
+            <p class="kicker text-chatgpt">Excellente pour</p>
+            <ul class="mt-4 space-y-2.5 text-[.95rem]">
+              <li>✓ Rédiger, reformuler, résumer, traduire</li>
+              <li>✓ Structurer une idée confuse en plan clair</li>
+              <li>✓ Lire et synthétiser des documents longs</li>
+              <li>✓ Proposer des idées et des angles</li>
+              <li>✓ Critiquer un raisonnement, jouer l’avocat du diable</li>
+              <li>✓ Expliquer simplement un sujet technique</li>
+              <li>✓ Calculer et faire des graphiques à partir de vos tableaux</li>
+              <li>✓ Écrire des formules Excel et de petits programmes</li>
+            </ul>
+          </div>
+          <div class="bg-card p-6">
+            <p class="kicker text-accent">Faible ou risquée pour</p>
+            <ul class="mt-4 space-y-2.5 text-[.95rem]">
+              <li>✗ Les faits précis non vérifiés (chiffres, dates, noms)</li>
+              <li>✗ Les textes de loi, les références juridiques ou médicales</li>
+              <li>✗ L’actualité, si la recherche web n’est pas activée</li>
+              <li>✗ Le contexte local : lois et procédures nationales, prix du marché, entreprises locales</li>
+              <li>✗ Les langues nationales (fon, yoruba, bariba, dendi…)</li>
+              <li>✗ Connaître votre situation si vous ne la décrivez pas</li>
+              <li>✗ Prendre une décision à votre place</li>
+              <li>✗ Compter les mots ou caractères avec exactitude</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-warn"><span class="callout-tag">Le contexte local</span>
+          <div><p>Les IA ont appris surtout sur des textes américains et européens. Sur les réalités locales (textes de loi, procédures administratives, fiscalité, marché), elles en savent moins et se trompent plus souvent. Deux réflexes : <strong>activez la recherche web</strong> et <strong>fournissez vous-même les documents officiels</strong> (texte de loi, circulaire, grille tarifaire) plutôt que de compter sur sa mémoire.</p></div>
+        </div>
+
+        <h2 id="hallucinations"><span class="num">01.5</span>Les hallucinations en deux minutes</h2>
+        <p>Une IA ne ment pas : elle ne sait pas qu’elle ne sait pas. Quand l’information manque, elle produit ce qui <em>ressemblerait</em> à une bonne réponse. Les erreurs ont beaucoup diminué depuis 2023, mais elles n’ont pas disparu, surtout sur les sujets pointus, locaux ou chiffrés.</p>
+        <p>Les signaux qui doivent vous alerter :</p>
+        <ul>
+          <li>Une référence très précise (numéro d’article, date, montant) sans lien vérifiable ;</li>
+          <li>Une citation entre guillemets attribuée à une personne réelle ;</li>
+          <li>Des chiffres « ronds » ou trop parfaits sur un sujet de niche ;</li>
+          <li>Une réponse qui change si vous reposez la même question autrement.</li>
+        </ul>
+        <p>Le module 08 vous entraîne à repérer ces erreurs sur de vrais exemples.</p>
+
+        <h2 id="autres-ia"><span class="num">01.6</span>Une méthode, pas un outil</h2>
+        <p>Ce parcours présente en détail Claude, ChatGPT et Gemini, les trois IA les plus utilisées au travail. Mais vous en croiserez d’autres : <strong>Microsoft Copilot</strong> dans Word et Outlook, <strong>Meta AI</strong> dans WhatsApp, <strong>Mistral Le Chat</strong>, <strong>DeepSeek</strong>, ou l’assistant d’un logiciel métier.</p>
+        <p>Bonne nouvelle : <span class="marker">tout ce que vous apprenez ici fonctionne avec toutes</span>. Bien briefer, fournir de la matière, vérifier, protéger les données, choisir le bon usage : ces compétences ne dépendent pas de la marque. Les noms des boutons changent, la méthode reste.</p>
+        <div class="callout callout-tip"><span class="callout-tag">Le bon réflexe</span>
+          <div><p>Devant une nouvelle IA, posez-vous quatre questions : <strong>où vont mes données ?</strong> <strong>Peut-elle chercher sur le web ?</strong> <strong>Peut-elle lire mes fichiers ?</strong> <strong>Se souvient-elle de moi ?</strong> Avec ces réponses, vous savez déjà comment l’utiliser.</p></div>
+        </div>
+
+        <h2 id="exercice"><span class="num">01.7</span>Exercice : voir l’IA hésiter</h2>
+        <div class="exercise" data-exercise="comprendre-1">
+          <p class="kicker"><b>Exercice 01</b> · 10 min · dans l’IA de votre choix, version gratuite</p>
+          <p class="exercise-title">Constater par vous-même ses forces et ses limites.</p>
+          <ol>
+            <li>Sans activer la recherche web, demandez : « Quels sont les jours fériés en 2026 dans <span class="var">[votre pays]</span>, avec leurs dates ? »</li>
+            <li>Ouvrez une nouvelle conversation et posez la même question, cette fois avec la recherche web activée. Comparez.</li>
+            <li>Demandez ensuite : « Explique-moi en 5 lignes ce qu’est un bilan comptable, pour un commerçant qui n’a jamais fait de comptabilité. »</li>
+            <li>Enfin : « Traduis en fon : “La réunion est reportée à demain matin.” » Montrez le résultat à quelqu’un qui parle fon.</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation · cochez ce que vous avez constaté</p>
+            <label><input type="checkbox"><span>J’ai repéré au moins une différence entre la réponse sans web et la réponse avec web.</span></label>
+            <label><input type="checkbox"><span>J’ai vérifié au moins une date sur une source officielle ou fiable.</span></label>
+            <label><input type="checkbox"><span>L’explication du bilan était claire et utilisable telle quelle (c’est son point fort).</span></label>
+            <label><input type="checkbox"><span>J’ai fait vérifier la traduction en fon et j’ai noté sa qualité.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+          <details class="answer"><summary>Ce qu’il faut en retenir</summary>
+            <div>
+              <p>Les faits locaux et datés (jours fériés, dont certains varient chaque année) sont son point faible sans recherche web. Les explications générales sont son point fort. Les langues nationales restent approximatives.</p>
+              <p>Conclusion pratique : <strong>confiez-lui ce qu’elle fait bien, et apportez-lui ou vérifiez ce qu’elle fait mal.</strong></p>
+            </div>
+          </details>
+        </div>
+
+        <h2 id="regles"><span class="num">01.8</span>Les 7 règles d’or du professionnel</h2>
+        <ol class="not-prose border-t border-ink">
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">1</span><div><p class="font-semibold text-lg">Vous restez l’auteur.</p><p class="text-ink-soft mt-1">Tout ce qui sort sous votre nom est relu, compris et assumé par vous.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">2</span><div><p class="font-semibold text-lg">Le contexte avant tout.</p><p class="text-ink-soft mt-1">Plus l’IA en sait (qui vous êtes, pour qui, pourquoi, contraintes), meilleure est la réponse. Utilisez sa mémoire pour ne pas tout répéter.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">3</span><div><p class="font-semibold text-lg">Vérifiez ce qui engage.</p><p class="text-ink-soft mt-1">Chiffres, références légales, citations, noms : toujours à la source.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">4</span><div><p class="font-semibold text-lg">Protégez les données.</p><p class="text-ink-soft mt-1">Pas de données personnelles de clients ou de collègues sans cadre. En cas de doute, on anonymise.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">5</span><div><p class="font-semibold text-lg">Itérez, ne recommencez pas.</p><p class="text-ink-soft mt-1">Un premier jet moyen s’améliore en deux retours précis.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">6</span><div><p class="font-semibold text-lg">Le bon usage pour la bonne tâche.</p><p class="text-ink-soft mt-1">Certaines tâches gagnent énormément à l’IA, d’autres pas du tout. Le module 09 vous apprend à les distinguer.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-5 border-b border-line"><span class="font-display text-3xl text-accent">7</span><div><p class="font-semibold text-lg">Capitalisez.</p><p class="text-ink-soft mt-1">Gardez vos meilleurs prompts, créez des Projets, des GPTs ou des Gems, et partagez-les avec vos collègues.</p></div></li>
+        </ol>
+
+        <h2 id="quiz"><span class="num">01.9</span>Vérifiez vos acquis</h2>
+        <p>Cinq mises en situation. Les explications s’affichent après chaque réponse.</p>
+        <div data-quiz="comprendre"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

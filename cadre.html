@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Données et cadre légal de l’IA — Formation Atelier IA</title>
+  <meta name="description" content="Ce que l’on peut confier à une IA, le Code du numérique et l’APDP, le secret professionnel, l’anonymisation, les arnaques à éviter et l’AI Act pour ceux qui travaillent avec l’Europe.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="cadre" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 11</b> · Sécurité</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5">Protéger les <em class="text-accent">données</em>,<br>et se protéger.</h1>
+        <p class="lede mt-8 max-w-3xl">Ce que vous écrivez à une IA part sur des serveurs à l’étranger. Savoir ce qu’on peut lui confier, comment anonymiser et ce que dit la loi vous évite les ennuis, à vous et à votre employeur.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">20 min</dd></div>
+        <div><dt class="kicker">Exercice</dt><dd class="font-display text-2xl">1 pratique</dd></div>
+        <div><dt class="kicker">Quiz</dt><dd class="font-display text-2xl">5 questions</dd></div>
+      </dl>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Objectifs du module</span>
+          <div><p>Classer une information selon ce qu’on peut en faire avec une IA, régler la confidentialité de votre compte, anonymiser un document en quelques minutes, connaître les règles légales essentielles et reconnaître les arnaques liées à l’IA.</p></div>
+        </div>
+
+        <h2 id="feux"><span class="num">11.1</span>Que puis-je confier à l’IA ?</h2>
+        <p class="dropcap">La réponse dépend de deux choses : la <strong>nature de l’information</strong> et le <strong>type de compte</strong> utilisé. Retenez trois niveaux.</p>
+        <div class="not-prose grid gap-px bg-line border border-line rounded-xl overflow-hidden">
+          <div class="bg-card p-5 grid sm:grid-cols-[8rem_1fr] gap-3"><p class="kicker text-chatgpt">Libre</p><div><p class="font-semibold">Informations publiques ou générales.</p><p class="text-ink-soft text-[.95rem] mt-1">Textes que vous rédigez, questions générales, documents déjà publiés, idées. N’importe quel compte convient.</p></div></div>
+          <div class="bg-card p-5 grid sm:grid-cols-[8rem_1fr] gap-3"><p class="kicker">Encadré</p><div><p class="font-semibold">Informations internes non sensibles.</p><p class="text-ink-soft text-[.95rem] mt-1">Procédures, comptes rendus, chiffres agrégés, brouillons de stratégie. Compte professionnel, ou compte personnel avec l’entraînement désactivé, et on retire les noms.</p></div></div>
+          <div class="bg-card p-5 grid sm:grid-cols-[8rem_1fr] gap-3"><p class="kicker text-accent">Interdit sans cadre</p><div><p class="font-semibold">Données personnelles, secrets et informations réglementées.</p><p class="text-ink-soft text-[.95rem] mt-1">Dossiers médicaux, salaires nominatifs, pièces d’identité, coordonnées bancaires ou Mobile Money, dossiers clients couverts par le secret professionnel, secrets d’affaires. Uniquement avec une offre entreprise validée par votre structure. Sinon, on anonymise.</p></div></div>
+        </div>
+
+        <div class="callout callout-tip"><span class="callout-tag">Le réflexe</span>
+          <div><p>Anonymiser prend 30 secondes : remplacez « Établissements Houngbédji, M. Adjovi, 4 500 000 FCFA » par « Client A, le directeur, montant X ». L’IA travaille aussi bien, et vous ne prenez aucun risque.</p></div>
+        </div>
+
+        <h2 id="comptes"><span class="num">11.2</span>Compte personnel ou compte professionnel</h2>
+        <p>Sur les offres grand public (gratuites ou individuelles), les éditeurs peuvent utiliser vos conversations pour améliorer leurs modèles, <strong>sauf si vous le désactivez</strong>. Sur les offres professionnelles (Claude Team et Enterprise, ChatGPT Business et Enterprise, Gemini dans Google Workspace), vos données sont exclues de l’entraînement par défaut et couvertes par un contrat.</p>
+        <p>Si vous utilisez un compte personnel pour le travail, faites ce réglage aujourd’hui :</p>
+        <div class="where not-prose">
+          <div><b class="text-claude">Claude</b><span>Paramètres → Confidentialité : désactivez l’utilisation de vos conversations pour améliorer les modèles.</span></div>
+          <div><b class="text-chatgpt">ChatGPT</b><span>Paramètres → Contrôle des données : désactivez « Améliorer le modèle pour tous ».</span></div>
+          <div><b class="text-gemini">Gemini</b><span>« Activité dans les applications Gemini » : désactivez-la pour le travail, sinon des conversations peuvent être relues par des humains.</span></div>
+        </div>
+
+        <h2 id="loi"><span class="num">11.3</span>Ce que dit la loi</h2>
+        <p>La protection des données personnelles est régie par le <strong>Code du numérique</strong> (loi n° 2017-20 du 20 avril 2018, modifiée en 2021), dans son Livre V. Le contrôle est assuré par l’<strong>APDP</strong>, l’Autorité de protection des données à caractère personnel.</p>
+        <p>Les principes à retenir pour l’usage de l’IA :</p>
+        <ul>
+          <li><strong>Finalité :</strong> on n’utilise les données personnelles que pour le but pour lequel elles ont été collectées. Les données de vos clients servent à les servir, pas à alimenter n’importe quel outil.</li>
+          <li><strong>Proportionnalité :</strong> on ne transmet que ce qui est nécessaire. Pour faire rédiger un courrier, l’IA n’a pas besoin du numéro de téléphone du client.</li>
+          <li><strong>Sécurité :</strong> l’organisation doit protéger les données qu’elle traite. Coller un fichier clients dans un compte gratuit va à l’encontre de cette obligation.</li>
+          <li><strong>Transferts à l’étranger :</strong> les services d’IA sont hébergés à l’étranger. Envoyer des données personnelles à ces services est un transfert, que la loi encadre.</li>
+          <li><strong>Droits des personnes :</strong> vos clients, patients ou employés gardent le droit de savoir ce qu’on fait de leurs données et de s’y opposer.</li>
+        </ul>
+        <p>L’APDP indique avoir examiné 782 dossiers en 2025, et être passée de l’accompagnement à des contrôles et des sanctions face aux structures qui ne sont pas en règle. Si votre organisation a désigné un <strong>délégué à la protection des données</strong>, c’est lui qu’il faut consulter avant d’utiliser l’IA sur des données personnelles.</p>
+        <div class="callout callout-warn"><span class="callout-tag">À retenir</span>
+          <div><p>Ce module donne les grands principes, pas un avis juridique. Pour un projet qui implique des données personnelles (fichier clients, dossiers patients, données RH), faites valider l’usage par votre délégué à la protection des données, un juriste, ou renseignez-vous auprès de l’APDP.</p></div>
+        </div>
+
+        <h2 id="secret"><span class="num">11.4</span>Secret professionnel et confidentialité</h2>
+        <p>Certains métiers sont tenus au secret : santé, banque et microfinance, avocats, notaires, experts-comptables, assurances. Pour eux, coller un dossier client dans une IA grand public peut constituer une violation du secret, même si l’intention est bonne.</p>
+        <p>Et dans tous les métiers, vérifiez vos <strong>engagements de confidentialité</strong> : contrats avec les clients, accords avec un bailleur, règlement intérieur. Ils s’appliquent aussi à l’IA.</p>
+
+        <h2 id="auteur"><span class="num">11.5</span>Droits d’auteur, transparence et images</h2>
+        <ul>
+          <li><strong>Vous restez responsable</strong> de ce que vous publiez, qu’il ait été écrit par vous ou par une IA.</li>
+          <li><strong>Ne faites pas reproduire</strong> des œuvres protégées (livres, articles, logos d’autres marques).</li>
+          <li><strong>Une image générée n’est pas une photo.</strong> Ne la présentez jamais comme réelle : un faux « avant / après », un faux chantier terminé ou un faux témoignage client peuvent constituer une tromperie.</li>
+          <li><strong>Jamais l’image ou la voix d’une personne réelle</strong> sans son accord.</li>
+          <li><strong>Dites-le quand c’est important.</strong> Dans un rapport, une étude ou un travail évalué, indiquez que l’IA a été utilisée et pour quoi faire.</li>
+        </ul>
+
+        <h2 id="arnaques"><span class="num">11.6</span>Les arnaques à connaître</h2>
+        <p>L’IA est aussi utilisée par les escrocs. Les pièges les plus courants :</p>
+        <ul>
+          <li><strong>Les fausses applications.</strong> Des applications imitent ChatGPT, Claude ou Gemini pour voler vos données ou vous abonner à votre insu. Téléchargez uniquement depuis les sites officiels (claude.ai, chatgpt.com, gemini.google.com) ou les magasins officiels, en vérifiant l’éditeur.</li>
+          <li><strong>Les comptes partagés et revendeurs.</strong> Des vendeurs proposent un « ChatGPT Plus à 3 000 FCFA » via Mobile Money. Il s’agit souvent d’un compte partagé : tout le monde voit vos conversations, et le compte peut être fermé du jour au lendemain. Jamais pour un usage professionnel.</li>
+          <li><strong>La fausse voix du patron.</strong> Une voix peut être imitée à partir de quelques secondes d’enregistrement. Si « votre directeur » vous demande un transfert d’argent urgent par message vocal, rappelez-le sur son numéro habituel avant d’agir.</li>
+          <li><strong>Les messages trop bien écrits.</strong> Les arnaques par mail ou WhatsApp n’ont plus de fautes d’orthographe. Fiez-vous à l’expéditeur et à la demande, pas à la qualité du texte.</li>
+        </ul>
+
+        <h2 id="europe"><span class="num">11.7</span>Le contexte national et international</h2>
+        <p>Le gouvernement a adopté en janvier 2023 une <strong>Stratégie nationale d’intelligence artificielle et des mégadonnées</strong> (2023-2027), qui fait de la formation aux compétences numériques une priorité, notamment dans l’éducation, la santé, l’agriculture et les services publics.</p>
+        <p><strong>Si vous travaillez avec l’Europe</strong> (clients, partenaires, bailleurs européens), le règlement européen sur l’IA (« AI Act ») peut vous concerner : il demande aux organisations de former leurs équipes à l’IA, impose de signaler certains contenus générés par IA depuis le 2 août 2026, et encadrera strictement à partir du 2 décembre 2027 les usages « à haut risque », comme le tri automatique de candidatures. Le RGPD européen s’applique aussi aux données de personnes situées dans l’Union européenne.</p>
+
+        <h2 id="charte"><span class="num">11.8</span>Proposer une charte IA dans votre structure</h2>
+        <p>Une charte d’une page suffit : outils autorisés, données interdites, relecture obligatoire, mention de l’usage de l’IA. Si votre structure n’en a pas, c’est un excellent sujet à porter, et l’IA peut vous aider à la rédiger.</p>
+        <div class="prompt-block" data-label="Prompt · projet de charte">
+          <p class="prompt-text">Je travaille dans <span class="var">[une institution de microfinance de 60 salariés]</span>. Rédige un projet de charte d’usage de l’IA d’une page, à présenter à la direction.
+Rubriques : outils autorisés et types de comptes, données interdites (avec exemples concrets de notre secteur), relecture et vérification obligatoires, mention de l’usage de l’IA, que faire en cas de doute, qui contacter.
+Tiens compte du Code du numérique et du secret professionnel. Signale ce qu’un juriste doit valider.</p>
+        </div>
+
+        <h2 id="exercice"><span class="num">11.9</span>Exercice : anonymiser avant de demander</h2>
+        <div class="exercise" data-exercise="cadre-1">
+          <p class="kicker"><b>Exercice 11</b> · 10 min · copier dans un traitement de texte</p>
+          <p class="exercise-title">Rendez ce message utilisable dans une IA, sans perdre l’essentiel.</p>
+          <div class="not-prose bg-paper-2 border border-line rounded-lg p-4 text-[.93rem] leading-relaxed font-mono">Bonjour, je suis Mme Akpovi, gestionnaire de crédit à l’agence de Bohicon. Notre client M. Sèwanou Dossa (tél. 97 00 00 00, compte n° 004512), commerçant au marché de Bohicon, a un retard de 3 échéances sur son prêt de 2 500 000 FCFA. Il nous a dit que sa femme est hospitalisée au CHD. Aide-moi à rédiger un courrier de relance ferme mais humain, et propose un rééchelonnement sur 6 mois.</div>
+          <p>Réécrivez ce message pour qu’il ne contienne plus aucune donnée qui permette d’identifier une personne, tout en gardant ce dont l’IA a besoin pour bien répondre.</p>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation · ma version…</p>
+            <label><input type="checkbox"><span>…ne contient plus aucun nom, numéro de téléphone ni numéro de compte.</span></label>
+            <label><input type="checkbox"><span>…ne mentionne plus l’information de santé, qui n’est pas nécessaire au courrier.</span></label>
+            <label><input type="checkbox"><span>…garde le montant, le retard et l’objectif (relance humaine, rééchelonnement), utiles à l’IA.</span></label>
+            <label><input type="checkbox"><span>…permet de réinsérer facilement les vrais éléments dans le courrier final.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+          <details class="answer"><summary>Voir une version anonymisée</summary>
+            <div>
+              <p class="font-mono text-[.9rem]">Je suis gestionnaire de crédit dans une institution de microfinance. Un client commerçant a 3 échéances de retard sur un prêt de 2 500 000 FCFA. Il traverse des difficultés familiales sérieuses. Rédige un courrier de relance ferme mais humain, avec des zones [NOM], [ADRESSE] et [RÉFÉRENCE DU PRÊT] à compléter, et propose un rééchelonnement sur 6 mois.</p>
+              <p>Le montant reste utile au courrier, sans permettre à lui seul d’identifier la personne. L’hospitalisation devient « difficultés familiales » : l’IA peut adapter le ton sans connaître la donnée de santé. Les zones entre crochets se complètent ensuite dans votre traitement de texte, hors de l’IA.</p>
+            </div>
+          </details>
+        </div>
+
+        <h2 id="quiz"><span class="num">11.10</span>Vérifiez vos acquis</h2>
+        <div data-quiz="cadre"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

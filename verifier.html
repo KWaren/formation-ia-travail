@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérifier ce que dit l’IA : repérer les erreurs, avec exercices — Formation Atelier IA</title>
+  <meta name="description" content="Les cinq types d’erreurs des IA, une grille de vérification en cinq questions, les sources officielles à consulter, et des exercices interactifs pour s’entraîner.">
+  <script>try{var t=localStorage.getItem('atelier-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="verifier" class="bg-paper text-ink font-sans">
+  <div id="site-header"></div>
+
+  <main class="mx-auto max-w-7xl px-5 lg:px-10">
+    <header class="pt-12 lg:pt-16 pb-12 border-b border-line grid lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-9">
+        <p class="kicker"><b>Module 08</b> · Compétence n° 2</p>
+        <h1 class="font-display font-medium text-5xl sm:text-6xl lg:text-8xl leading-[.95] mt-5"><em class="text-accent">Vérifier</em>,<br>avant d’envoyer.</h1>
+        <p class="lede mt-8 max-w-3xl">L’IA écrit toujours bien, mais elle n’a pas toujours raison. Savoir repérer une erreur en quelques minutes est ce qui sépare un utilisateur fiable d’un utilisateur dangereux pour sa propre crédibilité.</p>
+      </div>
+      <dl class="lg:col-span-3 self-end grid grid-cols-3 lg:grid-cols-1 gap-4 text-sm lg:border-l lg:border-line lg:pl-6">
+        <div><dt class="kicker">Durée</dt><dd class="font-display text-2xl">30 min</dd></div>
+        <div><dt class="kicker">Exercices</dt><dd class="font-display text-2xl">3 pratiques</dd></div>
+        <div><dt class="kicker">Quiz</dt><dd class="font-display text-2xl">5 questions</dd></div>
+      </dl>
+    </header>
+
+    <div class="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-12 lg:gap-16 pt-12">
+      <aside class="hidden lg:block"><div id="toc" class="sticky top-24"></div></aside>
+
+      <article class="prose-atelier max-w-3xl">
+
+        <div class="callout callout-info"><span class="callout-tag">Objectifs du module</span>
+          <div><p>Reconnaître les cinq types d’erreurs des IA, appliquer une grille de vérification rapide, savoir où vérifier une information, et décider quand il vaut mieux ne pas utiliser l’IA.</p></div>
+        </div>
+
+        <h2 id="enjeu"><span class="num">08.1</span>Ce qu’une erreur peut coûter</h2>
+        <p class="dropcap">Un montant faux dans un devis, une date erronée dans un courrier officiel, un article de loi inventé dans une note à la direction, le nom d’un client mal orthographié dans une proposition commerciale. Chacune de ces erreurs passe inaperçue à la lecture, parce que <span class="marker">le texte est fluide et sûr de lui</span>. Et chacune peut coûter un contrat, de l’argent ou votre crédibilité.</p>
+        <p>Personne ne vous reprochera d’utiliser l’IA. On vous reprochera d’avoir envoyé une erreur qu’elle a faite.</p>
+
+        <h2 id="types"><span class="num">08.2</span>Les cinq types d’erreurs</h2>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Type</th><th>À quoi ça ressemble</th><th>Comment le repérer</th></tr></thead>
+            <tbody>
+              <tr><td>L’invention</td><td>Un chiffre, une citation, un article de loi, une référence qui n’existent pas.</td><td>Toute référence précise sans source ouvrable est suspecte.</td></tr>
+              <tr><td>Le mauvais calcul</td><td>Une addition fausse, un pourcentage mal appliqué, un total qui ne tombe pas juste.</td><td>Refaites au moins un calcul, ou demandez-lui de montrer le détail.</td></tr>
+              <tr><td>La mauvaise lecture</td><td>Elle résume votre document mais change un chiffre, une date, une personne, ou ajoute une décision qui n’a pas été prise.</td><td>Comparez les points clés avec le document source.</td></tr>
+              <tr><td>Le mauvais pays</td><td>Elle applique les règles françaises ou américaines : taux de TVA, Code du travail, procédures, jours fériés.</td><td>Demandez-vous : « Est-ce vrai <em>ici</em> ? » Vérifiez sur une source officielle nationale.</td></tr>
+              <tr><td>La complaisance</td><td>Elle va dans votre sens, trouve votre idée excellente, minimise les risques.</td><td>Demandez-lui explicitement les objections et les contre-arguments.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="grille"><span class="num">08.3</span>La grille de vérification en cinq questions</h2>
+        <p>Avant d’envoyer un texte produit avec l’IA, posez-vous ces cinq questions. Cela prend deux à cinq minutes.</p>
+        <ol class="not-prose border-t border-ink">
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-4 border-b border-line"><span class="font-display text-3xl text-accent">1</span><div><p class="font-semibold">Les chiffres sont-ils justes ?</p><p class="text-ink-soft mt-1 text-[.95rem]">Montants, dates, quantités, totaux : je les ai comparés à ma source ou recalculés.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-4 border-b border-line"><span class="font-display text-3xl text-accent">2</span><div><p class="font-semibold">Les noms sont-ils les bons ?</p><p class="text-ink-soft mt-1 text-[.95rem]">Personnes, entreprises, lieux, intitulés : orthographe et attribution.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-4 border-b border-line"><span class="font-display text-3xl text-accent">3</span><div><p class="font-semibold">Les références existent-elles ?</p><p class="text-ink-soft mt-1 text-[.95rem]">Lois, articles, études, citations : j’ai ouvert la source, ou je les retire.</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-4 border-b border-line"><span class="font-display text-3xl text-accent">4</span><div><p class="font-semibold">Est-ce valable ici et maintenant ?</p><p class="text-ink-soft mt-1 text-[.95rem]">Ici, en 2026, dans mon secteur, et pas seulement « en général ».</p></div></li>
+          <li class="grid grid-cols-[3rem_1fr] gap-4 py-4 border-b border-line"><span class="font-display text-3xl text-accent">5</span><div><p class="font-semibold">Est-ce que je peux le défendre ?</p><p class="text-ink-soft mt-1 text-[.95rem]">Si on me demande « d’où vient ce chiffre ? », je sais répondre.</p></div></li>
+        </ol>
+
+        <h2 id="techniques"><span class="num">08.4</span>Cinq techniques pour réduire les erreurs</h2>
+        <h3>1. Ancrer l’IA dans vos documents</h3>
+        <p>Plutôt que de compter sur sa mémoire, donnez-lui la source et interdisez-lui d’en sortir.</p>
+        <div class="prompt-block" data-label="Consigne anti-erreurs, à réutiliser">
+          <p class="prompt-text">Réponds uniquement à partir du document joint.
+Pour chaque affirmation importante, cite entre guillemets le passage exact qui la justifie.
+Si l’information n’est pas dans le document, écris « Non précisé dans le document » au lieu de déduire.
+Si tu as un doute, signale-le clairement.</p>
+        </div>
+        <h3>2. Exiger des sources, et les ouvrir</h3>
+        <p>Activez la recherche web pour tout ce qui est récent ou local, et <strong>cliquez sur les liens</strong>. Une source citée mais jamais ouverte ne vaut rien : il arrive qu’elle ne dise pas ce que l’IA affirme.</p>
+        <h3>3. Faire calculer, pas deviner</h3>
+        <p>Pour les chiffres, déposez le fichier Excel et demandez à l’IA de faire le calcul avec son outil d’analyse, en montrant le détail. Vérifiez ensuite une ligne vous-même.</p>
+        <h3>4. Demander ce qui pourrait être faux</h3>
+        <div class="prompt-block" data-label="Prompt · relecture critique">
+          <p class="prompt-text">Relis ta réponse précédente. Liste les affirmations dont tu n’es pas certain, celles qui dépendent du pays ou de la date, et ce que je dois vérifier avant d’utiliser ce texte.</p>
+        </div>
+        <h3>5. Faire relire par une autre IA</h3>
+        <p>Collez la réponse de ChatGPT dans Claude ou Gemini (ou l’inverse) et demandez : « Trouve les erreurs factuelles et les calculs faux dans ce texte. » Deux IA se trompent rarement de la même façon. Ce n’est pas une preuve, mais c’est un bon filtre.</p>
+
+        <div class="callout callout-warn"><span class="callout-tag">Le piège</span>
+          <div><p>Demander « Es-tu sûr ? » ne suffit pas. Une IA peut confirmer une erreur avec assurance, ou au contraire abandonner une bonne réponse pour vous faire plaisir. Seule la source fait foi.</p></div>
+        </div>
+
+        <h2 id="sources"><span class="num">08.5</span>Où vérifier</h2>
+        <p>Pour tout ce qui engage, remontez à la source officielle. Les principales :</p>
+        <div class="table-wrap">
+          <table class="table-atelier">
+            <thead><tr><th>Sujet</th><th>Où vérifier</th></tr></thead>
+            <tbody>
+              <tr><td>Lois, décrets</td><td>Le Journal officiel et les textes publiés par le Secrétariat général du gouvernement</td></tr>
+              <tr><td>Impôts, TVA, déclarations</td><td>La Direction générale des impôts (DGI) et le Code général des impôts en vigueur</td></tr>
+              <tr><td>Droit des affaires, comptabilité</td><td>Les Actes uniformes de l’OHADA et le référentiel SYSCOHADA</td></tr>
+              <tr><td>Taux, monnaie, inflation</td><td>La BCEAO</td></tr>
+              <tr><td>Statistiques</td><td>L’INStaD (Institut national de la statistique et de la démographie)</td></tr>
+              <tr><td>Données personnelles</td><td>L’APDP (Autorité de protection des données à caractère personnel)</td></tr>
+              <tr><td>Marchés publics</td><td>L’ARMP et le portail officiel des marchés publics</td></tr>
+              <tr><td>Droit du travail</td><td>Le Code du travail, le ministère du Travail, un juriste ou l’inspection du travail</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Pour un sujet à fort enjeu (contrat, licenciement, fiscalité), l’IA vous aide à <strong>préparer</strong> la question et à comprendre le sujet. La décision s’appuie sur un professionnel.</p>
+
+        <h2 id="exercice-1"><span class="num">08.6</span>Exercice : le compte rendu infidèle</h2>
+        <p>Voici des notes de réunion, puis le compte rendu qu’une IA en a tiré. <strong>Cliquez sur chaque phrase du compte rendu qui vous semble fausse</strong>, puis vérifiez.</p>
+
+        <div class="not-prose bg-paper-2 border border-line rounded-xl p-5 text-[.93rem] leading-relaxed">
+          <p class="kicker mb-3">Document source · notes de réunion</p>
+          <p>Comité de pilotage du projet « Eau potable Zou », mardi 14 octobre 2026. Présents : Mme Agossou (coordinatrice), M. Kpadonou (finances), M. Sossa (terrain).</p>
+          <ul class="mt-2 space-y-1">
+            <li>— Forages : 6 réalisés sur 10 prévus. Retard dû aux pluies.</li>
+            <li>— Budget consommé : 62 %, soit 37,2 millions FCFA sur 60 millions.</li>
+            <li>— Décision : demander au bailleur une prolongation de 2 mois. Mme Agossou rédige la demande d’ici le 24 octobre.</li>
+            <li>— M. Sossa organise la visite des 4 sites restants la semaine du 3 novembre.</li>
+            <li>— Non tranché : recruter ou non un second technicien. À revoir à la prochaine réunion.</li>
+          </ul>
+        </div>
+
+        <div class="spot not-prose mt-4" data-spot="verifier-spot-1">
+          <div class="spot-head"><p class="kicker">Réponse de l’IA · cliquez sur les phrases douteuses</p></div>
+          <div class="spot-text text-[.97rem]">
+            <p><span class="spot-item" data-why="Correct : 6 forages sur 10, c’est bien ce que disent les notes.">Six forages sur les dix prévus ont été réalisés à ce jour.</span> <span class="spot-item" data-wrong data-why="Faux : les notes attribuent le retard aux pluies, pas au matériel. L’IA a inventé une cause plausible.">Le retard s’explique principalement par des difficultés d’approvisionnement en matériel.</span> <span class="spot-item" data-why="Correct : 62 % de 60 millions font bien 37,2 millions FCFA.">Le budget est consommé à 62 %, soit 37,2 millions FCFA.</span></p>
+            <p><span class="spot-item" data-wrong data-why="Faux : la prolongation demandée est de 2 mois, pas 3.">Le comité a décidé de solliciter une prolongation de trois mois auprès du bailleur.</span> <span class="spot-item" data-wrong data-why="Faux : c’est Mme Agossou qui rédige la demande, pas M. Kpadonou. Erreur d’attribution classique.">M. Kpadonou se charge de rédiger la demande avant le 24 octobre.</span> <span class="spot-item" data-why="Correct : semaine du 3 novembre, 4 sites restants, M. Sossa.">M. Sossa organisera la visite des quatre sites restants la semaine du 3 novembre.</span> <span class="spot-item" data-wrong data-why="Faux : rien n’a été décidé sur le recrutement. L’IA a transformé un point ouvert en décision, l’erreur la plus dangereuse dans un compte rendu.">Enfin, le recrutement d’un second technicien a été validé.</span></p>
+          </div>
+          <div class="spot-foot">
+            <button type="button" class="btn btn-primary spot-check">Vérifier mes choix</button>
+            <div class="spot-result"></div>
+          </div>
+        </div>
+
+        <h2 id="exercice-2"><span class="num">08.7</span>Exercice : le devis faux</h2>
+        <p>Un commercial a demandé à l’IA de rédiger un devis à partir de ces éléments. Trouvez les erreurs.</p>
+
+        <div class="not-prose bg-paper-2 border border-line rounded-xl p-5 text-[.93rem] leading-relaxed">
+          <p class="kicker mb-3">Document source · demande du commercial</p>
+          <p>Client : Lycée technique de Bohicon. 10 rames de papier A4 à 3 500 FCFA, 4 cartouches d’encre à 18 000 FCFA, 6 chaises de bureau à 45 000 FCFA. TVA 18 %. Livraison gratuite. Devis valable 30 jours. Délai de livraison : 10 jours après la commande.</p>
+        </div>
+
+        <div class="spot not-prose mt-4" data-spot="verifier-spot-2">
+          <div class="spot-head"><p class="kicker">Réponse de l’IA · cliquez sur les phrases douteuses</p></div>
+          <div class="spot-text text-[.97rem]">
+            <p><span class="spot-item" data-why="Correct : 10 × 3 500 = 35 000 FCFA.">Papier A4, 10 rames × 3 500 FCFA = 35 000 FCFA.</span> <span class="spot-item" data-wrong data-why="Faux : 4 × 18 000 = 72 000 FCFA, pas 62 000. Toute la suite du devis est donc fausse aussi.">Cartouches d’encre, 4 × 18 000 FCFA = 62 000 FCFA.</span> <span class="spot-item" data-why="Correct : 6 × 45 000 = 270 000 FCFA.">Chaises de bureau, 6 × 45 000 FCFA = 270 000 FCFA.</span></p>
+            <p><span class="spot-item" data-wrong data-why="Faux en conséquence : le bon total HT est 377 000 FCFA, et le TTC 444 860 FCFA. Une seule erreur de ligne fausse tout le devis.">Total HT : 367 000 FCFA. TVA 18 % : 66 060 FCFA. Total TTC : 433 060 FCFA.</span> <span class="spot-item" data-wrong data-why="Inventé : cette règle n’apparaît nulle part dans la demande, et la référence légale précise est typique d’une hallucination. Une référence qu’on n’a pas vérifiée ne doit jamais partir chez un client.">Conformément à l’article 245 du Code général des impôts, une remise de 5 % s’applique automatiquement aux achats publics supérieurs à 300 000 FCFA.</span></p>
+            <p><span class="spot-item" data-why="Correct : livraison gratuite, comme demandé.">La livraison est offerte.</span> <span class="spot-item" data-wrong data-why="Faux : le délai prévu est de 10 jours. L’IA a fait une promesse commerciale que l’entreprise ne pourra pas tenir.">Livraison sous 48 heures après réception du bon de commande.</span> <span class="spot-item" data-why="Correct : 30 jours de validité.">Ce devis est valable 30 jours.</span></p>
+          </div>
+          <div class="spot-foot">
+            <button type="button" class="btn btn-primary spot-check">Vérifier mes choix</button>
+            <div class="spot-result"></div>
+          </div>
+        </div>
+
+        <h2 id="exercice-3"><span class="num">08.8</span>Exercice : vérifier une réponse sur une règle locale</h2>
+        <div class="exercise" data-exercise="verifier-3">
+          <p class="kicker"><b>Exercice 08.3</b> · 20 min · dans votre IA, avec la recherche web</p>
+          <p class="exercise-title">Faites l’épreuve de vérité sur une question de votre métier.</p>
+          <ol>
+            <li>Posez à l’IA une question pratique sur une règle ou une procédure qui s’applique à votre travail, sans préciser le pays. Exemples : « Quelles sont les étapes pour créer une entreprise individuelle ? », « Quel est le délai de préavis pour un employé en CDI ? », « Quelles pièces faut-il pour répondre à un marché public ? » Regardez pour quel pays elle a répondu.</li>
+            <li>Demandez-lui ses sources, puis ouvrez au moins deux liens.</li>
+            <li>Demandez ensuite : « Qu’est-ce qui, dans ta réponse, dépend de la date ou pourrait avoir changé ? »</li>
+            <li>Comparez avec une source officielle (voir 08.5) ou avec un collègue expert.</li>
+          </ol>
+          <div class="exercise-check">
+            <p class="kicker">Auto-évaluation</p>
+            <label><input type="checkbox"><span>J’ai ouvert au moins deux sources citées et vérifié qu’elles disent bien ce que l’IA affirme.</span></label>
+            <label><input type="checkbox"><span>J’ai repéré au moins un point qui était imprécis, daté ou valable dans un autre pays.</span></label>
+            <label><input type="checkbox"><span>J’ai confronté la réponse à une source officielle nationale.</span></label>
+            <label><input type="checkbox"><span>Je sais dire ce que je peux utiliser tel quel et ce qui demande un professionnel.</span></label>
+            <p class="exercise-feedback" data-ex-feedback></p>
+          </div>
+        </div>
+
+        <h2 id="quand-non"><span class="num">08.9</span>Quand ne pas utiliser l’IA</h2>
+        <p>Deux questions suffisent pour décider :</p>
+        <ul>
+          <li><strong>Une erreur coûterait-elle cher ?</strong> (argent, santé, droit, réputation)</li>
+          <li><strong>Puis-je vérifier facilement le résultat ?</strong></li>
+        </ul>
+        <div class="not-prose grid sm:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden text-[.95rem]">
+          <div class="bg-card p-5"><p class="kicker text-chatgpt">Erreur peu coûteuse · facile à vérifier</p><p class="mt-2">Foncez : brouillons, idées, reformulations, résumés de vos propres documents.</p></div>
+          <div class="bg-card p-5"><p class="kicker">Erreur coûteuse · facile à vérifier</p><p class="mt-2">Utilisez, puis vérifiez tout : devis, courriers officiels, comptes rendus, calculs.</p></div>
+          <div class="bg-card p-5"><p class="kicker">Erreur peu coûteuse · difficile à vérifier</p><p class="mt-2">Utilisez comme piste, sans la présenter comme un fait : tendances, idées de marché.</p></div>
+          <div class="bg-card p-5"><p class="kicker text-accent">Erreur coûteuse · difficile à vérifier</p><p class="mt-2">Pas d’IA seule : diagnostic médical, conseil juridique engageant, décision sur une personne. Un professionnel décide.</p></div>
+        </div>
+
+        <h2 id="quiz"><span class="num">08.10</span>Vérifiez vos acquis</h2>
+        <div data-quiz="verifier"></div>
+
+        <div data-chapter-end></div>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
